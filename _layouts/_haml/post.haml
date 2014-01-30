@@ -1,0 +1,17 @@
+!!!
+%html{lang: "en"}
+  {% include head.html %}
+  %body
+    {% include header.html %}
+    {% include sidebar.html %}
+    %main
+      %article
+        %header
+          %h1 {{ page.title }}
+          %time
+            %span {{ page.date | date_to_long_string }}
+          %h2 {{ page.subtitle }}
+        %section
+          {{ content | stripem }}
+
+      {% include footer.html %}

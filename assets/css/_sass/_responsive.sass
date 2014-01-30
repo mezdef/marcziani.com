@@ -1,0 +1,49 @@
+@import "variables"
+
+@media all and (orientation: portrait)
+
+@media all and (orientation: landscape)
+
+
+// html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
+
+
+@media screen and (max-width: 1280px)
+  body
+    margin: 20px auto 0 auto
+    width: 720px
+  header.banner
+    display: block
+  aside.aside
+    display: none
+  main
+    padding: 0 30px
+
+@media only screen and (max-width: 1024px)
+  body
+    margin: 20px 0 20px auto
+    width: 870px
+    header.banner
+      width: 720px
+    main
+      margin: 0
+      padding: 0 180px 0 30px
+
+@media only screen and (max-width: 870px)
+  body
+    margin: 20px auto
+    width: 720px
+    main
+      padding: 0 30px
+  figure
+    figcaption
+      position: relative
+      // display: block
+      right: 0
+      width: 100%
+      &:after
+        display: none
+
+@media only screen and (max-width: 768px)
+
+@media screen and (max-device-width: 480px)
