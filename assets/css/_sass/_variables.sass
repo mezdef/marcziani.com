@@ -7,9 +7,12 @@ $color-light: #999
 
 // !TYPOGRAPHY //////////////////////////////////////////////////////////////////
 
-$font-serif: 'FreightTextBook', 'Helvetica Neue', Helvetica, Arial, sans-serif
-$font-serif-italic: 'FreightTextMediumItalic', 'Helvetica Neue', Helvetica, Arial, sans-serif
-$font-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+$font-serif: 'freight-text-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif
+$font-sans: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+@mixin font-serif-italic
+  font-family: $font-serif 
+  font-style: italic
+
 @mixin font-sans
   font-family: $font-sans 
   font-weight: normal
