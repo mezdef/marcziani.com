@@ -1,6 +1,6 @@
 ---
 title: The Unbearable Lightness of Listening
-subtitle: "A few good poscasts"
+subtitle: "A few good podcasts"
 created: !!timestamp '2012-08-12 20:00:00'
 layout: post
 ---
@@ -11,7 +11,7 @@ Podcasts occupy an interesting audio niche, offering critical and thoughtful mat
 
 > [Hypercritical](http://5by5.tv/hypercritical/) - <em class="quote">A weekly talk show ruminating on exactly what is wrong in the world of Apple and related technologies and businesses. Nothing is so perfect that it can't be complained about.</em>
 
-A technically minded person so thoroughly invested in critical thinking and considered hair splitting is a rare thing. Listening to someone revel in the details of software, hardware, and consumer electronics like John Siracusa does is something of a rarity and makes for engrossing material. The 5by5 network maintains an excellent standard for clarity and listenability, and this show is no exception, despite the lack of editing done by Dan Benjamin (host and owner of 5by5). With an eye on Apple (John is famous for his voluminous OS X reviews on [Ars Technica](arstechnica.com)), the epitaph 'No better friend, No worse enemy' may be appropriate. Listening to smart people dosen't get much better than this.
+A technically minded person so thoroughly invested in critical thinking and considered hair splitting is a rare thing. Listening to someone revel in the details of software, hardware, and consumer electronics like John Siracusa does is something of a rarity and makes for engrossing material. The 5by5 network maintains an excellent standard for clarity and listenability, and this show is no exception, despite the lack of editing done by Dan Benjamin (host and owner of 5by5). With an eye on Apple (John is famous for his voluminous OS X reviews on [Ars Technica](arstechnica.com)), the epitaph 'No better friend, No worse enemy' may be appropriate. Listening to smart people doesn't get much better than this.
 
 > [The Changelog](http://thechangelog.com/) - <em class="quote">The Changelog is a weekly podcast and blog that covers what's fresh and new in Open Source.</em>
 
