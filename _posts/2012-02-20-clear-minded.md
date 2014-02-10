@@ -9,8 +9,8 @@ GTD (Getting things Done) applications serve a particular niche, and have found 
 
 Developed by Realmac Software, [Clear](http://www.realmacsoftware.com/clear/) stands firmly in the to-do camp, serving as a task and list management application. Products such as the ever-popular [OmniFocus](http://www.omnigroup.com/products/omnifocus-iphone#!prettyPhoto) or [Things](http://culturedcode.com/things/iphone/) lie towards the opposite end of the spectrum, catering to a different audience though depth and customisation. Clear trades on it's navigation model, simplicity, and visual aesthetic.
 
-![Clear_SS_01](http://marcziani.com/blog/wp-content/uploads/2012/02/Clear_SS_011.png)
-![Clear_SS_02](http://marcziani.com/blog/wp-content/uploads/2012/02/Clear_SS_021.png)
+![Clear_SS_01](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/02/20/Clear_SS_011.png)
+![Clear_SS_02](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/02/20/Clear_SS_021.png)
 <figcaption class="caption">1. Quick Tips: Splash screen. 2. Quick Tips: A demonstration of Clear's 3 level menu system.</figcaption>
 
 ## First glance
@@ -21,8 +21,8 @@ After exiting the quick tutorial, the application presents the user with a pre-m
 
 Any session with Clear that involves completing more than a few items will likely necessitate a trip to the settings to turn off the frequent vibrations the app emits. Vibrations are usually reserved for core functionality such as calls and messages, or very important application events. Given the frequency with which items can be completed, and the ample visual cues applied to ticked items, this option would be less obtrusive if it were off by default.
 
-![Clear_SS_03](http://marcziani.com/blog/wp-content/uploads/2012/02/Clear_SS_03.png)
-![Clear_SS_04](http://marcziani.com/blog/wp-content/uploads/2012/02/Clear_SS_04.png)
+![Clear_SS_03](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/02/20/Clear_SS_03.png)
+![Clear_SS_04](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/02/20/Clear_SS_04.png)
 <figcaption class='caption'>1. Navigation: half-pull and release to create new item, 2. Navigation: full-pull to rise a navigation level</figcaption>
 
 Clear's navigation model is one of the key selling points, and does not disappoint in it's usability or simplicity. Animations are smooth and respond well to some of the finer-grain interactions such as a half-pull for new lists and list items. The half-pull gesture is a great alternative for fast or one-handed execution, and also does a great job of allowing users to stumble upon alternate navigation methods. The only noticeable inconsistency is the method in which  settings are switched on and off compared to list items completed (tapping vs. swiping).
@@ -31,8 +31,8 @@ The iPhone's dimensions allow for effective one-handed operation, and Clear take
 
 List items can be swiped to the right to be completed and when pulled in the opposite direction will result in deletion. Tapping and holding an item will allow it to be re-sorted, and tapping the name will allow it to be edited. These features all apply at both the list and item level, making for a consistent experience. All the above actions have precedent in other applications, and the resulting experience is intuitive enough not to leave the average iPhone user alienated. 
 
-![Clear_SS_05](http://marcziani.com/blog/wp-content/uploads/2012/02/Clear_SS_05.png)
-![Clear_SS_06](http://marcziani.com/blog/wp-content/uploads/2012/02/Clear_SS_06.png)
+![Clear_SS_05](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/02/20/Clear_SS_05.png)
+![Clear_SS_06](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/02/20/Clear_SS_06.png)
 <figcaption class='caption'>1. List items: mark as completed, 2. List items: pinch appart to create</figcaption>
 
 ## Visual Design

@@ -9,4 +9,4 @@ Hacker News occupies an interesting place in the pantheon of my information cons
 
 [Cleaner-Hacker-News](https://github.com/Primigenus/Cleaner-Hacker-News) presents an interesting way to clean up a web interface were legibility and ease of use are paramount. Verdana (used by Hacker News) has never been a go-to in my repertoire, but it provides a pleasant break from the usual Helvetica that so permeates an Apple filled life. [Hacker News in White](https://github.com/mezdef/Hacker-News_White) takes a somewhat more reserved path, removing the tan content box, reducing the weight of the header, and promoting the prominence of news-titles in comparison to other information.
 
-![Screenshot of Hacker News in White](http://marcziani.com/blog/wp-content/uploads/2012/03/HNW_screenshot.png)
+![Screenshot of Hacker News in White](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/03/25/HNW_screenshot.png)

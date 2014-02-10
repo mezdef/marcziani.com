@@ -9,7 +9,7 @@ Television and movies have a somewhat baffling disregard for their technology an
 
 This is not to say that every example is bad. Sci-Fi settings provide the perfect circumstance for creative interpretations of what interfaces may look like in the future. How current computer experiences inform predictions of the future or often riveting, and packed with information about the environment and world they reside in. Some are well designed, and show a considerable amount of thought, but unfortunately, these are the exception rather than the rule.
 
-![Tron: Legacy terminal](http://payload.cargocollective.com/1/0/2995/1190825/064.TRONBR.07_905.JPG)
+![Tron: Legacy terminal](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/02/06/064.TRONBR.07_905.JPG)
 <figcaption class='caption'>Interface from Tron: Legacy via <a href='work.gmunk.com'>work.gmunk.com</a></figcaption>
 
 In the war of clarity vs. authenticity, the proliferation of foe-interfaces prompts the question of how much time and effort is spent on these creations that ultimately confuse rather than inform. Hyperbole aside, some constructed interfaces genuinely do perform their intended function of information delivery. It is obvious that a generic Windows or OS X interface will not always communicate the desired information rapidly enough to a casual viewer. A closeup on a computer or phone screen takes the character out of context, and may feel jarring or ruin a directors carefully constructed scene. Interfaces with large text, overly-obvious interface elements, and computers that beep every time a button is hit. For devices such as phones, the use of caller-id has always seemed woefully under appreciated. A large picture of the caller, large text displaying the contact's name, and an obvious hang up / answer button has always struck as an easy way to accomplish the afore-mentioned goals.
@@ -17,15 +17,15 @@ In the war of clarity vs. authenticity, the proliferation of foe-interfaces prom
 The BBC's Sherlock, returning for it's second season, takes a fresh approach to conveying it's information. This is usually in the form of text messages the characters receive, or details the characters notice. The method bypasses the need for viewers to stare at a proffered phone to gain the same knowledge as the characters. The scene is allowed more context, while the information is displayed, allowing immediate reactions, rather than many quick cuts from character, to device, to character.
 
 
-![Sherlock_01](http://marcziani.com/blog/wp-content/uploads/2012/02/Sherlock_SS_01.jpeg)
+![Sherlock_01](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/02/06/Sherlock_SS_01.jpeg)
 <figcaption class='caption'>Sherlock: Multiple text messages</figcaption>
 
 While this method is certainly effective, it could easily have been far less arresting, if not for its typographical details. Information displayed on a phone is set in AF Generation Z Medium (as seen in the picture above (season 1), however the font changes in seasons two (below), and web-pages in Arial/Helvetica with smatterings of serifs. While this information may not mean much to an average viewer, it subtly reinforces the information's source, and the scene, it's context.
 
-![Sherlock_02](http://marcziani.com/blog/wp-content/uploads/2012/02/Sherlock_SS_02.jpeg)
+![Sherlock_02](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/02/06/Sherlock_SS_02.jpeg)
 <figcaption class='caption'>Sherlock: List of text messages</figcaption>
 
-![Sherlock_03](http://marcziani.com/blog/wp-content/uploads/2012/02/Sherlock_SS_03.jpeg)
+![Sherlock_03](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/02/06/Sherlock_SS_03.jpeg)
 <figcaption class='caption'>Sherlock: Phone interface used to indicate files</figcaption>
 
 While Sherlock's typography makes for a certain slickness that matches the cinematography and direction, the real magic is in the type's animation. Messages pop up, conversations scroll, and text is typed. This all gives a wonderful sense of motion, and it is all too easy to imagine the text whizzing by infront of the characters eyes.

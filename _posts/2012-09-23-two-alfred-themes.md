@@ -9,11 +9,11 @@ Having been an [Alfred](http://www.alfredapp.com/) devotee for some time now, tr
 
 The [Powerpack](http://www.alfredapp.com/powerpack/) paid upgrade to Alfred (not currently available on the AppStore) is well worth it to anyone using Alfred in any meaningful capacity. Of particular interest to fellow pedants is the ability to export, import, and create themes.
 
-![Fig 1. Alfred theme: DeusEx](http://marcziani.com/blog/wp-content/uploads/2012/09/Screen-Shot-2012-09-18-at-9.12.46-AM.png)
+![Fig 1. Alfred theme: DeusEx](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/09/23/Screen-Shot-2012-09-18-at-9.12.46-AM.png)
 
-![Fig 2. Alfred theme: Ulysses](http://marcziani.com/blog/wp-content/uploads/2012/09/Screen-Shot-2012-09-18-at-9.11.16-AM.png)
+![Fig 2. Alfred theme: Ulysses](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/09/23/Screen-Shot-2012-09-18-at-9.11.16-AM.png)
 
 If you're interested in either of these themes, click below to download. Installation is as simple as opening the file with Alfred + Powerpack installed.
 
-[DeusEx](http://marcziani.com/blog/wp-content/uploads/2012/09/DeusEx.alfredtheme.zip) /
-[Ulysses](http://marcziani.com/blog/wp-content/uploads/2012/09/Ulysses.alfredtheme.zip)
+[DeusEx](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/09/23/DeusEx.alfredtheme.zip) /
+[Ulysses](https://s3-ap-southeast-2.amazonaws.com/marcziani/2012/09/23/Ulysses.alfredtheme.zip)
