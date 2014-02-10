@@ -9,7 +9,7 @@
         %header
           %h1 {{ page.title }}
           %time
-            %span {{ page.date | date_to_long_string }}
+            {{ page.date | date_to_long_string }}
           %h2 {{ page.subtitle }}
         %section
           {{ content | stripem }}

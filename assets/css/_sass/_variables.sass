@@ -1,14 +1,20 @@
 // COLOURS //////////////////////////////////////////////////////////////////
 
-$color-link: #FF0033
-$color-base: #444
-$color-dark: #333
-$color-light: #999
+// $color-link: #FF0033
+// $color-link: #2455c3
+// $color-link: #2A363B
+$color-base: #2A363B
+// $color-midlayer: #999
+$color-midlayer: #C6C7C9
+$color-lowlight: #CEECEF
+$color-highlight: #FF6666
+$color-crunch: #222
 
 // !TYPOGRAPHY //////////////////////////////////////////////////////////////////
 
-$font-serif: 'freight-text-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif
-$font-sans: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
+$font-serif: 'freight-text-pro', Georgia, serif
+$font-sans: 'freight-sans-pro', Helvetica, Arial, sans-serif
+
 @mixin font-serif-italic
   font-family: $font-serif 
   font-style: italic
@@ -17,7 +23,8 @@ $font-sans: 'open-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
   font-family: $font-sans 
   font-weight: normal
 
-$base-font-size: 23px
-$base-line-height: 34px
+$font-size-base: 22px
+$font-size-small: 16.6px
 
-$border-dotted: 1px dotted #666
+$border-structural: 1px solid $color-midlayer
+$border-arrested: 1px solid $color-lowlight
