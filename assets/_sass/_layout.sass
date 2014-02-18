@@ -1,0 +1,198 @@
+@import "compass/utilities"
+@import "variables"
+
+// !ELEMENTS - !GLOBALS ////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+html
+  height: 100%
+  width: 100%
+  // background-image: url(http://basehold.it/i/24) // 24px baseline 
+
+body
+  position: relative
+  margin: 0 auto
+  width: 1100px
+
+main
+  width: 660px
+  padding: 0 0 0 220px
+
+figure
+  position: relative
+  margin: 0 0 33px 0
+
+  img
+    height: auto
+    width: auto
+    max-width: 100%
+
+p
+  margin: 0 0 33px 0
+
+li
+  position: relative
+  code
+    margin: 0 0 5px 0
+    padding: 3px 6px
+    display: inline-block
+    background: #F9F9F9
+    border: 1px solid #CCC
+    -webkit-border-radius: 2px
+    moz-border-radius: 2px
+    border-radius: 2px
+
+blockquote
+  margin-left: -20px
+  padding-left: 20px
+  border-left: $border-structural
+
+h2
+  
+  // margin: 16.px 0 0px 0
+  padding: 16.5px 0
+  // line-height: 
+
+// HEADER //////////////////////////////////////////////////////////
+
+header.banner
+  display: block
+  padding: 33px 0 66px 220px
+  // padding: 0 0 0 220px
+  img
+    display: none
+  a.brand
+  ul
+    display: inline
+    // +inline-block
+    li
+      display: inline
+      // +inline-block
+  ul.nav
+    +float-right
+
+aside.aside
+  display: none
+  position: absolute
+  margin: 0
+  padding: 0
+  width: 200px
+  img
+    -webkit-border-radius: 140px
+    -moz-border-radius: 140px
+    border-radius: 140px
+  a.brand
+    display: block
+  nav a
+
+
+// LISTING /////////////////////////////////////////////////////////
+
+article
+  margin: 0 0 99px 0
+  header
+    position: relative
+    margin: 0 0 33px 0
+    h1
+    h2
+      margin: 0
+      padding: 0
+    time
+      position: absolute
+      width: 130px
+      bottom: -66px
+      left: -150px
+      text-align: right
+      &:before, &:after
+        content: ""
+        display: block
+        margin-left: 90px
+        width: 40px
+        border-top: $border-structural
+      &:before
+        margin-bottom: -1px
+      &:after
+        margin-top: -1px
+        // margin-top: 10px
+      span
+
+  .content > p:first-child, .content > figure:first-child
+    font-weight: 500
+    font-size: 21px
+    color: #444
+  .content
+    h2
+      display: block
+      // margin: 60px 0 40px 0;
+      // text-align: center;
+      font-weight: 600
+      // border-bottom: 1px solid #CCC;
+      text-transform: none
+      letter-spacing: 0px
+      span
+        display: table
+        margin: 0 auto -15px auto
+        padding: 0 20px
+        background: #FFF
+  section
+    margin: 0 0 10px 0
+
+figure
+  text-align: center
+  figcaption
+    text-align: left
+    position: absolute
+    display: block
+    top: 0
+    right: -170px
+    width: 150px
+    &:before, &:after
+      display: block
+      content: ""
+      width: 25%
+      border-top: $border-structural
+    &:before
+      margin-bottom: 8.25px
+    &:after
+      margin-top: 8.25px
+
+
+// FOOTER //////////////////////////////////////////////////////////
+
+footer
+  display: block
+  padding: 32px 0 33px 0
+  border-top: $border-structural
+  span
+    width: 500px
+    +inline-block
+  nav
+    width: 110px
+    +float-right
+    ul
+      +inline-block-list
+    a
+      margin-left: 10px
+      // color: $color-midlayer
+
+
+// LISTING /////////////////////////////////////////////////////////
+
+section.listing
+  margin: 0 0 66px 0
+  article
+    margin: 0
+    padding: 0
+    time
+      float: right
+// nav.work
+//   margin: 0 0 0 395px
+//   width: 200px
+//   top: 130px
+//   left: 50%
+//   position: absolute
+
+// nav.work a
+//   display: block
+//   font: normal normal bold 14px/18px "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif
+
