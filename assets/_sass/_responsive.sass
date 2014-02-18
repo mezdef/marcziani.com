@@ -9,39 +9,42 @@
 
 
 @media screen and (max-width: 1280px)
-  body
-    width: 720px
-  header.banner
-    // display: block
-    padding: 0 30px
-    padding: 33px 30px 66px 30px
-  aside.aside
-    // display: none
-  main
-    padding: 0 30px
+
+@media screen and (max-width: 1000px)
+  article header
+    time
+      left: auto
+      right: -150px
+      text-align: left
+      &:before, &:after
+        margin-left: 0
 
 @media only screen and (max-width: 1024px)
   body
-    margin: 20px 0 20px auto
-    width: 870px
+    margin: 0 0 20px auto
+    width: 840px
     header.banner
-      width: 720px
-    main
-      margin: 0
-      padding: 0 180px 0 30px
+      width: 660px
 
 @media only screen and (max-width: 870px)
   body
-    margin: 20px auto
-    width: 720px
-    main
-      padding: 0 30px
-  figure
-    figcaption
+    margin: 0 auto
+    width: 660px
+  article
+    header time
+      left: auto
+      right: 0
+      bottom: 0
+      text-align: right
+      &:before, &:after
+        margin-left: 90px
+    figure figcaption
       position: relative
-      // display: block
+      line-height: 33px
       right: 0
       width: 100%
+      &:before
+        margin-bottom: -1px
       &:after
         display: none
 
