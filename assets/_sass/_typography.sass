@@ -1,4 +1,5 @@
 // @import "compass/typography"
+@import "compass/css3"
 @import "variables"
 
 body
@@ -183,3 +184,19 @@ section.listing
         color: $color-highlight
         text-decoration: underline
 
+// 404 /////////////////////////////////////////////////////////////
+
+section.error
+  h1
+    @include font-sans
+    color: #FFF
+    font-size: 219.318px
+    line-height: 132px
+    font-weight: 700
+    font-style: italic
+    text-align: center
+    span
+      text-decoration: underline
+  h2
+    color: #FFF
+    text-align: center
