@@ -1,0 +1,12 @@
+---
+---
+!!!
+%html{lang: "en"}
+  {% haml head.haml %}
+  %body
+    {% haml header.haml %}
+    {% haml sidebar.haml %}
+    %main
+      {{ content }}
+
+      {% haml footer.haml %}

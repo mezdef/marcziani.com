@@ -1,17 +1,17 @@
 !!!
 %html{lang: "en"}
-  {% include head.html %}
+  {% haml head.haml %}
   %body
-    {% include header.html %}
-    {% include sidebar.html %}
+    {% haml header.haml %}
+    {% haml sidebar.haml %}
     %main
       %article
         %header
           %h1 {{ page.title }}
+          %h2 {{ page.subtitle }}
           %time
             {{ page.date | date_to_long_string }}
-          %h2 {{ page.subtitle }}
         %section
           {{ content | stripem }}
 
-      {% include footer.html %}
+      {% haml footer.haml %}
