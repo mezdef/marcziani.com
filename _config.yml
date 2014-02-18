@@ -13,6 +13,6 @@ permalink: pretty
 
 gems:
 - jekyll-compass
-- haml
+- jekyll-haml
 
-exclude: ['rakefile', 'Guardfile', 'Gemfile', 'Gemfile.lock']
+exclude: ['rakefile.rb', 'Guardfile', 'Gemfile', 'Gemfile.lock', 's3_website.yml']

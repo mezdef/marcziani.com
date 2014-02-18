@@ -4,3 +4,7 @@ assets/.sass-cache/638dd3c1ced0ed4233b4717378f2f354c962f1d2/print.scssc
 assets/.sass-cache/638dd3c1ced0ed4233b4717378f2f354c962f1d2/screen.scssc
 assets/.sass-cache/ba5545d774760f6cfb9432729f54f9e731bf8fee/_utilities.scssc
 */.sass-cache/*
+*.html
+s3_website.yml
+_site
+.ruby-gemset
