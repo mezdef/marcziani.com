@@ -7,7 +7,12 @@ url: "http://localhost:4000"
 
 # auto: true
 
-markdown: redcarpet
+# markdown: redcarpet
+markdown: kramdown
 permalink: pretty
+
+gems:
+- jekyll-compass
+- haml
 
 exclude: ['rakefile', 'Guardfile', 'Gemfile', 'Gemfile.lock']
