@@ -25,11 +25,15 @@
     width: 840px
     header.banner
       width: 660px
+    main
+      width: 660px
 
 @media only screen and (max-width: 870px)
   body
     margin: 0 auto
     width: 660px
+    main
+      width: auto
   article
     header time
       left: auto
@@ -49,5 +53,48 @@
         display: none
 
 @media only screen and (max-width: 768px)
+  body
+    width: 540px
+    header.banner
+      width: 540px
 
-@media screen and (max-device-width: 480px)
+@media only screen and (max-width: 630px)
+  body
+    width: 420px
+    header.banner
+      width: 420px
+
+@media only screen and (max-width: 480px)
+  body
+    width: 360px
+    header.banner
+      width: 360px
+
+@media only screen and (max-width: 420px)
+  body
+    width: 240px
+    font-size: $font-size-s
+    header.banner
+      padding: 33px 0
+      text-align: center
+      a.brand
+        display: block
+      ul.nav
+        float: none
+    section.listing
+      a
+        display: inline
+        width: auto
+      time
+        float: none
+    header.banner
+      width: 240px
+    h1
+      font-size: $font-size-l
+      line-height: 49.5px
+    h2
+      padding: 24.75px 0 8.25px 0
+      font-size: $font-size-base
+    article section>p:first-of-type
+      font-size: $font-size-base
+  

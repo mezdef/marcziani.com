@@ -162,15 +162,19 @@ article
 
 footer
   @include font-sans
-  // color: $color-midlayer
   line-height: 33px
   span
-    font-size: 16.5px
+    font-size: $font-size-s
   nav
     ul
-      text-align: right
+      text-align: center
     a
+      font-size: $font-size-m
       color: $color-midlayer
+
+main.post footer nav
+  a
+    color: $color-lowlight
 
 
 // LISTING /////////////////////////////////////////////////////////
