@@ -72,8 +72,11 @@
 
 @media only screen and (max-width: 420px)
   body
-    width: 240px
+    width: 280px
     font-size: $font-size-s
+    main.page
+      article header h2
+        text-align: left
     header.banner
       padding: 33px 0
       text-align: center
@@ -88,13 +91,34 @@
       time
         float: none
     header.banner
-      width: 240px
+      width: 280px
     h1
       font-size: $font-size-l
       line-height: 49.5px
+      text-align: center
     h2
       padding: 24.75px 0 8.25px 0
       font-size: $font-size-base
-    article section>p:first-of-type
+    blockquote
+      margin-left: -10px
+      padding-left: 10px
       font-size: $font-size-base
+    article
+      margin: 0 0 66px 0
+      header
+        h2
+          font-size: $font-size-s
+          line-height: 1.5
+          text-align: center
+        time
+          position: relative
+          margin: 16.5px auto 0 auto
+          right: auto
+          bottom: auto
+          display: block
+          text-align: center
+          &:before, &:after
+            margin: 0 auto
+      section>p:first-of-type
+        font-size: $font-size-base
   
