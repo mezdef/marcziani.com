@@ -30,7 +30,7 @@ It is revealed that Stone has recently experienced the loss of a child, an event
 
 > I get it. It's nice up here. You can just shut down all the systems, turn out all the lights, and just close your eyes and tune out everyone. There's nobody up here that can hurt you. It's safe.
 
-The initial event continues to assault Stone (much as nausea rolls in waves), shattering the surrounding environment and her means of escape. The aftermath of each successive deluge leaves her in a state of repose, as if shedding the flight-or-fight state like a chrysalis, allowing Stone a form emotional rebirth. In the intervening 120 minutes the projectiles take to circle the planet, she floats—free of her 'space' skin—among the relics of the previous ISS inhabitants. The disarray they have left behind in the rush to evacuate retards her escape attempts, creating a clostrphobic environment in which the previous open air vertigo is replaced by the pressing confines of the space station. The 'inside' objects leave stone little room to move and when not avoided result in dazed confusion, but ultimatly escape.
+The initial event continues to assault Stone (much as nausea rolls in waves), shattering the surrounding environment and her means of escape. The aftermath of each successive deluge leaves her in a state of repose, as if shedding the flight-or-fight state like a chrysalis, allowing Stone a form emotional rebirth. In the intervening 120 minutes the projectiles take to circle the planet, she floats—free of her 'space' skin—among the relics of the previous ISS inhabitants. The disarray they have left behind in the rush to evacuate retards her escape attempts, creating a clostrphobic environment in which the previous open air vertigo is replaced by the pressing confines of the space station. The 'inside' objects leave Stone little room to move and when not avoided result in dazed confusion, but ultimatly escape.
 
 ![image]
 
@@ -52,6 +52,8 @@ Sent by the company on missions to ostensibly prevent potential collisions betwe
 
 *Planetes* deals extensively with the difficulties of surviving beyond the natural habitat of the earths atmosphere; radiation poisoning, brittle bones, and the isolating experience of space are explored throuought the series. Removed from geographic references of ground and sky, characters question the notion of borders and nationality in a space where none exist. The society depicted explores a period in which humanity is still preparing it's first manned steps to the outer planets. Various factions dispute this move, arguing that a failure to fix earth's environmental and social problems before further exploration is a mistake.
 
+![image]
+
 *Regrets* features a criminal space crew engaged in dumping waste in orbit. Debris section must deal with this waste dumping because it adds rather than subtracts. Showcasing Hachimaki's mentor and his radiation sickness, the debris (a proxy for environmental issues of the planet below) finds its way into space, but the local environment exacts its toll upon those violoating its inhabitatns and thier rules. Hachimaki opines of riding his motorbike by the ocean, accepting the danger and doing it anyway; much as he collects space debris despite the dangers.
 
 > The salty wind off the sea is really bad for machines, but I rode my bike along the seaside roads all the the time, anyway. I never thought about it much, but I guess I really loved it.
@@ -64,27 +66,25 @@ I copy.
 
 ## Footnotes
 
-[^1]: Presumably the menial tasks of garbage collection happen off-screen, much as the mundanities of procedural police work do not often appear on screen as they do not serve to advance the plot, themes, or characters with the show. Unless of course there's a point to be made of the ability (or lack there-of) to withstand drudgery and it's relation to the event's usually depicted. 
+[^1]: Presumably the menial tasks of garbage collection happen off-screen, much as the mundanities of procedural police work do not often appear on screen as they do not advance the plot, themes, or characters of the show. Unless of course there's a point to be made of the ability (or lack there-of) to withstand drudgery and it's relation to the event's depicted. 
 
-[^2]: Other people are, of course, one of—if not the main—antagonists of this genre. [Zombie][] stories often employ their eponymous monsters as an unthinking force of nature, instead focusing on the thinking human characters as the true source of danger.
+[^2]: Other people are, of course, one of—if not the main—antagonists of this genre. [Zombie][L12] stories often employ their eponymous monsters as an unthinking force of nature, instead focusing on the thinking human characters as the true source of danger.
 
-[^3]: Speed of space debris
+[^3]: 11.7 km/s is FAST. [Space is cool][L13].
 
-[^4]: Perfect length for a thriller, examples.
+[^4]: 91 mintes for Gravity seemed about right, as it didn't leave much fat on the bone. It's hard to come up with a number that is perfect for thrillers. *Jaws* clocks in at 124 and *Tinker Tailor Soldier Spy* at 127. Both are great, but very different types of thriller.
 
-[^5]: [Retirony][L] tells us where this is going to end up. http://tvtropes.org/pmwiki/pmwiki.php/Main/Retirony
+[^5]: [Retirony][L14] tells us where this is going to end.
 
 [^6]: Structure of Planetes. How many episodes involve trash.
 
-[^7]: Optimism in Japanese animation
+[^7]: Optimism and the contrast between natural ability and hard work is something that young adult fiction in Japan is consumed by in a way that dosen't occur in western YA (please well-actually me if appropriate). I'd like to make some deep insight here but I'd very quickly make a fool out of myself. Perhaps salary-man conformist culture?
 
 ## Further reading
 
 - [Planetes][L]http://www.amazon.com/Planetes-Complete-Collection-Joe-Cappelletti/dp/B000HT3876
 - [Technical Report on Space Debris][L] http://orbitaldebris.jsc.nasa.gov/library/UN_Report_on_Space_Debris99.pdf
 - [Space Debrius Mitigation Guidelines of the Committee on the Peacful Uses of Outer Space][L] http://orbitaldebris.jsc.nasa.gov/library/Space%20Debris%20Mitigation%20Guidelines_COPUOS.pdf
-
-[^3]: Speed of space debris
 
 [L1]: http://en.wikipedia.org/wiki/Hard_science_fiction
 [L2]: http://en.wikipedia.org/wiki/Category:Science_fiction_genres
@@ -96,3 +96,6 @@ I copy.
 [L8]: http://en.wikipedia.org/wiki/Butterfly_effect
 [L10]: http://en.wikipedia.org/wiki/Planetes
 [L11]: http://www.overthinkingit.com/2012/08/27/otip-episode-217/
+[L12]: http://en.wikipedia.org/wiki/Zombie
+[L13]: https://what-if.xkcd.com/38/
+[L14]: http://tvtropes.org/pmwiki/pmwiki.php/Main/Retirony
