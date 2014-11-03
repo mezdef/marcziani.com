@@ -1,0 +1,92 @@
+// LISTING /////////////////////////////////////////////////////////
+
+article
+  margin: 0 0 99px 0
+  header
+    position: relative
+    margin: 0 0 33px 0
+    h1
+      // color: $color-red
+    h2
+      margin: 0
+      padding: 0
+      color: $color-grey-neutral
+      font-family: $font-mono
+      font-size: $font-size-s
+      // font-weight: 400
+      // line-height: 33px
+      // font-style: normal
+
+    time
+      position: absolute
+      width: 130px
+      bottom: -66px
+      left: -150px
+      text-align: right
+      &:before, &:after
+        content: ""
+        display: block
+        margin-left: 90px
+        width: 40px
+        border-top: $border-structural
+      &:before
+        margin-bottom: -1px
+      &:after
+        margin-top: -1px
+
+  .content > p:first-child, .content > figure:first-child
+    font-weight: 500
+    font-size: 21px
+    color: #444
+  .content
+    h2
+      display: block
+      // margin: 60px 0 40px 0;
+      // text-align: center;
+      font-weight: 600
+      // border-bottom: 1px solid #CCC;
+      text-transform: none
+      letter-spacing: 0px
+      span
+        display: table
+        margin: 0 auto -15px auto
+        padding: 0 20px
+        background: #FFF
+  section
+    margin: 0 0 10px 0
+    >p:first-of-type
+      // @include font-sans
+      font-size: $font-size-m
+      line-height: $font-leading--base
+      color: $color-crunch
+      >a
+        background-position: 0 24px
+      // font-weight: 500
+      // font-family: $font-sans
+    li[id*='fn:']
+      font-size: $font-size-xs
+      a:last-of-type
+        color: $color-lowlight
+        text-decoration: none
+
+
+// ARTICLE /////////////////////////////////////////////////////////
+
+article
+  // font-family: $font-serif
+  header
+    // text-align: center
+    h1
+      // @include font-serif-italic
+      // font-size: 48px
+      // line-height: 66px
+      // font-weight: 700
+    h2
+      // letter-spacing: .01rem
+    time
+      font-size: $font-size-xs
+      line-height: $font-leading--base
+      span
+        // font-size: 14px
+        // line-height: 21px
+        // color: $color-light

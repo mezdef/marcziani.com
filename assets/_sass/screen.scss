@@ -7,7 +7,21 @@
 // @import "base";
 // @import "main";
 @import "compass/reset";
+@import "compass/utilities";;
 // @import 'assets/css/_sass/_syntax';
-@import "typography";
+
+@import "variables/_colors";
+@import "variables/_type";
+
+@import "modules/_helpers";
+@import "modules/_typography";
+
+@import "views/layout/_header";
+@import "views/layout/_page";
+@import "views/layout/_footer";
+
+@import "views/_post";
+@import "views/_listing";
+
 @import "layout";
 @import "responsive";

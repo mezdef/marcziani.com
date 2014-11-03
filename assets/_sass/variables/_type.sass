@@ -1,0 +1,41 @@
+// TYPOGRAPHY //////////////////////////////////////////////////////////////////
+
+$font-serif: 'adobe-garamond-pro', Georgia, serif
+$font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif
+$font-mono: 'inconsolata', Helvetica, Arial, sans-serif
+
+@mixin font-serif-italic
+  font-family: $font-serif
+  font-style: italic
+  letter-spacing: .01rem
+  color: $color-crunch
+
+@mixin font-sans
+  font-family: $font-sans
+  font-weight: normal
+
+@mixin font-mono
+  font-family: $font-mono
+  // letter-spacing: .01rem
+  color: $color-grey-dark
+  a:hover
+    text-decoration: underline
+
+
+// Modular Scale 22px @ 1:1.333
+// http://modularscale.com/scale/?px1=22&px2=&ra1=1.333&ra2=0
+
+$font-size-xs: 14px
+$font-size-s: 18px
+$font-size-base: 20px
+$font-size-m: 24px
+$font-size-l: 32px
+$font-size-xl: 52.11px
+
+$font-leading--base: 33px
+$font-leading--m: 2.3
+
+@mixin font-leading--base
+  line-height: $font-leading--base
+@mixin font-leading--m
+  line-height: $font-leading--m

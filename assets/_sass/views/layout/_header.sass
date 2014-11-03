@@ -1,0 +1,42 @@
+// HEADER //////////////////////////////////////////////////////////
+
+header.banner
+  display: block
+  padding: 33px 0 66px 0
+  @include font-mono
+  font-size: $font-size-s
+  // padding: 0 0 0 220px
+  a.brand
+    color: $color-red
+  img
+    display: none
+  nav
+    display: inline
+  ul.nav
+    +float-right
+    vertical-align: top
+    li
+      display: inline
+
+aside.aside
+  display: none
+  position: absolute
+  margin: 0
+  padding: 0
+  width: 200px
+  img
+    -webkit-border-radius: 140px
+    -moz-border-radius: 140px
+    border-radius: 140px
+  a.brand
+    display: block
+
+// HEADER //////////////////////////////////////////////////////////
+
+header.banner, aside.aside
+  // text-align: center
+  li
+    color: $color-midlayer
+
+aside.aside
+  text-align: left

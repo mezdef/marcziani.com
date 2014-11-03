@@ -1,0 +1,130 @@
+// @import "compass/typography"
+@import "compass/css3"
+// @import "variables"
+
+body
+  font-family: $font-serif
+  font-size: $font-size-base
+  line-height: 1.5
+  color: $color-base
+
+p
+  margin: 0 0 36px 0
+b
+strong
+i
+em
+  font-style: italic
+
+ul
+  list-style:none
+  margin: 0
+  -webkit-margin-before: 0
+  -webkit-padding-start: 0
+
+ol
+  list-style: decimal
+
+li
+  code
+    color: #000
+
+a
+  text-decoration: none
+  color: $color-crunch
+  &:hover
+    color: $color-red !important
+    text-decoration: none
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%, $color-red 50%)
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, $color-red 50%)
+    background-repeat: repeat-x
+    background-size: 2px 2px
+    background-position: 0 20px
+    // text-decoration: underline
+  // &:visited, &:active
+p>a
+  // border-bottom: 1px solid #fd5b5b
+  text-decoration: none
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%, $color-grey-neutral 50%)
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, $color-grey-neutral 50%)
+  background-repeat: repeat-x
+  background-size: 2px 2px
+  background-position: 0 20px
+
+sup, sub
+  padding-left: 2px
+  @include font-sans
+  font-size: $font-size-xs
+  line-height: 16.5px
+  vertical-align: baseline
+  position: relative
+  top: -0.4em
+  a
+    color: $color-crunch
+
+figure
+  // min-height: 297px
+  line-height: 0
+
+time
+  font-family: $font-mono
+  color: $color-grey-neutral
+
+blockquote
+  // font-size: $font-size-m
+  // line-height: $font-lineheight-base
+  // font-weight: 500
+  color: $color-grey-neutral
+  p
+    // @include font-serif-italic
+
+// HEADINGS ////////////////////////////////////////////////////////
+
+h1, h2, h3, h4, h5
+  font-family: $font-sans
+  // font-weight: 600
+  // color: $color-highlight
+  // color: $color-crunch
+
+h1
+  font-size: $font-size-l
+h2
+  padding: 0 0 11px 0
+  // @include font-serif-italic
+  font-size: $font-size-base
+  // color: $color-grey-dark
+  // font-weight: 400
+  line-height: 1.5
+
+
+// SELECTION ///////////////////////////////////////////////////////
+
+::-moz-selection
+  background: $color-red
+  color: white
+  text-shadow: none
+
+::selection
+  background: $color-red
+  color: white
+  text-shadow: none
+
+
+
+
+// 404 /////////////////////////////////////////////////////////////
+
+section.error
+  h1
+    @include font-sans
+    color: #FFF
+    font-size: 219.318px
+    line-height: 132px
+    font-weight: 700
+    font-style: italic
+    text-align: center
+    span
+      text-decoration: underline
+  h2
+    color: #FFF
+    text-align: center
