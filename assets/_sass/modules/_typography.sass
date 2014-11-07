@@ -62,9 +62,14 @@ blockquote
   // font-size: $font-size-m
   // line-height: $font-lineheight-base
   // font-weight: 500
-  color: $color-grey-neutral
+  padding: 0 0 33px 0
+  em
   p
-    // @include font-serif-italic
+    margin-left: -20px
+    padding: 0 0 0 20px
+    color: $color-grey-neutral
+    font-weight: 500
+    border-left: $border-structural
 
 // HEADINGS ////////////////////////////////////////////////////////
 
@@ -88,21 +93,32 @@ h2
 
 
 hr
-  padding: 0 0 33px 0
+  margin: 0
+  padding: 33px 0 66px 0
   border: 0px solid $color-white
   text-align: center
   line-height: 1px
   height: 1px
-  // border-width: 1px 0
-  // border-style: solid
-  // border-color: #676767
+  &:before
+    +clearfix
+    +inline-block
+    content: "~"
+    padding: 0 10px
+    height: 16px
+    width: 40px
+    +font-serif
+    font-size: 64px
+    line-height: 20px
+    background: $color-white
   &:after
     display: block
-    content: "\f111 \f111 \f111"
-    color: $color-grey-light
-    font-family: 'FontAwesome'
-    font-size: $font-size-xs
-    text-spacing
+    content: ""
+    margin-top: -18px
+    border-top: 1px solid $color-grey-light
+    // height: 15px
+    // width: 15px
+    // transform: rotate(90deg)
+    // border: 1px solid $color-grey-light
 
 // SELECTION ///////////////////////////////////////////////////////
 
