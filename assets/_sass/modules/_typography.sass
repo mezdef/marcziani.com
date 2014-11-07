@@ -32,26 +32,11 @@ li
     color: #000
 
 a
-  text-decoration: none
   color: $color-crunch
+  text-decoration: underline
   &:hover
     color: $color-red !important
-    text-decoration: none
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%, $color-red 50%)
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, $color-red 50%)
-    background-repeat: repeat-x
-    background-size: 2px 2px
-    background-position: 0 20px
-    // text-decoration: underline
-  // &:visited, &:active
-p>a
-  // border-bottom: 1px solid #fd5b5b
-  text-decoration: none
-  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%, $color-grey-neutral 50%)
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, $color-grey-neutral 50%)
-  background-repeat: repeat-x
-  background-size: 2px 2px
-  background-position: 0 20px
+    text-decoration: underline
 
 sup, sub
   padding-left: 2px
@@ -69,7 +54,8 @@ figure
   line-height: 0
 
 time
-  font-family: $font-mono
+  font-family: $font-sans
+  text-transform: uppercase
   color: $color-grey-neutral
 
 blockquote

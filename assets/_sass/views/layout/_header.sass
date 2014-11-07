@@ -3,11 +3,18 @@
 header.banner
   display: block
   padding: 33px 0 66px 0
-  font-size: $font-size-xxs
+  +font-sans
+  font-size: $font-size-s
   // padding: 0 0 0 220px
+  a
+    text-decoration: none
+    &:hover
+      text-decoration: underline
   a.brand
-    color: $color-red
-    font-size: $font-size-s
+    // color: $color-red
+    font-size: $font-size-m
+    font-style: italic
+    text-transform: uppercase
   img
     display: none
   nav
@@ -15,7 +22,7 @@ header.banner
   ul.nav
     +float-right
     text-transform: uppercase
-    font-weight: 500
+    // font-weight: 500
     letter-spacing: 1px
     vertical-align: top
     li
