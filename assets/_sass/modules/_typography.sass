@@ -34,6 +34,7 @@ li
 a
   color: $color-crunch
   text-decoration: underline
+  transition: .1s color linear
   &:hover
     color: $color-red !important
     text-decoration: underline
@@ -98,7 +99,7 @@ hr
   border: 0px solid $color-white
   text-align: center
   line-height: 1px
-  height: 1px
+  height: 16px
   &:before
     +clearfix
     +inline-block
@@ -113,7 +114,7 @@ hr
   &:after
     display: block
     content: ""
-    margin-top: -18px
+    margin-top: -8px
     border-top: 1px solid $color-grey-light
     // height: 15px
     // width: 15px
