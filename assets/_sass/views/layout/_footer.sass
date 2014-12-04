@@ -1,22 +1,46 @@
 // FOOTER //////////////////////////////////////////////////////////
 
 footer
+  position: relative
   display: block
   padding: 32px 0 33px 0
-  font-size: $font-size-s
+  font-size: $font-size--s
   +font-sans
   border-top: $border-structural
+
+
   span
-    font-size: $font-size-xs
+    font-size: $font-size--ss
   nav
     margin: 33px 0 0 0
     ul
       +inline-block-list
+      overflow: visible
       text-align: center
+    li
     a
+      position: relative
+      display: block
       margin: 0 0 0 33px
-      font-size: $font-size-m
-      color: $color-midlayer
+      width: 30px
+      height: 30px
+      border: 1px solid $color-grey--light
+      +font-size--m
+      color: $color-grey--dark
+      transform: rotate(45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)
+      &:hover
+        border: 1px solid $color-red
+      i
+        position: absolute
+        transform: rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)
+        &.fa-paper-plane
+          margin: 8px 0 0 -9px
+        &.fa-github
+          margin: 4px 0 0 -9px
+          +font-size--l
+        &.fa-twitter
+          margin: 4px 0 0 -9px
+          +font-size--l
     li:first-of-type
       a
         margin: 0

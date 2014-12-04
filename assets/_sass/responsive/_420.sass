@@ -1,0 +1,52 @@
+@media only screen and (max-width: 420px)
+  body
+    // width: 280px
+    +font-size--s
+    +font-leading--s
+    main
+      padding: 0 30px
+      article header h2
+        text-align: left
+    header.banner
+      // padding: 33px 0
+      text-align: center
+      a.brand
+        display: block
+      ul.nav
+        float: none
+    section.listing
+      a
+        display: inline
+        width: auto
+      time
+        float: none
+    h1
+      font-size: $font-size--l
+      line-height: 49.5px
+      text-align: center
+    h2
+      padding: 24.75px 0 8.25px 0
+      font-size: $font-size--m
+    blockquote
+      margin-left: -10px
+      padding-left: 10px
+      font-size: $font-size--m
+    article
+      margin: 0 0 66px 0
+      header
+        h2
+          font-size: $font-size--ss
+          line-height: 1.5
+          text-align: center
+        time
+          position: relative
+          margin: 16.5px auto 0 auto
+          right: auto
+          bottom: auto
+          display: block
+          text-align: center
+          &:before, &:after
+            margin: 0 auto
+      section>p:first-of-type
+        +font-size--m
+        +font-leading--m

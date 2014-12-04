@@ -2,23 +2,29 @@
 
 header.banner
   display: block
-  padding: 33px 0 66px 0
+  padding: 33px 40px 66px 40px
   +font-sans
-  font-size: $font-size-s
+  font-size: $font-size--s
   // padding: 0 0 0 220px
   a
+    +inline-block
+    line-height: $font-leading--m
     text-decoration: none
     &:hover
       text-decoration: underline
   a.brand
     // color: $color-red
-    font-size: $font-size-m
+    // padding: 3px 14px 0 14px
+    font-size: $font-size--m
     font-style: italic
     text-transform: uppercase
+    // border: 1px solid $color-grey--dark
+    &:hover
+      // text-decoration: none
+      // border: 1px solid $color-red
   img
     display: none
   nav
-    display: inline
   ul.nav
     +float-right
     text-transform: uppercase
