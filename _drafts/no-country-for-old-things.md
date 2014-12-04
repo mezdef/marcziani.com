@@ -6,15 +6,15 @@ layout: post
 
 What do the number and nature of your posessions mean, and how do you think about them?
 
-Several months ago, starting down the prospect of a move overseas with little more than suitcase in-hand and trusty backpack stuffed to the brim, the prospects of packing loomed large—after all, two bags is not much for all one's worldly possessions. A not-inconsiderable period of sorting, categorising, and packing everything into either bags or boxes lay ahead; Deciding what was not nessecary for every-day living—i.e. what I would be taking with me, and what would stay—could not be put off.
+Several months ago, starting down the maw of a move overseas with little more than suitcase in-hand and trusty backpack stuffed to the brim, the prospects of packing loomed large—after all, two bags is not much for all one's worldly possessions. A not-inconsiderable period of sorting, categorising, and packing lay ahead; Deciding what was nessecary for every-day living could not be put off: i.e. what would stay and what would go.
 
-Once once the pondering has begun, the rabbit hole begins to reveal its self: How often do I use this? Where did this come from? Don’t I already have, like, 4 of these things?  These questions (and many more) make the consideration of exactly how much you need to get along with life (and if you wouldn’t be better off without most of it anyway) all the easier.
+Once even the barest of inroads had been made, the rabbit hole begun to reveal its self: *How often do I use this? Where did this come from? Don’t I already have, like, 4 of these things?*  These and simliar questions are usefull shortcut to the consideration of exactly how much is required for the living of life and being yourself.
 
-It is at this point, that queries relating to the ill-defined minimalism loom large, and one wonders “I love these books, but how many of them can I fit in my suitcase?"
+It is at this point that questions relating to the oft-nebulous minimalism loom large, and one begins to wonder “*I love these books, how many of them can I fit into my suitcase?*"
 
 ---
 
-The pack-discard-move cycle seems—if one listens to the resigned groans of friends—to be one of the more execrable experiences involved with a household move. Much of this depends—as do many things in life—on the formative years spent in a home environment. More often than not, those habits ingrained early will stick, leading one down myriad paths along the Pack Rat to Minimalist spectrum, shaped and shifted by experience gained along the way. That is not to say, however, that a shift from the former to the latter (or visa versa for that matter) at any time is out of the question.
+The pack-discard-move cycle seems—if one listens to the resigned lamentations of friends—to be among the more execrable experiences involved with a household move. Much of this seems to depend on the formative years spent in a home environment. More often than not, those habits ingrained early will stick, leading one down myriad paths along the Pack Rat to Minimalist spectrum, shaped and shifted by experience gained along the way. That is not to say, however, that a shift from the former to the latter (or visa versa for that matter) at any time is out of the question.
 
 In some cases, living situations will reenforce certain habits: i.e. shoebox studio apartment living tends to entail limited storage space, where as a multi-bedroom house provides allows clutter to spread. When it comes time for a move, the current living situation will have a large impact on the amount of work to be done.
 

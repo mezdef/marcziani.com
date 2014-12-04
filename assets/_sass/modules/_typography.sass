@@ -6,7 +6,7 @@ body
   font-family: $font-serif
   font-size: $font-size--m
   line-height: $font-leading--m
-  color: $color-base
+  color: $color-grey--dd
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
@@ -66,18 +66,22 @@ figure
 time
   font-family: $font-sans
   text-transform: uppercase
-  color: $color-grey-neutral
+  color: $color-grey--m
 
 blockquote
   // font-size: $font-size--m
   // line-height: $font-lineheight-base
   // font-weight: 500
   +margin-bottom--m
+  color: $color-grey--mm
+  font-style: italic
+  &:hover
+    color: $color-grey--dd
+
   em
   p
     margin-left: -20px
     padding: 0 0 0 20px
-    color: $color-grey-neutral
     font-weight: 500
     border-left: $border-structural
 
@@ -101,12 +105,13 @@ h2
 
 
 hr
-  margin: 0
-  padding: 33px 0 66px 0
-  border: 0px solid $color-white
-  text-align: center
-  line-height: 1px
+  margin: 0 auto
+  padding: 30px 0 60px 0
   height: 16px
+  width: 35%
+  line-height: 1px
+  text-align: center
+  border: 0px solid $color-white
   &:before
     +clearfix
     +inline-block
@@ -115,6 +120,7 @@ hr
     height: 16px
     width: 40px
     +font-serif
+    color: $color-grey--m
     font-size: 64px
     line-height: 20px
     background: $color-white
@@ -122,11 +128,11 @@ hr
     display: block
     content: ""
     margin-top: -8px
-    border-top: 1px solid $color-grey--light
+    border-top: 1px solid $color-grey--l
     // height: 15px
     // width: 15px
     // transform: rotate(90deg)
-    // border: 1px solid $color-grey--light
+    // border: 1px solid $color-grey--l
 
 // SELECTION ///////////////////////////////////////////////////////
 
