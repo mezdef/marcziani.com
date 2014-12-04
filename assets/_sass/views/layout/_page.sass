@@ -1,29 +1,48 @@
+html
+  height: 100%
+  width: 100%
+
+body
+  position: relative
+  margin: 0 auto
+  width: 620px
+
+main
+  // width: 660px
+  padding: 0 40px
+
 // LISTING /////////////////////////////////////////////////////////
 
 article
-  margin: 0 0 99px 0
+  margin: 0 0 120px 0
   header
     position: relative
-    margin: 0 0 33px 0
+    +margin-bottom--m
+    padding-top: 60px
 
     &:after
-      content: ""
-      display: block
+      // content: ""
+      // display: block
       // margin-left: 90px
-      width: 40px
-      border-top: $border-structural
+      // width: 40px
+      // border-top: $border-structural
 
     h1
       // color: $color-red
+      line-height: $font-leading--l
     h2
+      // position: absolute
       margin: 0
       padding: 0
+      width: 100%
+      bottom: 0
       // color: $color-grey-neutral
       // font-family: $font-mono
 
       text-transform: uppercase
       font-style: normal
-      font-size: $font-size-xxs
+      +font-size--sss
+      +font-leading--s
       font-weight: 500
       letter-spacing: 1px
       // line-height: 33px
@@ -31,20 +50,29 @@ article
 
     time
       position: absolute
-      width: 130px
-      bottom: -66px
-      left: -150px
-      text-align: right
+      display: block
+      width: 100%
+      top: 0
+      font-size: $font-size--ss
+      line-height: $font-leading--m
+      text-align: center
+      span
+        z-index: 1
+        background: $color-white
+        &:nth-of-type(1)
+          padding-left: 10px
+        &:nth-of-type(3)
+          padding-right: 10px
       &:before, &:after
         content: ""
         display: block
-        margin-left: 90px
-        width: 40px
         border-top: $border-structural
       &:before
-        margin-bottom: -1px
+        z-index: -1
+        margin: 0 0 -15px 0
+        width: 100%
       &:after
-        margin-top: -1px
+        display: none
 
   .content > p:first-child, .content > figure:first-child
     font-weight: 500
@@ -65,18 +93,18 @@ article
         padding: 0 20px
         background: #FFF
   section
-    margin: 0 0 10px 0
+    // margin: 0 0 10px 0
     >p:first-of-type
       // @include font-sans
-      font-size: $font-size-m
-      line-height: $font-leading--base
+      +font-size--l
+      +font-leading--l
       color: $color-crunch
       >a
         background-position: 0 24px
       // font-weight: 500
       // font-family: $font-sans
     li[id*='fn:']
-      font-size: $font-size-xs
+      font-size: $font-size--ss
       a:last-of-type
         color: $color-lowlight
         text-decoration: none
@@ -95,9 +123,6 @@ article
       // font-weight: 700
     h2
       // letter-spacing: .01rem
-    time
-      font-size: $font-size-xs
-      line-height: $font-leading--base
       span
         // font-size: 14px
         // line-height: 21px

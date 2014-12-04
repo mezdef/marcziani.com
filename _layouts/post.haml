@@ -9,7 +9,12 @@
           %h1 {{ page.title }}
           %h2 {{ page.subtitle }}
           %time
-            {{ page.date | date_to_long_string }}
+            %span
+              {{ page.date | date: '%d' }}
+            %span
+              {{ page.date | date: '%B' }}
+            %span
+              {{ page.date | date: '%Y' }}
         %section
           {{ content | stripem }}
 

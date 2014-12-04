@@ -4,14 +4,14 @@
 
 body
   font-family: $font-serif
-  font-size: $font-size-base
-  line-height: 1.9
+  font-size: $font-size--m
+  line-height: $font-leading--m
   color: $color-base
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
 p
-  margin: 0 0 36px 0
+  +margin-bottom--m
 b
 strong
 i
@@ -28,7 +28,16 @@ ol
   list-style: decimal
 
 li
+  position: relative
   code
+    margin: 0 0 5px 0
+    padding: 3px 6px
+    display: inline-block
+    background: #F9F9F9
+    border: 1px solid #CCC
+    -webkit-border-radius: 2px
+    moz-border-radius: 2px
+    border-radius: 2px
     color: #000
 
 a
@@ -42,7 +51,7 @@ a
 sup, sub
   padding-left: 2px
   @include font-sans
-  font-size: $font-size-xs
+  font-size: $font-size--ss
   line-height: 16.5px
   vertical-align: baseline
   position: relative
@@ -60,10 +69,10 @@ time
   color: $color-grey-neutral
 
 blockquote
-  // font-size: $font-size-m
+  // font-size: $font-size--m
   // line-height: $font-lineheight-base
   // font-weight: 500
-  padding: 0 0 33px 0
+  +margin-bottom--m
   em
   p
     margin-left: -20px
@@ -83,14 +92,12 @@ h1, h2, h3, h4, h5
   font-style: italic
 
 h1
-  font-size: $font-size-l
+  +font-size--ll
+  +font-leading--ll
 h2
   padding: 0 0 16px 0
-  // @include font-serif-italic
-  font-size: $font-size-m
-  // color: $color-grey-dark
-  // font-weight: 400
-  line-height: 1.5
+  +font-size--l
+  +font-leading--l
 
 
 hr
@@ -115,11 +122,11 @@ hr
     display: block
     content: ""
     margin-top: -8px
-    border-top: 1px solid $color-grey-light
+    border-top: 1px solid $color-grey--light
     // height: 15px
     // width: 15px
     // transform: rotate(90deg)
-    // border: 1px solid $color-grey-light
+    // border: 1px solid $color-grey--light
 
 // SELECTION ///////////////////////////////////////////////////////
 
