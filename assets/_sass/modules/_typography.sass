@@ -69,21 +69,32 @@ time
   color: $color-grey--m
 
 blockquote
-  // font-size: $font-size--m
-  // line-height: $font-lineheight-base
-  // font-weight: 500
+  position: relative
   +margin-bottom--m
   color: $color-grey--mm
   font-style: italic
   &:hover
-    color: $color-grey--dd
-
+    p, cite
+      color: $color-grey--dd
+  cite
+    // position: absolute
+    display: block
+    bottom: 0
+    +font-sans
+    color: $color-grey--mm
+    font-size: $font-size--s
+    line-height: 1.3
+    text-align: right
   em
   p
     margin-left: -20px
+    margin-bottom: 0
     padding: 0 0 0 20px
     font-weight: 500
     border-left: $border-structural
+    &:last-of-type
+      border-left: none
+      +margin-bottom--m
 
 // HEADINGS ////////////////////////////////////////////////////////
 

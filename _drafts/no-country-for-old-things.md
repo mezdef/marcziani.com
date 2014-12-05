@@ -10,19 +10,21 @@ Several months ago, starting down the maw of a move overseas with little more th
 
 Once even the barest of inroads had been made, the rabbit hole begun to reveal its self: *How often do I use this? Where did this come from? Don’t I already have, like, 4 of these things?*  These and simliar questions are usefull shortcut to the consideration of exactly how much is required for the living of life and being yourself.
 
-It is at this point that questions relating to the oft-nebulous minimalism loom large, and one begins to wonder “*I love these books, how many of them can I fit into my suitcase?*"
+It is at this point that questions relating to the oft-nebulous [minimalism][L1] loom large, and one begins to wonder “*I love these books, how many of them can I fit into my suitcase?*"
 
 ---
 
-The pack-discard-move cycle seems—if one listens to the resigned lamentations of friends—to be among the more execrable experiences involved with a household move. Much of this seems to depend on the formative years spent in a home environment. More often than not, those habits ingrained early will stick, leading one down myriad paths along the Pack Rat to Minimalist spectrum, shaped and shifted by experience gained along the way. That is not to say, however, that a shift from the former to the latter (or visa versa for that matter) at any time is out of the question.
+The pack-discard-move cycle seems—if one listens to the resigned lamentations of friends—to be among the more execrable experiences involved with a household move. Much of this seems to depend on the formative years of life spent learning by example. More often than not, those habits ingrained early will stick though maturation leading to a line along the Pack Rat to Minimalist spectrum; Shaped and shifted by experience gained along the way, these habbits often reflect personal habits in subtle ways. That is not to say that a shift from one to the other, either forced by circumstance or self-initiated, is at any time is out of the question.
 
-In some cases, living situations will reenforce certain habits: i.e. shoebox studio apartment living tends to entail limited storage space, where as a multi-bedroom house provides allows clutter to spread. When it comes time for a move, the current living situation will have a large impact on the amount of work to be done.
+The living situation in which a person finds themselves reenforce certain habits; studio apartment living entails close quaters and limited storage space, where as a multi-bedroom house encourages the room to be filled lest it feel 'empty'. When it comes time for a move, the currently occupied space and how you have populated it will—to a large extent—dictate the work ahead.
 
-Having made similar moves previously (house to apartment), the usual pack and move requires the shedding (or perhaps just leaving) of possessions to suit new circumstances. When these decisions are upon you, the collection of 'stuff' you have becomes the bundle of individual items that must be sorted though, boxed up, and then deployed to a new location.
+Having made similar moves previously (house to apartment, appartment to smaller appartment), the usual pack and move requires the shedding (or perhaps just leaving) of possessions to suit new circumstances. When these decisions are nigh, the totality of your belongings becomes the bundles of individual items that must be sorted though, boxed up, and then dispatched to a new location.
 
-While categorizing, assessing, and filing your personal assets, stopping to ponder the various objects that pass on by, and how they were acquired proves an interesting exercise. Do I need this? How often do I use this? Such surface level questions are useful for the purposes of sorting. Gifts tend to be harder to discard, less frequently used items easier. But, should one choose to venture deeper into the rabbit hole, the questions become at once somewhat less practical and more philosophical: What does the volume and nature of my possessions say about me?
+While categorizing, assessing, and filing, stopping to ponder the various objects that pass on by is almost an inevatibility; How they were acquired and why have they stuck around? Such surface level questions are useful for the purposes of sorting. Gifts tend to be harder to discard, less frequently used items bought on a whim easier. But, should one wish to venture deeper, the questions become at once somewhat less practical and more philosophical: What does the volume and nature of my possessions say about me?
 
 > “These are my things, and I like to be surrounded by them. I do some things with these things, but the main thing I to with these things is be me."
+>
+> <cite>—Sheely</cite>
 
 This consideration of possessions is referred to (and discussed at length in relation to questions of the nomadic lifestyle) as the ‘Infrastructure of Identity’ by Wrather and Sheely on the TFT Podcast episode 91. They posit that of the totality of personal possessions, only a core selection are essential to getting work done, to being comfortable, and being ‘myself'.
 
@@ -73,3 +75,5 @@ Once some form of goal is established—or at least worked towards—there is th
 This new found mindfulness is all well and good, but having re-settled, the inevitable accumulation of possessions sets in. New clothes for different climates and new seasons, cooking utensils and ingredients, electronic detritus of all colors begin to pile up bit by bit without realizing. This is natural, and ideally several coping mechanisms will help keep these developments at least semi conscious. Indeed, the value of minimalism (or whatever form or definition of minimalism is decided on) is not unto its self, but rather the mental space it creates. Impulse purchases will still plague budgets, but perhaps not as before, and the infrastructure that enables doing the things you do thrown into relief.
 
 In the final analysis, without appropriate consideration reduction becomes an end unto it’s self, a self perpetuating machine powered an abstract concept. The process its self being the true source of personal value; transforming from a state of mental morass, where decisions and lifestyles are decided unconsciously—by instinct: the impulses to gather, increase, and grow shift to conscious thought and action. Even if that mens the decision to have more things in order to be yourself.
+
+[L1]:http://en.wikipedia.org/wiki/Minimalism
