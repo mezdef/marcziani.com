@@ -49,15 +49,17 @@ a
     text-decoration: underline
 
 sup, sub
-  padding-left: 2px
-  @include font-sans
-  font-size: $font-size--ss
-  line-height: 16.5px
-  vertical-align: baseline
   position: relative
+  padding-left: 4px
   top: -0.4em
+  +font-sans
+  +font-size--s
+  +font-leading--sss
+  font-weight: 500
+  vertical-align: baseline
   a
-    color: $color-crunch
+    color: $color-grey--dd
+    text-decoration: none
 
 figure
   // min-height: 297px
@@ -76,6 +78,8 @@ blockquote
   &:hover
     p, cite
       color: $color-grey--dd
+      a
+        color: $color-grey--ddd
   cite
     // position: absolute
     display: block
@@ -85,6 +89,8 @@ blockquote
     font-size: $font-size--s
     line-height: 1.3
     text-align: right
+    a
+      color: $color-grey--mmm
   em
   p
     margin-left: -20px
@@ -126,24 +132,16 @@ hr
   &:before
     +clearfix
     +inline-block
-    content: "~"
+    content: "* * *"
     padding: 0 10px
     height: 16px
-    width: 40px
-    +font-serif
-    color: $color-grey--m
-    font-size: 64px
-    line-height: 20px
+    width: auto
+    color: $color-grey--dd
+    +font-sans
+    +font-size--l
+    +font-leading--l
     background: $color-white
-  &:after
-    display: block
-    content: ""
-    margin-top: -8px
-    border-top: 1px solid $color-grey--l
-    // height: 15px
-    // width: 15px
-    // transform: rotate(90deg)
-    // border: 1px solid $color-grey--l
+
 
 // SELECTION ///////////////////////////////////////////////////////
 

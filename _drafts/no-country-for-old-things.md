@@ -1,20 +1,20 @@
 ---
 title: No Country for Old Things
-subtitle: "On posessions and identity"
+subtitle: "On possessions and identity"
 layout: post
 ---
 
 What do the number and nature of your possessions mean, and how do you think about them?
 
-Several months ago, starting down the maw of a move overseas with little more than suitcase in-hand and trusty backpack stuffed to the brim, the prospects of packing loomed large—after all, two bags is not much for all one's worldly possessions. A not-inconsiderable period of sorting, categorising, and packing lay ahead; Deciding what was necessary for every-day living could not be put off: i.e. what would stay and what would go.
+Several months ago, starting down the maw of a transcontinental move with little more than suitcase in-hand and trusty backpack stuffed to the brim, the prospects of packing loomed large—after all, two bags is not much for all one's worldly possessions. A not-inconsiderable interstitial period of sorting, categorising, and packing lay ahead; Deciding what was necessary for every-day living could not be put off: i.e. what would stay and what would go.
 
-Once even the barest of inroads had been made, the rabbit hole begun to reveal its self: *How often do I use this? Where did this come from? Don’t I already have, like, 4 of these things?*  These and simliar questions are useful shortcut to the consideration of exactly how much is required for the living of life and being yourself.
+Once even the barest of inroads had been made, the rabbit hole begun to yawn wide: *How often do I use this?* goes into the maybe pile; *Where did this come from?* is flung into the corner; *Don’t I already have, like, 4 of these things?* heads straight for the donation pile. These questions all eventuall stumble into to the consideration of exactly how much is required for the living of life and being yourself.
 
-It is at this point that questions relating to the oft-nebulous [minimalism][L1] loom large, and one begins to wonder “*I love these books, how many of them can I fit into my suitcase?*"
+It is at this point that questions relating to the oft-nebulous [minimalism][L1] loom large, and one begins to wonder *how many books can I fit into my suitcase?*
 
 ---
 
-The pack-discard-move cycle seems—if one listens to the resigned lamentations of friends—to be among the more execrable experiences involved with a household move. Much of this seems to depend on the formative years of life spent learning by example. More often than not, those habits ingrained early will stick though maturation leading to a line along the Pack Rat to Minimalist spectrum; Shaped and shifted by experience gained along the way, these habits often reflect personal habits in subtle ways. That is not to say that a shift from one to the other, either forced by circumstance or self-initiated, is at any time is out of the question.
+The pack-discard-move cycle seems—if one listens to the resigned lamentations of friends—to be among the more execrable experiences associated with a household move. Much of this seems to depend on the formative years of life spent learning by example. More often than not, those habits ingrained early will stick though maturation leading down a line somewhere along the Pack Rat to Minimalist spectrum; Shaped and shifted by experience gained along the way, these habits often reflect personal habits in subtle ways. That is not to say that a shift from one to the other—either corralled by circumstance or self-initiated—is at any time is out of the question.
 
 The living situation in which a person finds themselves reenforce certain habits; studio apartment living entails close quarters and limited storage space, where as a multi-bedroom house encourages the room to be filled lest it feel 'empty'. When it comes time for a move, the currently occupied space and how you have populated it will—to a large extent—dictate the work ahead.
 
@@ -60,7 +60,17 @@ For more practical considerations, what could one expect to gain as a direct con
 
 ---
 
-The march towards reduction is a series is all very well, but what of living with those decisions? Lifestyle choices are often constrained by practical limitations related to occupation, income, culture, and long-term commitments. Happily, minimalism without the bells and whistles is a practice that can be achieved without regard to many of those factors. If circumstances align to allow a flexible lifestyle, then reduction can be a way to accelerate those choices.
+Thus far, an assumed result of the evaluated collection is that of reduction, but what if the peripherals that minimalism eschews are, in fact, an integral part of your infrastructure; What if life accrues in the cracks littered with souvenirs and baubles? Like king Midas desires for more, minimalism assumes the same of less[^4]—but is this correct?
+
+Certainly, there is an argument for ensconcement within a larger array: when the stationary banditry of adulthood[^5] trumps mobility or any sense of fulfillment the trappings of a minimalist lifestyle brings. The collection of a diverse range of hobbies often means specific sets of tools associated with each, and a lifetime of memories is not always best served by photos on a hard drive. But even for those to whom the possibility of less is desirable, the conscious decision to live a maximalist lifestyle is not in arrears.
+
+If such a dichotomy exists between minimal and maximal lifestyles, then a change from one to the other surely must involve some form of mental sculpting. Does freeing yourself from clutter mean you will finally be [ready to write][L5], will your mind be clearer? Conversely, one wonders if a journey in the opposite direction could act as a form of relaxation,[^6] a freeing of contraints. To follow this line of thinking, might the perception of self also undergoe a change based on a movement in one direction or the other?
+
+Unfortunately the answers to these questions are hard to answer, especially at the ability to see outside ones' self and judge the difference between a past and current mental state is no mean feat. These questions are almost certainly up to the individual, and best answered through personal experimentation and reflection.[^7]
+
+---
+
+The march towards reduction is all very well, but what of living with those decisions? Lifestyle choices are often constrained by practical limitations related to occupation, income, culture, and long-term commitments. Happily, minimalism without the bells and whistles is a practice that can be achieved without regard to many of those factors. If circumstances align to allow a flexible lifestyle, then reduction can be a way to accelerate those choices.
 
 Perhaps most importantly, reduction introduces a necessary mindfulness to everyday consumption; If the goal is a lesser amount of things—reasons aside—then a certain amount of consideration is required to either reduce to a given volume or maintain a desired level. One of the main reasons why many find it difficult or undesirable (simply not worth their while—after all, it’s not a ‘problem’ that everyone needs to solve) to achieve a form of minimalism is that the  amount of mental effort involved is a significant hurdle: loosing that object you love but has no purpose other than sunk-cost is no easy task. The other lingering questions ‘*how much should I reduce by*’ and ‘*at what point is this process complete*’ are not easily answerable, and ultimately up to the individual.
 
@@ -72,13 +82,18 @@ Once some form of goal is established—or at least worked towards—there is th
 
 A new found mindfulness is all well-and-good, but having re-settled or finished pruning, the inevitable accumulation of possessions sets in anew. New clothes for different climates and new seasons, cooking utensils and ingredients, electronic detritus of all colors begin to pile up bit-by-bit without realizing. Several coping mechanisms will help keep these developments at least semi conscious— indeed, the value of minimalism (or whatever form or definition of minimalism is decided on) is not unto its self, but rather the mental space it creates. Impulse purchases will still plague budgets, but perhaps not as before, and the infrastructure that enables doing the things you do thrown into relief.
 
-In the final analysis—without appropriate consideration —reduction becomes an end unto it’s self, a self perpetuating machine powered an abstract concept. The process being the true source of personal value; Transforming from a state of mental morass, where decisions and lifestyles are decided unconsciously, or by instinct. The impulses to gather, increase, and grow shift to conscious thought and action—even if that means the decision to have more things in order to be yourself.
+In the final analysis—without appropriate consideration —reduction becomes an end unto it’s self, a self perpetuating machine powered by an abstract concept. The process being the true source of personal value; Transforming from a state of mental morass, where decisions and lifestyles are decided unconsciously, or by instinct. The impulses to gather, increase, and grow shift to conscious thought and action—even if that means the decision to have more things in order to be yourself.
 
 [L1]:http://en.wikipedia.org/wiki/Minimalism
 [L2]:http://www.overthinkingit.com/2014/01/22/tft-episode-91/
 [L3]:http://guynameddave.com/about-the-100-thing-challenge/
 [L4]:http://theproject333.com/
+[L5]:http://5by5.tv/b2w/102
 
 [^1]: Happily the latter two somewhat overlap in my case
 [^2]: I cheated here somewhat as I left the essentials behind for safe keeping
 [^3]: On a personal level, the benefits have been: a greater mindfulness of what I choose to use and purchase, and the care and thought given to each possession. Ultimately, given enough thought, the benefits of a smaller collection of essentials far outweighs that of the larger.
+[^4]: but not necessarily gold
+[^5]: Stationary Banditry of Adulthood
+[^6]: Retail therapy
+[^7]: For the sake of simplicity and brevity, this essay shall assume—rightly or wrongly—that less is, at the least, desirable.
