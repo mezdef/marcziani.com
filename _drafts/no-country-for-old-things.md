@@ -8,7 +8,7 @@ What do the number and nature of your possessions mean, and how do you think abo
 
 Several months ago, starting down the maw of a transcontinental move with little more than suitcase in-hand and trusty backpack stuffed to the brim, the prospects of packing loomed large—after all, two bags is not much for all one's worldly possessions. A not-inconsiderable interstitial period of sorting, categorising, and packing lay ahead; Deciding what was necessary for every-day living could not be put off: i.e. what would stay and what would go.
 
-Once even the barest of inroads had been made, the rabbit hole begun to yawn wide: *How often do I use this?* goes into the maybe pile; *Where did this come from?* is flung into the corner; *Don’t I already have, like, 4 of these things?* heads straight for the donation pile. These questions all eventuall stumble into to the consideration of exactly how much is required for the living of life and being yourself.
+Once even the barest of inroads had been made, the rabbit hole begun to yawn wide: *How often do I use this?* goes into the maybe pile; *Where did this come from?* is flung into the corner; *Don’t I already have, like, 4 of these things?* heads straight for the donation pile. These questions all eventual stumble into to the consideration of exactly how much is required for the living of life and being yourself.
 
 It is at this point that questions relating to the oft-nebulous [minimalism][L1] loom large, and one begins to wonder *how many books can I fit into my suitcase?*
 
@@ -42,7 +42,7 @@ The impetus for this starting down this path is typically brought about by some 
 
 The simple questions *What do I need for tonight and the next few days?*, and subsequently *What can I move in the following weeks?* are necessary on a purely practical level. Basic considerations of need and want turn out to be an effective way of separating those items that enable you to be 'yourself’ from the sea of ‘stuff’ you passively possess. The immediate benefit of such a separation is that a move is relatively easy and pain free. In the following days and weeks, it becomes increasingly apparent that the portion left out of the initial move is, in fact, non-essential. How do years of accumulation suddenly become unnecessary?
 
-The answer—unsurprisingly—is that much of what accumulates, despite valiant efforts to the contrary, is superfluous. In the end, a wardrobe for sports, work, and casual wear[^1] is all that is needed. Electronics can be reduced to the bare essential cables and devices necessary for work and play. An entire bookshelf[^2] compressed to an eReader virtually stuffed full of books.
+The answer—unsurprisingly—is that much of what accumulates, despite valiant efforts to the contrary, is superfluous. In the end, a wardrobe for sports, work, and casual wear is all that is needed.[^1] Electronics can be reduced to the bare essential cables and devices necessary for work and play. An entire bookshelf[^2] compressed to an eReader virtually stuffed full of books.
 
 ---
 
@@ -60,13 +60,13 @@ For more practical considerations, what could one expect to gain as a direct con
 
 ---
 
-Thus far, an assumed result of the evaluated collection is that of reduction, but what if the peripherals that minimalism eschews are, in fact, an integral part of your infrastructure; What if life accrues in the cracks littered with souvenirs and baubles? Like king Midas desires for more, minimalism assumes the same of less[^4]—but is this correct?
+Thus far, an assumed result of an evaluation of belongings is that of reduction, but what if the peripherals that minimalism eschews are, in fact, an integral part of your infrastructure; What if life accrues in the cracks littered with souvenirs and baubles? Much as dragon assumes the good in a greater pile upon which to lie, minimalism assumes the same of less[^4]—but is this strictly correct?
 
 Certainly, there is an argument for ensconcement within a larger array: when the stationary banditry of adulthood[^5] trumps mobility or any sense of fulfillment the trappings of a minimalist lifestyle brings. The collection of a diverse range of hobbies often means specific sets of tools associated with each, and a lifetime of memories is not always best served by photos on a hard drive. But even for those to whom the possibility of less is desirable, the conscious decision to live a maximalist lifestyle is not in arrears.
 
-If such a dichotomy exists between minimal and maximal lifestyles, then a change from one to the other surely must involve some form of mental sculpting. Does freeing yourself from clutter mean you will finally be [ready to write][L5], will your mind be clearer? Conversely, one wonders if a journey in the opposite direction could act as a form of relaxation,[^6] a freeing of contraints. To follow this line of thinking, might the perception of self also undergoe a change based on a movement in one direction or the other?
+If such a dichotomy exists between minimal and maximal lifestyles, then a change from one to the other surely must involve some form of mental sculpting. Does freeing yourself from clutter mean you will finally be [ready to write][L5], will your mind be clearer? Conversely, one wonders if a journey in the opposite direction could act as a form of relaxation,[^6] a freeing of constraints. To follow this line of thinking, might the perception of self also undergo a change based on a movement in one direction or the other?
 
-Unfortunately the answers to these questions are hard to answer, especially at the ability to see outside ones' self and judge the difference between a past and current mental state is no mean feat. These questions are almost certainly up to the individual, and best answered through personal experimentation and reflection.[^7]
+Unfortunately the answers to these questions are not easy, especially as the ability to see outside ones' self and judge the difference between a past and current mental state is no mean feat. These questions are almost certainly up to the individual, and best answered through personal experimentation and reflection.[^7]
 
 ---
 
@@ -89,11 +89,13 @@ In the final analysis—without appropriate consideration —reduction becomes a
 [L3]:http://guynameddave.com/about-the-100-thing-challenge/
 [L4]:http://theproject333.com/
 [L5]:http://5by5.tv/b2w/102
+[L6]:http://dcurt.is/the-best
+[L7]:http://en.wikipedia.org/wiki/Retail_therapy
 
-[^1]: Happily the latter two somewhat overlap in my case
-[^2]: I cheated here somewhat as I left the essentials behind for safe keeping
-[^3]: On a personal level, the benefits have been: a greater mindfulness of what I choose to use and purchase, and the care and thought given to each possession. Ultimately, given enough thought, the benefits of a smaller collection of essentials far outweighs that of the larger.
-[^4]: but not necessarily gold
-[^5]: Stationary Banditry of Adulthood
-[^6]: Retail therapy
-[^7]: For the sake of simplicity and brevity, this essay shall assume—rightly or wrongly—that less is, at the least, desirable.
+[^1]: Happily, both work and casualwear somewhat overlap, which makes things far simpler on the whole.
+[^2]: It's worth noting that I did cheat here, as I left the few books I thought were worth keeping physical copies of in storage.
+[^3]: A new found mindfulness of what I choose to surround myself has meant an increase in both the time devoted to the consideration of each new purchase, and the maintenance of those belongings. Focusing on buying one item that is not intended to be replaced, but rather maintained and used regularly and [performs its task in an exemplary manner][L6].
+[^4]: If we ascribe a dragon as the avatar of Maximalism, then what should come to represent minimalism? A Knight seems appropriate given St. George—perhaps.
+[^5]: This great turn of phrase is shamelessly lifted from the [TFT episode mentioned earlier in this piece][L2]. It generally refers to the propensity—or at least expectation—for adulthood to involve less geographical movement and greater physical ties than that of adolescence or early adulthood.
+[^6]: The opposite direction may be some form of [Retail Therapy], but that dosen't nessecarily cast an illuminating light on identity so much as compulsion.
+[^7]: For the sake of simplicity and brevity, this essay shall assume—rightly or wrongly—that less is, at the least, some form of good.
