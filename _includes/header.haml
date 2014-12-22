@@ -3,9 +3,28 @@
     %a.brand{href: "/"}
       %span.logo
       Marc Ziani de Ferranti
+
+    {% assign current = page.url | downcase | split: '/' %}
     %ul.nav
       %li
+        {% if current[1] == "about" %}
+        %a.active{href: "/about"}> About
+        {% else %}
         %a{href: "/about"}> About
-      %li>= ",&nbsp;"
+        {% endif %}
+      %li —
       %li
+        {% if current[1] == "writing" %}
+        %a.active{href: "/"}> Writing
+        {% elsif current[1].nil? %}
+        %a.active{href: "/"}> Writing
+        {% else %}
         %a{href: "/"}> Writing
+        {% endif %}
+      %li —
+      %li
+        {% if current[1] == "projects" %}
+        %a.active{href: "/projects"}> Projects
+        {% else %}
+        %a{href: "/projects"}> Projects
+        {% endif %}

@@ -1,14 +1,16 @@
 == ---
-title: Hello, World!
+title: Marc Ziani de Ferranti // Projects
 layout: listing
+permalink: projects/
 == ---
 
-%article.listing
+%article.projects.listing
   %section
     %ul
-      == {% for post in site.categories.writing %}
+      == {% for post in site.categories.projects %}
       %li
         %a{ href: "{{ post.url }}" }
           == {{ post.title }}
+        %img{ src: "{{ post.thumbnail }}"}
         %time {{ post.date | date: "%b %Y" }}
       == {% endfor %}
