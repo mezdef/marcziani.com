@@ -13,12 +13,9 @@ header.banner
     &:hover
       text-decoration: underline
   a.brand
-    // color: $color-red
-    // padding: 3px 14px 0 14px
     font-size: $font-size--m
     font-style: italic
     text-transform: uppercase
-    // border: 1px solid $color-grey--d
     span.logo
       float: left
       display: block
@@ -29,7 +26,13 @@ header.banner
       background-size: 100%
     &:hover
       text-decoration: none
-      // border: 1px solid $color-red
+      span.logo
+        background-image: url('/assets/img/icon_mezdef_red.png')
+        -webkit-transition: background-image 0.1s linear
+        -moz-transition: background-image 0.1s linear
+        -ms-transition: background-image 0.1s linear
+        -o-transition: background-image 0.1s linear
+        transition: background-image 0.1s linear
   img
     display: none
   nav
