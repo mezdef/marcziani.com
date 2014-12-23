@@ -10,7 +10,7 @@ permalink: projects/
       == {% for post in site.categories.projects %}
       %li
         %a{ href: "{{ post.url }}" }
-          == {{ post.title }}
-        %img{ src: "{{ post.thumbnail }}"}
-        %time {{ post.date | date: "%b %Y" }}
+          %span {{ post.title }}
+          %h2 {{ post.subtitle }}
+          %img{ src: "{{ post.thumbnail }}"}
       == {% endfor %}
