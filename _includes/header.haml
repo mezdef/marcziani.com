@@ -16,7 +16,7 @@
       %li
         {% if current[1] == "writing" %}
         %a.active{href: "/"}> Writing
-        {% elsif current[1].nil? %}
+        {% elsif current.[1] == "index.html" %}
         %a.active{href: "/"}> Writing
         {% else %}
         %a{href: "/"}> Writing
