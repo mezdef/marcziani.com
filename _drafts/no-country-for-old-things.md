@@ -10,17 +10,18 @@ Several months ago, starting down the maw of a transcontinental move with little
 
 Once even the barest of inroads had been made, the rabbit hole begun to yawn wide: *How often do I use this?* goes into the maybe pile; *Where did this come from?* is flung into the corner; *Don’t I already have, like, 4 of these things?* heads straight for the donation pile. These questions all eventual stumble into to the consideration of exactly how much is required for the living of life and being yourself.
 
-It is at this point that questions relating to the oft-nebulous [minimalism][L1] loom large, and one begins to wonder *how many books can I fit into my suitcase?*
+It is at this point that questions regarding the oft-nebulous [minimalism][L1] loom large, and one begins to wonder *how many books can I fit into my suitcase?*
 
 ---
 
 The pack-discard-move cycle seems—if one listens to the resigned lamentations of friends—to be among the more execrable experiences associated with a household move. Much of this seems to depend on the formative years of life spent learning by example. More often than not, those habits ingrained early will stick though maturation leading down a line somewhere along the Pack Rat to Minimalist spectrum; Shaped and shifted by experience gained along the way, these habits often reflect personal habits in subtle ways. That is not to say that a shift from one to the other—either corralled by circumstance or self-initiated—is at any time is out of the question.
 
-The living situation in which a person finds themselves reenforce certain habits; studio apartment living entails close quarters and limited storage space, where as a multi-bedroom house encourages the room to be filled lest it feel 'empty'. When it comes time for a move, the currently occupied space and how you have populated it will—to a large extent—dictate the work ahead.
+The living situation in which a person finds themselves reenforce certain habits; studio apartment living entails close quarters and limited storage space, where as a multi-bedroom house encourages filling lest it feel 'empty'. When it comes time for a move, the currently occupied space and how you have populated it will—to a large extent—dictate the work ahead.
 
-Having made similar moves previously (house to apartment, apartment to smaller appartment), the usual pack and move requires the shedding (or perhaps just leaving) of possessions to suit new circumstances. When these decisions are nigh, the totality of your belongings becomes the bundles of individual items that must be sorted though, boxed up, and then dispatched to a new location.
+Having made similar moves previously (house to apartment, apartment to smaller apartment), the usual pack and move requires the shedding (or perhaps just leaving) of possessions to suit new circumstances. When these decisions are nigh, the totality of your belongings become the individual items that must be sorted though, boxed up, and then dispatched to a new location.
 
-While categorizing, assessing, and filing, stopping to ponder the various objects that pass on by is almost an inevatibility; How they were acquired and why have they stuck around? Such surface level questions are useful for the purposes of sorting. Gifts tend to be harder to discard, less frequently used items bought on a whim easier. But, should one wish to venture deeper, the questions become at once somewhat less practical and more philosophical: What does the volume and nature of my possessions say about me?
+While categorizing, assessing, and filing, stopping to ponder the various objects that pass on by is almost an inevitably; How they were acquired and why have they stuck around? Such surface level questions are useful for the purposes of sorting. Gifts tend to be harder to discard, less frequently used items bought on a whim easier. But, should one wish to venture deeper, the questions become at once somewhat less practical and more philosophical: What does the volume and nature of my possessions say about me?
+
 
 > “These are my things, and I like to be surrounded by them. I do some things with these things, but the main thing I to with these things is be me."
 >
@@ -30,7 +31,7 @@ The consideration of possessions as reflective of a sense of self—postulated a
 
 Further, they (TFT) ponder the nature of gifts and their claims on identity. As a counter-point to the objects purchased that project an image of self, the things others give can represent their mental model of you—or at least who they wish you to be. The cook book Christmas present, the framed family photo, the decorative oven mitt, the gym membership.
 
-This is potentially a very cynical way of looking at the otherwise well-intentioned generosity of others, but taken away from that context, it proves a mental exercise well worth the effort. The art of Gift-giving is certainly a difficult one to master: separating what you covet from what you want for another or understand them to desire is no easy task. To further complicate matters, the giving of something that is personally appreciated and valued to another is inextricable from the platonic ideal of the gift; The hope that a shared understanding or connection will result—or at the least, some shared goodwill—is inextricably tied to subconscious shopping process. That is to say: wether intentionally or not, a offering makes claims on both the projected and perceived identities of giftor and giftee respectively, regardless of intentions.
+This is potentially a very cynical way of looking at the otherwise well-intentioned generosity of others, but taken away from that context, it proves a mental exercise well worth the effort. The art of Gift-giving is certainly a difficult one to master: separating what you covet from what you want for another or understand them to desire is no easy task. To further complicate matters, the giving of something that is personally appreciated and valued to another is inextricable from the platonic ideal of the gift; The hope that a shared understanding or connection will result—or at the least, some shared goodwill—is inextricably tied to subconscious shopping process. That is to say: whether intentionally or not, an offering makes claims on both the projected and perceived identities of giftor and giftee respectively, regardless of intentions.
 
 ---
 
@@ -97,5 +98,5 @@ In the final analysis—without appropriate consideration —reduction becomes a
 [^3]: A new found mindfulness of what I choose to surround myself has meant an increase in both the time devoted to the consideration of each new purchase, and the maintenance of those belongings. Focusing on buying one item that is not intended to be replaced, but rather maintained and used regularly and [performs its task in an exemplary manner][L6].
 [^4]: If we ascribe a dragon as the avatar of Maximalism, then what should come to represent minimalism? A Knight seems appropriate given St. George—perhaps.
 [^5]: This great turn of phrase is shamelessly lifted from the [TFT episode mentioned earlier in this piece][L2]. It generally refers to the propensity—or at least expectation—for adulthood to involve less geographical movement and greater physical ties than that of adolescence or early adulthood.
-[^6]: The opposite direction may be some form of [Retail Therapy], but that dosen't nessecarily cast an illuminating light on identity so much as compulsion.
+[^6]: The opposite direction may be some form of [Retail Therapy], but that doesn't necessarily cast an illuminating light on identity so much as compulsion.
 [^7]: For the sake of simplicity and brevity, this essay shall assume—rightly or wrongly—that less is, at the least, some form of good.
