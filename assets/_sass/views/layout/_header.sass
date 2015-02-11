@@ -13,6 +13,7 @@ header.banner
     &:hover
       text-decoration: underline
   a.brand
+    float: left
     font-size: $font-size--m
     font-style: italic
     text-transform: uppercase
@@ -36,6 +37,7 @@ header.banner
   img
     display: none
   nav
+    +clearfix
   ul.nav
     +float-right
     text-transform: uppercase
@@ -44,6 +46,9 @@ header.banner
     vertical-align: top
     li
       display: inline
+    a
+      &.active
+        text-decoration: underline
 
 aside.aside
   display: none
