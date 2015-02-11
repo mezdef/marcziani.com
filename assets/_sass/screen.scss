@@ -14,6 +14,7 @@
 @import "variables/_type";
 
 @import "modules/_helpers";
+@import "modules/_fonts";
 @import "modules/_typography";
 
 @import "views/layout/_header";
@@ -24,7 +25,6 @@
 @import "views/_listing";
 
 @import "layout";
-@import "responsive";
 
 @import "responsive/_1024-1600";
 @import "responsive/_1024-1000";
