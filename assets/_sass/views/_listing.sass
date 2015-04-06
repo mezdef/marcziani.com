@@ -30,11 +30,12 @@
       &:nth-child(even)
         padding: 0
       a
+        position: relative
         display: block
-        padding: 20px
         line-height: 0
         text-align: center
         // border: 1px solid $color-grey--l
+        +background-color($color-grey--l)
         &:hover
           text-decoration: none
           // border: 1px solid $color-grey--l
@@ -44,17 +45,29 @@
           -o-transition: border-color 0.1s linear
           transition: border-color 0.1s linear
 
-      span
-        +font-leading--m
-      h2
-        text-transform: uppercase
-        font-style: normal
-        color: $color-grey--mm
-        +font-sans
-        +font-size--ss
-        +font-leading--s
-        font-weight: 400
-        letter-spacing: 1px
+          .about
+            // +background-color($color-grey--m, 0.75)
+          img
+            opacity: 0.15
+
+        .about
+          position: absolute
+          top: 0
+          bottom: 0
+          left: 0
+          right: 0
+
+          span
+            +font-leading--m
+          h2
+            text-transform: uppercase
+            font-style: normal
+            color: $color-grey--mm
+            +font-sans
+            +font-size--ss
+            +font-leading--s
+            font-weight: 400
+            letter-spacing: 1px
 
       img
         width: 100%

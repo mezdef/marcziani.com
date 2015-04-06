@@ -38,3 +38,51 @@ $border-arrested: 1px solid $color-lowlight
   line-height: $font-leading--l
 @mixin font-leading--ll
   line-height: $font-leading--ll
+
+// COLOURS /////////////////////////////////////////////////////////////////////
+
+@mixin background-color($color, $opacity: 1.0)
+  background-color: $color
+  background-color: rgba($color, $opacity)
+
+
+// BORDER //////////////////////////////////////////////////////////////////////
+
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+  -webkit-background-clip: padding-box
+  -moz-background-clip:    padding
+  background-clip:         padding-box
+
+
+@mixin border-radiuses($topright: 0, $bottomright: 0, $bottomleft: 0, $topleft: 0)
+  -webkit-border-top-right-radius:    $topright
+  -webkit-border-bottom-right-radius: $bottomright
+  -webkit-border-bottom-left-radius:  $bottomleft
+  -webkit-border-top-left-radius:     $topleft
+
+  -moz-border-radius-topright:        $topright
+  -moz-border-radius-bottomright:     $bottomright
+  -moz-border-radius-bottomleft:      $bottomleft
+  -moz-border-radius-topleft:         $topleft
+
+  border-top-right-radius:            $topright
+  border-bottom-right-radius:         $bottomright
+  border-bottom-left-radius:          $bottomleft
+  border-top-left-radius:             $topleft
+
+  -webkit-background-clip: padding-box
+  -moz-background-clip:    padding
+  background-clip:         padding-box
+
+
+// ANIMATION ///////////////////////////////////////////////////////////////////
+
+@mixin transition($transition-property, $transition-time, $method)
+  -webkit-transition: $transition-property $transition-time $method
+  -moz-transition: $transition-property $transition-time $method
+  -ms-transition: $transition-property $transition-time $method
+  -o-transition: $transition-property $transition-time $method
+  transition: $transition-property $transition-time $method
