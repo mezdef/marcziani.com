@@ -21,6 +21,13 @@
         {% else %}
         %a{href: "/"}> Writing
         {% endif %}
+      %li —
+      %li
+        {% if current[1] == "photos" %}
+        %a.active{href: "/photos"}> Photos
+        {% else %}
+        %a{href: "/photos"}> Photos
+        {% endif %}
       -# %li —
       -# %li
         -# {% if current[1] == "projects" %}
