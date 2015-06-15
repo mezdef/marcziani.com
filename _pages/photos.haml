@@ -1,0 +1,16 @@
+== ---
+title: Marc Ziani de Ferranti // Photos
+layout: listing
+permalink: photos/
+== ---
+
+%article.photos.listing
+  %section
+    %ul
+      == {% for album in site.categories.photos %}
+      %li
+        %a{ href: "{{ album.url }}" }
+          %span {{ album.title }}
+          %h2 {{ album.subtitle }}
+          %img{ src: "{{ album.thumbnail }}"}
+      == {% endfor %}
