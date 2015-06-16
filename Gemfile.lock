@@ -24,6 +24,7 @@ GEM
     fast-stemmer (1.0.2)
     ffi (1.9.3)
     filey-diff (1.4.3)
+    flickraw (0.9.8)
     fssm (0.2.10)
     haml (4.0.5)
       tilt
@@ -93,6 +94,7 @@ PLATFORMS
 
 DEPENDENCIES
   compass
+  flickraw
   haml
   jekyll
   jekyll-compass
