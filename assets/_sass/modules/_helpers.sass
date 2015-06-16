@@ -5,11 +5,39 @@
     clear: both
 
 $border-structural: 1px solid $color-grey--l
-$border-arrested: 1px solid $color-lowlight
+$border-arrested: 1px solid $color-grey--d
 
 
 @mixin margin-bottom--m
   margin-bottom: $font-leading--m
+
+
+// TYPOGRAPHY //////////////////////////////////////////////////////////////////
+
+@mixin font-serif
+  font-family: $font-serif
+
+@mixin font-serif--italic
+  +font-serif
+  font-style: italic
+  letter-spacing: .01rem
+  +font-color($color-grey--ddd)
+
+@mixin font-sans
+  font-family: $font-sans
+  font-weight: normal
+
+@mixin font-sans--block
+  +font-sans
+  letter-spacing: 1px
+  text-transform: uppercase
+
+@mixin font-mono
+  font-family: $font-mono
+  // letter-spacing: .01rem
+  color: $color-grey--d
+  a:hover
+    text-decoration: underline
 
 @mixin font-size--sss
   font-size: $font-size--sss
@@ -24,6 +52,11 @@ $border-arrested: 1px solid $color-lowlight
 @mixin font-size--ll
   font-size: $font-size--ll
 
+@mixin font-leading($size)
+  line-height: $size
+
+@mixin font-leading--none
+  line-height: 0
 @mixin font-leading--ssss
   line-height: $font-leading--ssss
 @mixin font-leading--sss
@@ -38,6 +71,11 @@ $border-arrested: 1px solid $color-lowlight
   line-height: $font-leading--l
 @mixin font-leading--ll
   line-height: $font-leading--ll
+
+@mixin font-color($color, $opacity: 1.0)
+  color: $color
+  color: rgba($color, $opacity)
+
 
 // COLOURS /////////////////////////////////////////////////////////////////////
 

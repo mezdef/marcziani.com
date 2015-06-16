@@ -10,9 +10,7 @@
 @import "compass/utilities";
 // @import 'assets/css/_sass/_syntax';
 
-@import "variables/_colors";
-@import "variables/_type";
-
+@import "modules/_variables";
 @import "modules/_helpers";
 @import "modules/_fonts";
 @import "modules/_typography";
@@ -23,6 +21,7 @@
 
 @import "views/_post";
 @import "views/_listing";
+@import "views/_projects";
 
 @import "layout";
 

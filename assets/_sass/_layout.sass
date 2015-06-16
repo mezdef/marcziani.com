@@ -1,55 +1,9 @@
-@import "compass/utilities"
-// @import "variables"
-
-
-figure
-  position: relative
-  margin: 0 0 33px 0
-
-  img
-    height: auto
-    width: auto
-    max-width: 100%
-
-
-
-figure
-  text-align: center
-  &:hover
-    figcaption
-      color: $color-grey--d
-      transition: .1s color linear
-
-  figcaption
-    display: block
-    position: absolute
-    top: 0
-    right: -170px
-    width: 150px
-    color: $color-grey--mm
-    text-align: left
-    +font-sans
-    font-size: $font-size--s
-    line-height: 1.3
-    &:before, &:after
-      display: block
-      content: ""
-      width: 25%
-      border-top: $border-structural
-    &:before
-      margin-bottom: 8.25px
-    &:after
-      margin-top: 8.25px
-
-
-
-
 
 // 404 /////////////////////////////////////////////////////////////
 
 section.error
   margin: 0 0 99px 0
-  background: $color-lowlight
+  +background-color($color-grey--l)
   @include border-radius(16.5px)
   h1
     padding: 33px 0 66px 0

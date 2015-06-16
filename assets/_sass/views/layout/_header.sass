@@ -1,48 +1,14 @@
-// HEADER //////////////////////////////////////////////////////////
-
-header.banner
+body > header
   display: block
   padding: 33px 40px 66px 40px
-  +font-sans
-  font-size: $font-size--s
-  // padding: 0 0 0 220px
-  a
-    +inline-block
-    line-height: $font-leading--m
-    text-decoration: none
-    &:hover
-      text-decoration: underline
-  a.brand
-    float: left
-    font-size: $font-size--m
-    font-style: italic
-    text-transform: uppercase
-    span.logo
-      float: left
-      display: block
-      margin: 0 10px 0 0
-      width: 30px
-      height: 30px
-      background-image: url('/assets/img/icon_mezdef.png')
-      background-size: 100%
-    &:hover
-      text-decoration: none
-      span.logo
-        background-image: url('/assets/img/icon_mezdef_red.png')
-        -webkit-transition: background-image 0.1s linear
-        -moz-transition: background-image 0.1s linear
-        -ms-transition: background-image 0.1s linear
-        -o-transition: background-image 0.1s linear
-        transition: background-image 0.1s linear
-  img
-    display: none
+  +font-sans--block
+  +font-size--s
+
   nav
     +clearfix
-  ul.nav
+
+  ul
     +float-right
-    text-transform: uppercase
-    // font-weight: 500
-    letter-spacing: 1px
     vertical-align: top
     li
       display: inline
@@ -50,25 +16,27 @@ header.banner
       &.active
         text-decoration: underline
 
-aside.aside
-  display: none
-  position: absolute
-  margin: 0
-  padding: 0
-  width: 200px
-  img
-    -webkit-border-radius: 140px
-    -moz-border-radius: 140px
-    border-radius: 140px
-  a.brand
-    display: block
+  a
+    +inline-block
+    +font-leading--m
+    text-decoration: none
+    &:hover
+      text-decoration: underline
 
-// HEADER //////////////////////////////////////////////////////////
-
-header.banner, aside.aside
-  // text-align: center
-  li
-    color: $color-midlayer
-
-aside.aside
-  text-align: left
+    &.brand
+      float: left
+      +font-size--m
+      font-style: italic
+      .logo
+        display: block
+        float: left
+        margin: 0 10px 0 0
+        width: 30px
+        height: 30px
+        background-image: url('/assets/img/icon_mezdef.png')
+        background-size: 100%
+      &:hover
+        text-decoration: none
+        span.logo
+          background-image: url('/assets/img/icon_mezdef_red.png')
+          +transition(background-image 0.1s linear)

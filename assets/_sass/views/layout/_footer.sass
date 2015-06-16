@@ -1,23 +1,26 @@
-// FOOTER //////////////////////////////////////////////////////////
-
-footer
+main > footer
   position: relative
   display: block
-  padding: 32px 0 33px 0
-  font-size: $font-size--s
+  padding: 9px 0 33px 0
   +font-sans
+  +font-size--s
+  +font-color($color-grey--mm)
   border-top: $border-structural
+
+  a
+    +font-color($color-grey--d)
 
 
   span
-    font-size: $font-size--ss
+    +font-size--ss
+
   nav
     margin: 33px 0 0 0
     ul
       +inline-block-list
       overflow: visible
       text-align: center
-    li
+    // li
     a
       position: relative
       display: block
@@ -26,7 +29,7 @@ footer
       height: 30px
       border: 1px solid $color-grey--l
       +font-size--m
-      color: $color-grey--d
+      // color: $color-grey--d
       transform: rotate(45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)
       &:hover
         border: 1px solid $color-red

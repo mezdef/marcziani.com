@@ -1,25 +1,23 @@
-// @import "compass/typography"
 @import "compass/css3"
-// @import "variables"
 
 body
-  font-family: $font-serif
-  font-size: $font-size--m
-  line-height: $font-leading--m
-  color: $color-grey--dd
+  +font-serif
+  +font-size--m
+  +font-leading--m
+  +font-color($color-grey--dd)
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
 p
   +margin-bottom--m
-b
-strong
-i
+// b
+// strong
+// i
 em
   font-style: italic
 
 ul
-  list-style:none
+  list-style: none
   margin: 0
   -webkit-margin-before: 0
   -webkit-padding-start: 0
@@ -30,18 +28,16 @@ ol
 li
   position: relative
   code
+    display: inline-block
     margin: 0 0 5px 0
     padding: 3px 6px
-    display: inline-block
-    background: #F9F9F9
+    +font-color($color-grey--dd)
+    +background-color($color-grey--l)
     border: 1px solid #CCC
-    -webkit-border-radius: 2px
-    moz-border-radius: 2px
-    border-radius: 2px
-    color: #000
+    +border-radius(2px)
 
 a
-  color: $color-crunch
+  +font-color($color-grey--ddd)
   text-decoration: underline
   +transition(color, 0.1s, linear)
   &:hover
@@ -58,40 +54,73 @@ sup, sub
   font-weight: 500
   vertical-align: baseline
   a
-    color: $color-grey--dd
+    +font-color($color-grey--ddd)
     text-decoration: none
 
+
 figure
-  // min-height: 297px
-  line-height: 0
+  position: relative
+  margin: 0 0 33px 0
+  +font-leading--none
+  text-align: center
+
+  &:hover
+    figcaption
+      +font-color($color-grey--d)
+      +transition(color, 0.1s, linear)
+
+  img
+    height: auto
+    width: auto
+    max-width: 100%
+
+  figcaption
+    display: block
+    position: absolute
+    top: 0
+    right: -170px
+    width: 150px
+    +font-sans
+    +font-size--s
+    +font-leading(1.3)
+    +font-color($color-grey--mm)
+    text-align: left
+    &:before, &:after
+      display: block
+      content: ""
+      width: 25%
+      border-top: $border-structural
+    &:before
+      margin-bottom: 8.25px
+    &:after
+      margin-top: 8.25px
+
 
 time
-  font-family: $font-sans
-  text-transform: uppercase
-  color: $color-grey--m
+  +font-sans--block
+  +font-color($color-grey--m)
 
 blockquote
   position: relative
   +margin-bottom--m
-  color: $color-grey--mm
+  +font-color($color-grey--mm)
   font-style: italic
   &:hover
     p, cite
-      color: $color-grey--dd
+      +font-color($color-grey--dd)
       a
-        color: $color-grey--ddd
+        +font-color($color-grey--ddd)
   cite
-    // position: absolute
     display: block
     bottom: 0
     +font-sans
-    color: $color-grey--mm
-    font-size: $font-size--s
-    line-height: 1.3
+    +font-size--s
+    +font-color($color-grey--mm)
+    +font-leading(1.3)
     text-align: right
     a
-      color: $color-grey--mmm
-  em
+      +font-color($color-grey--mmm)
+  // em
   p
     margin-left: -20px
     margin-bottom: 0
@@ -105,10 +134,6 @@ blockquote
 // HEADINGS ////////////////////////////////////////////////////////
 
 h1, h2, h3, h4, h5
-  // font-family: $font-sans
-  // font-weight: 600
-  // color: $color-highlight
-  // color: $color-crunch
   text-align: center
   font-style: italic
 
@@ -126,7 +151,7 @@ hr
   padding: 30px 0 60px 0
   height: 16px
   width: 35%
-  line-height: 1px
+  +font-leading(1px)
   text-align: center
   border: 0px solid $color-white
   &:before
@@ -136,23 +161,23 @@ hr
     padding: 0 10px
     height: 16px
     width: auto
-    color: $color-grey--dd
     +font-sans
     +font-size--l
     +font-leading--l
-    background: $color-white
+    +font-color($color-grey--dd)
+    +background-color($color-white)
 
 
 // SELECTION ///////////////////////////////////////////////////////
 
 ::-moz-selection
-  background: $color-red
-  color: white
+  +background-color($color-red)
+  +font-color($color-white)
   text-shadow: none
 
 ::selection
-  background: $color-red
-  color: white
+  +background-color($color-red)
+  +font-color($color-white)
   text-shadow: none
 
 
@@ -162,7 +187,7 @@ hr
 
 section.error
   h1
-    @include font-sans
+    +font-sans
     color: #FFF
     font-size: 219.318px
     line-height: 132px
