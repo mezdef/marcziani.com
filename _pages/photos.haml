@@ -11,6 +11,5 @@ permalink: photos/
       %li
         %a{ href: "{{ album.url }}" }
           %span {{ album.title }}
-          %h2 {{ album.subtitle }}
-          %img{ src: "{{ album.thumbnail }}"}
+        %time {{ album.date | date: "%b %Y" }}
       == {% endfor %}

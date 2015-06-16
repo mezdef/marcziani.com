@@ -1,0 +1,65 @@
+article.album
+  // position: relative
+  section
+    // position: absolute
+    >p
+      &:last-of-type
+        margin: 0 0 120px 0
+        &:after
+          // position: absolute
+          content: ""
+          display: block
+          margin: 60px auto 0 auto
+          width: 10px
+          height: 10px
+          left: 50%
+          border: 1px solid $color-red
+          // background: $color-red
+          -webkit-border-radius: 40px
+          moz-border-radius: 40px
+          border-radius: 40px
+
+  figure
+    margin: 0 -30% 99px -30%
+    &:hover
+      figcaption
+        // opacity: 1
+        color: $color-grey--m
+    img
+      &:before
+        content: attr(data-alt)
+
+
+
+    figcaption
+      // width: auto
+      // top: auto
+      // bottom: 0
+      // left: 0
+      // right: 0
+      // background-color: $color-grey--ddd
+      // opacity: 0
+      color: $color-grey--l
+      font-size: $font-size--ss
+      p
+        display: inline-block
+        margin-bottom: 0
+      label
+        display: inline-block
+        width: 110px
+        text-transform: uppercase
+
+      // &.exif
+
+      &.description
+        height: 33px
+        bottom: -33px
+        top: auto
+        left: 0
+        right: auto
+        width: 100%
+        text-align: right
+        font-style: italic
+        text-transform: uppercase
+        &:before, &:after
+          display: none
