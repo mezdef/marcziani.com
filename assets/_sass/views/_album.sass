@@ -1,5 +1,10 @@
-article.album
-  // position: relative
+.album
+  main
+  footer
+  article
+    margin: 0
+    padding: 0
+    width: 100%
   section
     // position: absolute
     >p
@@ -20,11 +25,13 @@ article.album
           border-radius: 40px
 
   figure
-    margin: 0 -30% 99px -30%
+    margin: 0 auto 120px auto
+    padding: 0 30px
+    max-width: 1444px
     &:hover
       figcaption
         // opacity: 1
-        color: $color-grey--m
+        color: $color-grey--mmm
     img
       &:before
         content: attr(data-alt)
@@ -39,7 +46,7 @@ article.album
       // right: 0
       // background-color: $color-grey--ddd
       // opacity: 0
-      color: $color-grey--l
+      color: $color-grey--m
       font-size: $font-size--ss
       p
         display: inline-block
@@ -49,15 +56,21 @@ article.album
         width: 110px
         text-transform: uppercase
 
-      // &.exif
+      &.exif
+        width: 180px
+        right: 30px
+
 
       &.description
-        height: 33px
-        bottom: -33px
+        margin: 0 auto
+        padding: 0 240px
+        width: 100%
+        max-width: 1444px
+        height: 30px
+        bottom: -60px
         top: auto
         left: 0
         right: auto
-        width: 100%
         text-align: right
         font-style: italic
         text-transform: uppercase
