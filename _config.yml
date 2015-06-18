@@ -16,10 +16,3 @@ gems:
 
 # Handling Reading
 exclude: ['rakefile.rb', 'Guardfile', 'Gemfile', 'Gemfile.lock', 's3_website.yml']
-
-flickr:
-  enabled:         yes
-  cache_dir:       ./_cache/flickr
-  api_key:         53708c9a3d0c0a8d7fbf0e75176df58e
-  shared_secret:   26d6a0098efc5bde
-  auth_token:      72157652311431344-a11af32d03af1ce4
