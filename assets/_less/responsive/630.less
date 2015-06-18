@@ -1,0 +1,129 @@
+@media only screen and (min-width: 630px) {
+
+  body {
+    font-size: @font-size--m;
+    line-height: @font-leading--m;
+  }
+
+// TYPOGRAPHY //////////////////////////////////////////////////////////////////
+
+  h1 {
+    font-size: @font-size--ll;
+    line-height: @font-leading--ll;
+  }
+
+  figure {
+    figcaption {
+      &.exif, &.description {
+        padding-top: 15px;
+      }
+      &.exif {
+        display: block;
+      }
+      &.description {
+        right: 60px;
+      }
+    }
+  }
+
+  body > header {
+    nav {
+      padding: 30px 30px 90px 30px;
+      width: 620px;
+      text-align: left;
+    }
+
+    ul {
+      float: right;
+      position: relative;
+      padding-left: 30px;
+      font-size: @font-size--ss;
+      vertical-align: top;
+      border-bottom: @border-structural;
+
+      li {
+        display: inline-block;
+        margin-right: 30px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      a {
+        color: @color-grey--m;
+        &:hover {
+          text-decoration: none;
+          color: @color-grey--dd !important;
+          &:after {
+            display: block;
+            position: absolute;
+            content: "";
+            width: 100%;
+            bottom: -1px;
+            border-top: 1px solid @color-grey--dd;
+          }
+        }
+        &.active {
+          color: @color-grey--dd;
+          &:after {
+            display: block;
+            position: absolute;
+            content: "";
+            width: 100%;
+            bottom: -1px;
+            border-top: 1px solid @color-grey--dd;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    > footer {
+      padding: 30px 30px 60px 30px;
+      width: 540px;
+      border-top: @border-structural;
+      background-color: @color-white;
+    }
+  }
+
+// VIEWS - POST ////////////////////////////////////////////////////////////////
+
+  .post {
+    section {
+      > p:last-of-type {
+        &:after {
+          margin: 60px auto 90px auto;
+        }
+      }
+    }
+  }
+
+
+// VIEWS - PHOTOS //////////////////////////////////////////////////////////////
+
+  .photos {
+    figure {
+      padding: 0 60px;
+      margin: 0 auto 120px auto;
+      max-width: 1024px;
+    }
+  }
+
+  article {
+    width: 620px;
+    header {
+      time {
+        &:before {
+          border-top: @border-structural;
+        }
+      }
+    }
+
+    p:first-of-type {
+
+    }
+  }
+
+
+}

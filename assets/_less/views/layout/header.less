@@ -1,0 +1,84 @@
+body > header {
+  display: block;
+  margin: 0 auto;
+  .font-sans--block;
+  .font-size--s;
+
+  nav {
+    margin: 0 auto;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    .clearfix;
+  }
+
+  ul {
+    position: relative;
+    font-size: @font-size--ss;
+    vertical-align: top;
+    border-bottom: @border-structural;
+    li {
+      display: inline-block;
+      margin-right: 30px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    a {
+      color: @color-grey--m;
+      &:hover {
+        text-decoration: none;
+        color: @color-grey--dd !important;
+        &:after {
+          display: block;
+          position: absolute;
+          content: "";
+          width: 100%;
+          bottom: -1px;
+          border-top: 1px solid @color-grey--dd;
+        }
+      }
+      &.active {
+        color: @color-grey--dd;
+        &:after {
+          display: block;
+          position: absolute;
+          content: "";
+          width: 100%;
+          bottom: -1px;
+          border-top: 1px solid @color-grey--dd;
+        }
+      }
+    }
+  }
+
+  a {
+    .font-leading--m;
+    text-decoration: none;
+    vertical-align: top;
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.brand {
+      margin: 0 0 30px 0;
+      font-size: 0;
+      font-style: italic;
+      .logo {
+        display: inline-block;
+        margin-bottom: 10px;
+        width: 30px;
+        height: 30px;
+        background-image: url('/assets/img/icon_mezdef.png');
+        background-size: 100%;
+      }
+      &:hover {
+        text-decoration: none;
+        span.logo {
+          background-image: url('/assets/img/icon_mezdef_red.png');
+          // .transition(background-image 0.1s linear);
+        }
+      }
+    }
+  }
+}

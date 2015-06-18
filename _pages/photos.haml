@@ -4,12 +4,12 @@ layout: listing
 permalink: photos/
 == ---
 
-%article.photos.listing
+%article
   %section
     %ul
       == {% for album in site.categories.photos %}
       %li
+        %time {{ album.date | date: "%b %Y" }}
         %a{ href: "{{ album.url }}" }
           %span {{ album.title }}
-        %time {{ album.date | date: "%b %Y" }}
       == {% endfor %}

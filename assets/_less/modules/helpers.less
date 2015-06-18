@@ -1,0 +1,174 @@
+.clearfix {
+  zoom: 1;
+  &:before, &:after {
+    content:"";
+    display:table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+.margin-bottom--m {
+  margin-bottom: @font-leading--m;
+}
+
+.float-right {
+  float: right
+}
+
+
+//  FONTS //////////////////////////////////////////////////////////////////////
+.font-size(@size) {
+  font-size: @size;
+}
+
+.font-leading(@size) {
+  line-height: @size;
+}
+
+.font-color(@color, @alpha: 1) {
+  color: rgba( red(@color), green(@color), blue(@color), @alpha);
+}
+
+
+
+// TYPOGRAPHY //////////////////////////////////////////////////////////////////
+
+.font-serif {
+  font-family: @font-serif;
+}
+
+.font-serif--italic {
+  .font-serif;
+  font-style: italic;
+  letter-spacing: .01rem;
+  .font-color(@color-grey--ddd);
+}
+
+.font-sans {
+  font-family: @font-sans;
+  font-weight: normal;
+}
+
+.font-sans--block {
+  .font-sans;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.font-mono {
+  font-family: @font-mono;
+  color: @color-grey--d;
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.font-size--sss {
+  font-size: @font-size--sss;
+}
+.font-size--ss {
+  font-size: @font-size--ss;
+}
+.font-size--s {
+  font-size: @font-size--s;
+}
+.font-size--m {
+  font-size: @font-size--m;
+}
+.font-size--l {
+  font-size: @font-size--l;
+}
+.font-size--ll {
+  font-size: @font-size--ll;
+}
+
+.font-leading(@size) {
+  line-height: @size;
+}
+
+.font-leading--none {
+  line-height: 0;
+}
+.font-leading--ssss {
+  line-height: @font-leading--ssss;
+}
+.font-leading--sss {
+  line-height: @font-leading--sss;
+}
+.font-leading--ss {
+  line-height: @font-leading--ss;
+}
+.font-leading--s {
+  line-height: @font-leading--s;
+}
+.font-leading--m {
+  line-height: @font-leading--m;
+}
+.font-leading--l {
+  line-height: @font-leading--l;
+}
+.font-leading--ll {
+  line-height: @font-leading--ll;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+// COLOURS /////////////////////////////////////////////////////////////////////
+
+.background-color(@color, @alpha: 1) {
+  background-color: rgba( red(@color), green(@color), blue(@color), @alpha);
+}
+
+
+// BORDER //////////////////////////////////////////////////////////////////////
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip:    padding;
+  background-clip:         padding-box;
+
+}
+
+
+.border-radiuses(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius:    @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius:  @bottomleft;
+  -webkit-border-top-left-radius:     @topleft;
+
+  -moz-border-radius-topright:        @topright;
+  -moz-border-radius-bottomright:     @bottomright;
+  -moz-border-radius-bottomleft:      @bottomleft;
+  -moz-border-radius-topleft:         @topleft;
+
+  border-top-right-radius:            @topright;
+  border-bottom-right-radius:         @bottomright;
+  border-bottom-left-radius:          @bottomleft;
+  border-top-left-radius:             @topleft;
+
+  -webkit-background-clip: padding-box;
+  -moz-background-clip:    padding;
+  background-clip:         padding-box;
+}
+
+
+// ANIMATION ///////////////////////////////////////////////////////////////////
+
+.transition(@transition-property, @transition-time, @method) {
+  -webkit-transition: @transition-property @transition-time @method;
+  -moz-transition: @transition-property @transition-time @method;
+  -ms-transition: @transition-property @transition-time @method;
+  -o-transition: @transition-property @transition-time @method;
+  transition: @transition-property @transition-time @method;
+}

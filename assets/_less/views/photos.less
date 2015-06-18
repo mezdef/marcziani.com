@@ -1,0 +1,49 @@
+.photos {
+
+  article {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  section {
+    // position: absolute
+    padding: 0;
+    >p {
+      &:last-of-type {
+        margin: 0 0 120px 0;
+        &:after {
+          // position: absolute
+          content: "";
+          display: block;
+          margin: 60px auto 0 auto;
+          width: 10px;
+          height: 10px;
+          left: 50%;
+          border: 1px solid @color-red;
+          // background: @color-red
+          -webkit-border-radius: 40px;
+          moz-border-radius: 40px;
+          border-radius: 40px;
+        }
+      }
+    }
+  }
+
+  figure {
+    // margin: 0 auto 120px auto
+    margin-bottom: 60px;
+    padding: 0 30px;
+    // max-width: 1444px
+    &:hover {
+      figcaption {
+        color: @color-grey--mmm;
+      }
+    }
+    img {
+      &:before {
+        content: attr(data-alt);
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+main > footer {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+  // padding: 30px 60px;
+  width: 100%;
+  .font-sans;
+  .font-size--s;
+  .font-color(@color-grey--mm);
+  // border-top: @border-structural
+  background-color: @color-grey--l;
+
+  a {
+    .font-color(@color-grey--d);
+  }
+
+  span {
+    .font-size--ss();
+  }
+
+  nav {
+    margin: 33px 0 0 0;
+
+    ul {
+      overflow: visible;
+      text-align: center;
+    }
+
+    a {
+      position: relative;
+      display: block;
+      margin: 0 0 0 33px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid @color-grey--l;
+      .font-size--m();
+      transform: rotate(45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+      &:hover {
+        border: 1px solid @color-red;
+      }
+      i {
+        position: absolute;
+        transform: rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+        &.fa-paper-plane {
+          margin: 8px 0 0 -9px;
+        }
+        &.fa-github {
+          margin: 4px 0 0 -9px;
+          .font-size--l();
+        }
+        &.fa-twitter {
+          margin: 4px 0 0 -9px;
+          .font-size--l();
+        }
+      }
+    }
+    li:first-of-type {
+      a {
+        margin: 0;
+      }
+    }
+  }
+
+  li {
+    display: inline-block;
+  }
+
+}

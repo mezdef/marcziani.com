@@ -4,9 +4,11 @@ source 'https://rubygems.org'
 gem 'jekyll'
 
 gem 'haml'
-gem 'compass'
-gem 'jekyll-compass'
+gem 'less'
 gem 'jekyll-haml'
+gem 'jekyll-less'
+
+gem 'therubyracer'
 
 gem 'kramdown'
 

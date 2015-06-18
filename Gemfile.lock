@@ -6,17 +6,13 @@ GEM
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
     blankslate (2.1.2.4)
-    chunky_png (1.2.9)
     classifier (1.3.4)
       fast-stemmer (>= 1.0.0)
     colorator (0.1)
     colored (1.2)
     commander (4.1.5)
       highline (~> 1.6.11)
-    compass (0.12.2)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.1)
+    commonjs (0.2.7)
     configure-s3-website (1.5.2)
       deep_merge (= 1.0.0)
     deep_merge (1.0.0)
@@ -25,7 +21,6 @@ GEM
     ffi (1.9.3)
     filey-diff (1.4.3)
     flickraw (0.9.8)
-    fssm (0.2.10)
     haml (4.0.5)
       tilt
     highline (1.6.20)
@@ -40,14 +35,17 @@ GEM
       redcarpet (~> 2.3.0)
       safe_yaml (~> 0.9.7)
       toml (~> 0.1.0)
-    jekyll-compass (0.3.0)
-      compass (~> 0.12)
-      jekyll (~> 1.3)
     jekyll-haml (0.1.1)
       haml (>= 3.0.0)
       jekyll (>= 0.10.0)
+    jekyll-less (0.0.4)
+      jekyll (>= 0.10.0)
+      less (>= 2.0.5)
     json (1.8.1)
     kramdown (0.14.2)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
+    libv8 (3.16.14.7)
     liquid (2.5.5)
     listen (1.3.1)
       rb-fsevent (>= 0.9.3)
@@ -70,6 +68,7 @@ GEM
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
     redcarpet (2.3.0)
+    ref (1.0.5)
     s3_website (1.6.10)
       aws-sdk (= 1.33.0)
       configure-s3-website (= 1.5.2)
@@ -79,9 +78,11 @@ GEM
       simple-cloudfront-invalidator (~> 1)
       thor (= 0.18.1)
     safe_yaml (0.9.7)
-    sass (3.2.14)
     simple-cloudfront-invalidator (1.0.1)
       colored (= 1.2)
+    therubyracer (0.12.2)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.18.1)
     tilt (2.0.0)
     toml (0.1.0)
@@ -93,11 +94,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  compass
   flickraw
   haml
   jekyll
-  jekyll-compass
   jekyll-haml
+  jekyll-less
   kramdown
+  less
   s3_website
+  therubyracer
