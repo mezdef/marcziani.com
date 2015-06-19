@@ -60,25 +60,27 @@ body > header {
       text-decoration: underline;
     }
 
-    &.brand {
-      margin: 0 0 30px 0;
-      font-size: 0;
-      font-style: italic;
-      .logo {
-        display: inline-block;
-        margin-bottom: 10px;
-        width: 30px;
-        height: 30px;
-        background-image: url('/assets/img/icon_mezdef.png');
-        background-size: 100%;
-      }
-      &:hover {
-        text-decoration: none;
-        span.logo {
-          background-image: url('/assets/img/icon_mezdef_red.png');
-          // .transition(background-image 0.1s linear);
-        }
-      }
+  }
+}
+
+a.brand {
+  margin: 0 0 30px 0;
+  font-size: 0;
+  font-style: italic;
+  &:hover {
+    text-decoration: none;
+    span.logo {
+      background-image: url('/assets/img/icon_mezdef_red.png');
+      // .transition(background-image 0.1s linear);
     }
+  }
+
+  .logo {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url('/assets/img/icon_mezdef.png');
+    background-size: 100%;
   }
 }
