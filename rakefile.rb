@@ -18,6 +18,12 @@ task :haml do
   puts "done."
 end
 
+desc "Parse less layouts"
+task :less do
+  print "Parsing Less layouts..."
+  system "lessc assets/screen.less > _site/assets/screen.css"
+end
+
 desc "Clean _site"
 task :clean do
   system "rm -rf _site"

@@ -72,9 +72,10 @@ sup, sub {
   }
 }
 
+
 figure {
   position: relative;
-  margin: 0 0 33px 0;
+  margin-bottom: 30px;
   .font-leading--none;
   text-align: center;
 
@@ -90,72 +91,73 @@ figure {
     width: auto;
     max-width: 100%;
   }
+}
 
-  figcaption {
+figcaption {
+  display: block;
+  // position: absolute;
+  .font-sans;
+  .font-size--s;
+  line-height: 33px;
+  .font-color(@color-grey--mm);
+  text-align: left;
+
+  &:before, &:after {
     display: block;
+    content: "";
+    width: 25%;
+    border-top: @border-structural;
+  }
+
+  &:before {
+    margin-bottom: -1px;
+  }
+  &:after {
+    display: none;
+    margin-top: 8.25px;
+  }
+
+  &.exif, &.description {
     position: absolute;
-    .font-sans;
-    .font-size--s;
-    line-height: 33px;
-    .font-color(@color-grey--mm);
-    text-align: left;
-
-    &:before, &:after {
-      display: block;
-      content: "";
-      width: 25%;
-      border-top: @border-structural;
-    }
-
+    padding-top: 5px;
+    color: @color-grey--m;
+    font-size: @font-size--ss;
+    line-height: 15px;
+  }
+  &.exif {
+    display: none;
+    width: 400px;
     &:before {
-      margin-bottom: -1px;
-    }
-    &:after {
       display: none;
-      margin-top: 8.25px;
     }
-
-    &.exif, &.description {
-      padding-top: 5px;
-      color: @color-grey--m;
-      font-size: @font-size--ss;
-      line-height: 15px;
-    }
-    &.exif {
-      display: none;
-      width: 400px;
-      &:before {
+    p {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-right: 30px;
+      width: 150px;
+      &:last-of-type {
         display: none;
-      }
-      p {
-        display: inline-block;
-        margin-bottom: 0;
-        margin-right: 30px;
-        width: 150px;
-        &:last-of-type {
-          display: none;
-          width: 300px;
-        }
-      }
-      label {
-        display: inline-block;
-        width: 75px;
-        text-transform: uppercase;
+        width: 300px;
       }
     }
-
-    &.description {
-      margin: 0 auto;
-      height: 30px;
-      bottom: -30px;
-      right: 30px;
-      font-size: @font-size--ss;
-      text-align: right;
-      font-style: italic;
+    label {
+      display: inline-block;
+      width: 75px;
       text-transform: uppercase;
-      &:before, &:after {
-        display: none;
-      }
+    }
+  }
+
+  &.description {
+    margin: 0 auto;
+    height: 30px;
+    bottom: -30px;
+    right: 30px;
+    font-size: @font-size--ss;
+    text-align: right;
+    font-style: italic;
+    text-transform: uppercase;
+    &:before, &:after {
+      display: none;
     }
   }
 }
