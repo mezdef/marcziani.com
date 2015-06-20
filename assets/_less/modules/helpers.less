@@ -20,6 +20,7 @@
 
 
 //  FONTS //////////////////////////////////////////////////////////////////////
+
 .font-size(@size) {
   font-size: @size;
 }
@@ -163,12 +164,30 @@
 }
 
 
-// ANIMATION ///////////////////////////////////////////////////////////////////
+// OPACITY /////////////////////////////////////////////////////////////////////
 
-.transition(@transition-property, @transition-time, @method) {
-  -webkit-transition: @transition-property @transition-time @method;
-  -moz-transition: @transition-property @transition-time @method;
-  -ms-transition: @transition-property @transition-time @method;
-  -o-transition: @transition-property @transition-time @method;
-  transition: @transition-property @transition-time @method;
+.opacity (@opacity) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		      @opacity;
+}
+
+
+// TRANSITIONS /////////////////////////////////////////////////////////////////
+
+.transition(@transform) {
+  -webkit-transition: @transform;
+  -moz-transition: @transform;
+  -ms-transition: @transform;
+  -o-transition: @transform;
+  transition: @transform;
+}
+
+
+// ANIMATIONS //////////////////////////////////////////////////////////////////
+
+.animation(@name, @duration: 300ms, @delay: 0, @ease: ease) {
+  -webkit-animation: @name @duration @delay @ease;
+  -moz-animation: @name @duration @delay @ease;
+  -ms-animation: @name @duration @delay @ease;
 }

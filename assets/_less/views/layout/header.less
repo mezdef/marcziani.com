@@ -25,28 +25,39 @@ body > header {
       }
     }
     a {
+      display: block;
       color: @color-grey--m;
+      &:after {
+        display: block;
+        position: absolute;
+        content: "";
+        margin-left: 40%;
+        margin-right: 40%;
+        width: 20%;
+        bottom: -1px;
+        border-top: 1px solid @color-grey--dd;
+        .opacity(0);
+      }
       &:hover {
         text-decoration: none;
         color: @color-grey--dd !important;
+        background-color: transparent;
         &:after {
-          display: block;
-          position: absolute;
-          content: "";
           width: 100%;
-          bottom: -1px;
-          border-top: 1px solid @color-grey--dd;
+          margin-left: 0%;
+          margin-right: 0%;
+          .opacity(1);
+          .transition(all 0.15s linear);
         }
       }
       &.active {
         color: @color-grey--dd;
         &:after {
-          display: block;
-          position: absolute;
-          content: "";
           width: 100%;
-          bottom: -1px;
+          margin-left: 0%;
+          margin-right: 0%;
           border-top: 1px solid @color-grey--dd;
+          .opacity(1);
         }
       }
     }

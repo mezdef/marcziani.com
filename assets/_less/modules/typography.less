@@ -49,11 +49,15 @@ li {
 
 a {
   .font-color(@color-grey--ddd);
-  text-decoration: underline;
-  .transition(color, 0.1s, linear);
+  text-decoration: none;
+  .default article &, .post article & {
+    border-bottom: 1px dotted @color-grey--dd;
+  }
   &:hover {
-    color: @color-red !important;
-    text-decoration: underline;
+    .font-color(@color-grey--ddd);
+    background-color: @color-blue;
+    text-decoration: none;
+    border-bottom: 0px dotted @color-grey--dd;
   }
 }
 
@@ -82,7 +86,7 @@ figure {
   &:hover {
     figcaption {
       .font-color(@color-grey--d);
-      .transition(color, 0.1s, linear);
+      .transition(color 0.1s linear);
     }
   }
 
@@ -95,7 +99,6 @@ figure {
 
 figcaption {
   display: block;
-  // position: absolute;
   .font-sans;
   .font-size--s;
   line-height: 33px;
@@ -229,7 +232,7 @@ h2 {
 
 hr {
   margin: 0 auto 15px auto;
-  padding: 30px 0 60px 0;
+  padding-bottom: 30px;
   height: 16px;
   width: 35%;
   .font-leading(1px);
@@ -254,14 +257,12 @@ hr {
 // SELECTION ///////////////////////////////////////////////////////
 
 ::-moz-selection {
-  .background-color(@color-red);
-  .font-color(@color-white);
+  .background-color(@color-blue);
   text-shadow: none;
 }
 
 ::selection {
-  .background-color(@color-red);
-  .font-color(@color-white);
+  .background-color(@color-blue);
   text-shadow: none;
 }
 
