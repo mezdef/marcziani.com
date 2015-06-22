@@ -1,12 +1,12 @@
 ---
-  title: Japan
-  subtitle: "Skiing, Tokyo, Sapporo"
+  title: Jackson Hole
+  subtitle: "Ski trip"
   layout: photo
-  thumbnail: https://c2.staticflickr.com/8/7070/6882733113_0cbac7d928.jpg
-  photoset: 72157629263560201
+  thumbnail: https://c1.staticflickr.com/1/452/19032952905_f990c4abb3_n.jpg
+  photoset: 72157654474728070
   tags:
   - Travel
-  - Japan
+  - America
 ---
 
 {% if page.photoset %}

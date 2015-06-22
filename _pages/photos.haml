@@ -14,8 +14,8 @@ permalink: photos/
           %span {{ album.title }}
         %nav
           %time {{ album.date | date: "%Y" }}
-          %span,
           == {% for tag in album.tags %}
+          %span,
           %a{ href: "{{ tag.url }}"} {{ tag }}
           == {% endfor %}
       == {% endfor %}
