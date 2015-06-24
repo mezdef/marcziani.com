@@ -6,7 +6,7 @@ main > footer {
   width: 100%;
   .font-sans();
   .font-color(@color-grey--d);
-  font-size: @font-size--ss;
+  .font-size(ss);
   line-height: @font-leading--s;
   text-transform: uppercase;
   background-color: @color-grey--l;
@@ -22,7 +22,7 @@ main > footer {
       margin: 0 0 0 33px;
       width: 30px;
       height: 30px;
-      .font-size--m();
+      .font-size(m);
       .font-color(@color-grey--m);
       &:hover {
         background-color: transparent;
@@ -31,7 +31,7 @@ main > footer {
 
       i {
         &.fa-github, &.fa-twitter {
-          .font-size--l();
+          .font-size(l);
         }
       }
     }

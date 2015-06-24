@@ -1,17 +1,18 @@
 @media only screen and (min-width: 630px) {
 
   body {
-    font-size: @font-size--m;
+    .font-size(m);
     line-height: @font-leading--m;
   }
 
 // TYPOGRAPHY //////////////////////////////////////////////////////////////////
 
   h1 {
-    font-size: @font-size--ll;
+    .font-size(ll);
     line-height: @font-leading--ll;
   }
 
+    .font-size(l);
   figure {
     figcaption {
       &.exif, &.description {
@@ -77,20 +78,9 @@
   }
 
   a.brand {
-    font-size: @font-size--m;
+    .font-size(m);
     .logo {
       margin-right: 10px;
-    }
-  }
-
-
-// VIEWS - LISTING /////////////////////////////////////////////////////////////
-
-  .listing {
-    article.writing {
-      a {
-        font-size: @font-size--m;
-      }
     }
   }
 
@@ -106,17 +96,36 @@
     }
   }
 
+
+// VIEWS - LISTING /////////////////////////////////////////////////////////////
+
+  .listing {
+    article.writing {
+      a {
+        .font-size(m);
+      }
+    }
+  }
+
+
 // VIEWS - POST ////////////////////////////////////////////////////////////////
 
   .post {
     section {
-      > p:last-of-type {
-        &:after {
-          margin: 60px auto 90px auto;
+      > p {
+        &:first-of-type {
+          .font-size(mm);
+          line-height: @font-leading--mm;
+        }
+        &:last-of-type {
+          &:after {
+            margin: 60px auto 90px auto;
+          }
         }
       }
     }
   }
+
 
 
 // VIEWS - PHOTOS //////////////////////////////////////////////////////////////

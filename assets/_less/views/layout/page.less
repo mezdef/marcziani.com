@@ -43,10 +43,9 @@ article {
       text-transform: uppercase;
       font-style: normal;
       .font-sans;
-      // .font-size--ss;
-      font-size: @font-size--ss;
       line-height: @font-size--ss;
       // .font-leading--l;
+      .font-size(ss);
       font-weight: 400;
       letter-spacing: 1px;
     }
@@ -56,7 +55,7 @@ article {
       display: block;
       width: 100%;
       top: 0;
-      font-size: @font-size--ss;
+      .font-size(ss);
       line-height: @font-leading--m;
       text-align: center;
       span {
@@ -86,7 +85,7 @@ article {
 
   .content > p:first-child, .content > figure:first-child {
     font-weight: 500;
-    font-size: 21px;
+    .font-size(l);
     color: #444;
   }
 
@@ -110,9 +109,8 @@ article {
   }
 
   section > p:first-of-type {
-    // .font-size--l;
     // .font-leading--l;
-    .font-size--m;
+    .font-size(m);
     .font-leading--m;
     .font-color(@color-grey--ddd);
     >a {
@@ -133,9 +131,8 @@ article {
   li[id*='fn:'] {
     position: relative;
     padding: 0 0 0 20px;
-    // .font-size--ss;
     // .font-leading--ss;
-    font-size: @font-size--ss;
+    .font-size(ss);
     line-height: @font-leading--ss;
     counter-increment: step-counter;
     &:before {
@@ -144,7 +141,7 @@ article {
       content: counter(step-counter);
       margin-right: 5px;
       .font-sans;
-      .font-size--s;
+      .font-size(s);
       .font-leading--ssss;
       font-weight: 500;
     }
@@ -156,7 +153,7 @@ article {
     a:last-of-type {
       padding: 0 0 0 6px;
       .font-color(@color-red);
-      .font-size--ss;
+      .font-size(ss);
       .font-leading--sss;
       text-decoration: none;
     }

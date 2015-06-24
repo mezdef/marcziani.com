@@ -2,7 +2,7 @@ body > header {
   display: block;
   margin: 0 auto;
   .font-sans--block;
-  .font-size--s;
+  .font-size(s);
 
   nav {
     margin: 0 auto;
@@ -14,7 +14,7 @@ body > header {
 
   ul {
     position: relative;
-    font-size: @font-size--ss;
+    .font-size(ss);
     vertical-align: top;
     border-bottom: @border-structural;
     li {
@@ -76,7 +76,7 @@ body > header {
 
 a.brand {
   margin: 0 0 30px 0;
-  font-size: 0;
+  .font-size(0);
   font-style: italic;
   &:hover {
     text-decoration: none;
