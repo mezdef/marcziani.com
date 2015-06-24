@@ -2,17 +2,22 @@
 
   body {
     .font-size(m);
-    line-height: @font-leading--m;
+    .font-leading(m);
   }
 
 // TYPOGRAPHY //////////////////////////////////////////////////////////////////
 
   h1 {
     .font-size(ll);
-    line-height: @font-leading--ll;
+    .font-leading(ll);
   }
 
+  h2 {
+    padding: 30px 0;
     .font-size(l);
+    .font-leading(l);
+  }
+
   figure {
     figcaption {
       &.exif, &.description {
@@ -115,7 +120,7 @@
       > p {
         &:first-of-type {
           .font-size(mm);
-          line-height: @font-leading--mm;
+          .font-leading(mm);
         }
         &:last-of-type {
           &:after {

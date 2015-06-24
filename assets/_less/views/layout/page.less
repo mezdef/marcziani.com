@@ -32,7 +32,6 @@ article {
     &:after {
     }
     h1 {
-      // line-height: @font-leading--l;
     }
 
     h2 {
@@ -43,9 +42,8 @@ article {
       text-transform: uppercase;
       font-style: normal;
       .font-sans;
-      line-height: @font-size--ss;
-      // .font-leading--l;
       .font-size(ss);
+      .font-leading(ss);
       font-weight: 400;
       letter-spacing: 1px;
     }
@@ -56,7 +54,7 @@ article {
       width: 100%;
       top: 0;
       .font-size(ss);
-      line-height: @font-leading--m;
+      .font-leading(m);
       text-align: center;
       span {
         z-index: 1;
@@ -109,9 +107,8 @@ article {
   }
 
   section > p:first-of-type {
-    // .font-leading--l;
     .font-size(m);
-    .font-leading--m;
+    .font-leading(m);
     .font-color(@color-grey--ddd);
     >a {
       background-position: 0 24px;
@@ -131,9 +128,8 @@ article {
   li[id*='fn:'] {
     position: relative;
     padding: 0 0 0 20px;
-    // .font-leading--ss;
     .font-size(ss);
-    line-height: @font-leading--ss;
+    .font-leading(ss);
     counter-increment: step-counter;
     &:before {
       position: absolute;
@@ -142,7 +138,7 @@ article {
       margin-right: 5px;
       .font-sans;
       .font-size(s);
-      .font-leading--ssss;
+      .font-leading(ssss);
       font-weight: 500;
     }
     &:last-of-type {
@@ -154,7 +150,7 @@ article {
       padding: 0 0 0 6px;
       .font-color(@color-red);
       .font-size(ss);
-      .font-leading--sss;
+      .font-leading(sss);
       text-decoration: none;
     }
   }

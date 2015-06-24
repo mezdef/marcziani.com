@@ -8,7 +8,7 @@ ol, ul {
 body {
   .font-serif;
   .font-size(s);
-  line-height: @font-leading--s;
+  .font-leading(s);
   .font-color(@color-grey--dd);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -69,7 +69,7 @@ sup, sub {
   top: -0.4em;
   .font-sans;
   .font-size(s);
-  .font-leading--sss;
+  .font-leading(sss);
   font-weight: 500;
   vertical-align: baseline;
   a {
@@ -82,7 +82,7 @@ sup, sub {
 figure {
   position: relative;
   margin-bottom: 30px;
-  .font-leading--none;
+  .font-leading(0);
 
   &:hover {
     figcaption {
@@ -103,7 +103,7 @@ figcaption {
   display: block;
   .font-sans;
   .font-size(s);
-  line-height: @font-leading--s;
+  .font-leading(s);
   .font-color(@color-grey--mm);
   text-align: left;
 
@@ -127,7 +127,7 @@ figcaption {
     padding-top: 5px;
     color: @color-grey--m;
     .font-size(ss);
-    line-height: 15px;
+    .font-leading(15px);
   }
   &.exif {
     display: none;
@@ -222,13 +222,13 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   .font-size(l);
-  line-height: @font-leading--l;
+  .font-leading(l);
 }
 
 h2 {
-  padding: 0 0 16px 0;
+  padding: 16px 0;
   .font-size(mm);
-  line-height: @font-leading--mm;
+  .font-leading(mm);
 }
 
 
@@ -248,7 +248,7 @@ hr {
     width: auto;
     .font-sans;
     .font-size(l);
-    .font-leading--l;
+    .font-leading(l);
     .font-color(@color-grey--dd);
     .background-color(@color-white);
     .clearfix;
@@ -276,7 +276,7 @@ section.error {
     .font-sans;
     color: #FFF;
     font-size: 219.318px;
-    line-height: 132px;
+    .font-leading(132px);
     font-weight: 700;
     font-style: italic;
     text-align: center;

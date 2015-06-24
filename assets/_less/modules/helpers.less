@@ -30,7 +30,12 @@
   font-size: @size;
 }
 
-.font-leading(@size) {
+.font-leading(@size) when (iskeyword(@size)) {
+  @font-leading: 'font-leading--@{size}';
+  line-height: @@font-leading;
+}
+
+.font-leading(@size) when (isnumber(@size)) {
   line-height: @size;
 }
 
@@ -69,36 +74,6 @@
   a:hover {
     text-decoration: underline;
   }
-}
-
-
-.font-leading(@size) {
-  line-height: @size;
-}
-
-.font-leading--none {
-  line-height: 0;
-}
-.font-leading--ssss {
-  line-height: @font-leading--ssss;
-}
-.font-leading--sss {
-  line-height: @font-leading--sss;
-}
-.font-leading--ss {
-  line-height: @font-leading--ss;
-}
-.font-leading--s {
-  line-height: @font-leading--s;
-}
-.font-leading--m {
-  line-height: @font-leading--m;
-}
-.font-leading--l {
-  line-height: @font-leading--l;
-}
-.font-leading--ll {
-  line-height: @font-leading--ll;
 }
 
 .truncate {
