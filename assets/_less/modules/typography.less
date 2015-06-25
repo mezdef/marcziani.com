@@ -40,8 +40,8 @@ li {
     display: inline-block;
     margin: 0 0 5px 0;
     padding: 3px 6px;
-    .background-color(@color-grey--l);
     .font-color(grey--dd);
+    .background-color(grey--l);
     border: 1px solid #CCC;
     .border-radius(2px);
   }
@@ -54,9 +54,9 @@ a {
     border-bottom: 1px dotted @color-grey--dd;
   }
   &:hover {
-    background-color: @color-grey--ddd;
     .font-color(grey--w);
     text-decoration: none;
+    .background-color(grey--ddd);
     border-bottom: 0px dotted @color-grey--dd;
   }
 }
@@ -125,6 +125,7 @@ figcaption {
     padding-top: 5px;
     .font-size(ss);
     .font-leading(15px);
+    .background-color(grey--m);
   }
   &.exif {
     display: none;
@@ -249,7 +250,7 @@ hr {
     .font-size(l);
     .font-leading(l);
     .font-color(grey--dd);
-    .background-color(@color-grey--w);
+    .background-color(grey--w);
     .clearfix;
   }
 }
@@ -258,12 +259,12 @@ hr {
 // SELECTION ///////////////////////////////////////////////////////
 
 ::-moz-selection {
-  .background-color(@color-blue--l);
+  .background-color(blue--l);
   text-shadow: none;
 }
 
 ::selection {
-  .background-color(@color-blue--l);
+  .background-color(blue--l);
   text-shadow: none;
 }
 

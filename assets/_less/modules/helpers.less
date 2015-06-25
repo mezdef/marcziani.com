@@ -84,12 +84,16 @@
 }
 
 
-// COLOURS /////////////////////////////////////////////////////////////////////
+// BACKGROUND //////////////////////////////////////////////////////////////////
 
-.background-color(@color, @alpha: 1) {
-  background-color: rgba( red(@color), green(@color), blue(@color), @alpha);
+.background-color(@color, @alpha: 1) when (iskeyword(@color)) {
+  @b-color: 'color-@{color}';
+  background-color: rgba( red(@@b-color), green(@@b-color), blue(@@b-color), @alpha);
 }
 
+.background-color(@color) when (isstring(@color)) {
+  background-color: @color;
+}
 
 // BORDER //////////////////////////////////////////////////////////////////////
 
