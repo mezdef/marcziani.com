@@ -40,40 +40,24 @@
 }
 
 .font-color(@color, @alpha: 1) {
-  @f-color: ~'color-@{color}';
+  @f-color: 'color-@{color}';
   color: rgba( red(@@f-color), green(@@f-color), blue(@@f-color), @alpha);
 }
 
 
 // TYPOGRAPHY //////////////////////////////////////////////////////////////////
 
-.font-serif {
-  font-family: @font-serif;
+.font-family(@type) {
+  @family: 'font-@{type}';
+  font-family: @@family;
 }
 
-.font-serif--italic {
-  .font-serif;
-  font-style: italic;
-  letter-spacing: .01rem;
-  .font-color(grey--ddd);
-}
-
-.font-sans {
-  font-family: @font-sans;
-  font-weight: normal;
-}
-
-.font-sans--block {
-  .font-sans;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.font-mono {
-  font-family: @font-mono;
-  .font-color(grey--d);
-  a:hover {
-    text-decoration: underline;
+.font {
+  &-serif {
+    font-family: @font-serif;
+  }
+  &-sans {
+    font-family: @font-sans;
   }
 }
 

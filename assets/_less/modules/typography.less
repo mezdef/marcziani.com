@@ -6,7 +6,7 @@ ol, ul {
 }
 
 body {
-  .font-serif;
+  .font-family(serif);
   .font-size(s);
   .font-leading(s);
   .font-color(grey--dd);
@@ -65,7 +65,7 @@ sup, sub {
   position: relative;
   padding-left: 4px;
   top: -0.4em;
-  .font-sans;
+  .font-family(sans);
   .font-size(s);
   .font-leading(sss);
   font-weight: 500;
@@ -99,7 +99,7 @@ figure {
 
 figcaption {
   display: block;
-  .font-sans;
+  .font-family(sans);
   .font-size(s);
   .font-leading(s);
   .font-color(grey--mm);
@@ -166,15 +166,17 @@ figcaption {
 }
 
 time {
-  .font-sans--block;
+  .font-family(sans);
   .font-color(grey--m);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 blockquote {
   position: relative;
   margin: 0;
-  .margin-bottom--m;
-  .font-sans();
+  .margin-bottom--m();
+  .font-family(sans);
   .font-color(grey--mm);
   font-style: italic;
   &:hover {
@@ -185,10 +187,11 @@ blockquote {
       }
     }
   }
+
   cite {
     display: block;
     bottom: 0;
-    .font-sans;
+    .font-family(sans);
     .font-size(s);
     .font-leading(1.3);
     .font-color(grey--mm);
@@ -197,7 +200,7 @@ blockquote {
       .font-color(grey--mmm)
     }
   }
-  // em
+
   p {
     margin-left: -20px;
     margin-bottom: 0;
@@ -206,7 +209,7 @@ blockquote {
     border-left: @border-structural;
     &:last-of-type {
       border-left: none;
-      .margin-bottom--m;
+      .margin-bottom--m();
     }
   }
 }
@@ -246,24 +249,19 @@ hr {
     padding: 0 10px;
     height: 16px;
     width: auto;
-    .font-sans;
+    .font-family(sans);
     .font-size(l);
     .font-leading(l);
     .font-color(grey--dd);
     .background-color(grey--w);
-    .clearfix;
+    .clearfix();
   }
 }
 
 
 // SELECTION ///////////////////////////////////////////////////////
 
-::-moz-selection {
-  .background-color(blue--l);
-  text-shadow: none;
-}
-
-::selection {
+::-moz-selection, ::selection {
   .background-color(blue--l);
   text-shadow: none;
 }
@@ -273,8 +271,8 @@ hr {
 
 section.error {
   h1 {
-    .font-sans;
-    font-size: 219.318px;
+    .font-family(sans);
+    .font-size(219.318px);
     .font-leading(132px);
     .font-color(grey--w);
     font-weight: 700;
