@@ -25,7 +25,7 @@ body > header {
     }
     a {
       display: block;
-      color: @color-grey--m;
+      .font-color(grey--m);
       &:after {
         display: block;
         position: absolute;
@@ -39,8 +39,8 @@ body > header {
       }
       &:hover {
         text-decoration: none;
-        color: @color-grey--dd !important;
         background-color: transparent;
+        .font-color(grey--dd);
         &:after {
           width: 100%;
           margin-left: 0%;
@@ -50,7 +50,7 @@ body > header {
         }
       }
       &.active {
-        color: @color-grey--dd;
+        .font-color(grey--dd);
         &:after {
           width: 100%;
           margin-left: 0%;

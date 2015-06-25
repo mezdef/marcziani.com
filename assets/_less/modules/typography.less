@@ -9,7 +9,7 @@ body {
   .font-serif;
   .font-size(s);
   .font-leading(s);
-  .font-color(@color-grey--dd);
+  .font-color(grey--dd);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -40,22 +40,22 @@ li {
     display: inline-block;
     margin: 0 0 5px 0;
     padding: 3px 6px;
-    .font-color(@color-grey--dd);
     .background-color(@color-grey--l);
+    .font-color(grey--dd);
     border: 1px solid #CCC;
     .border-radius(2px);
   }
 }
 
 a {
-  .font-color(@color-grey--ddd);
+  .font-color(grey--ddd);
   text-decoration: none;
   .default article &, .post article & {
     border-bottom: 1px dotted @color-grey--dd;
   }
   &:hover {
-    color: @color-white !important;
     background-color: @color-grey--ddd;
+    .font-color(grey--w);
     text-decoration: none;
     border-bottom: 0px dotted @color-grey--dd;
   }
@@ -71,7 +71,7 @@ sup, sub {
   font-weight: 500;
   vertical-align: baseline;
   a {
-    .font-color(@color-grey--ddd);
+    .font-color(grey--ddd);
     text-decoration: none;
   }
 }
@@ -84,7 +84,7 @@ figure {
 
   &:hover {
     figcaption {
-      .font-color(@color-grey--d);
+      .font-color(grey--d);
       .transition(color 0.1s linear);
     }
   }
@@ -102,7 +102,7 @@ figcaption {
   .font-sans;
   .font-size(s);
   .font-leading(s);
-  .font-color(@color-grey--mm);
+  .font-color(grey--mm);
   text-align: left;
 
   &:before, &:after {
@@ -123,7 +123,6 @@ figcaption {
   &.exif, &.description {
     position: absolute;
     padding-top: 5px;
-    color: @color-grey--m;
     .font-size(ss);
     .font-leading(15px);
   }
@@ -167,7 +166,7 @@ figcaption {
 
 time {
   .font-sans--block;
-  .font-color(@color-grey--m);
+  .font-color(grey--m);
 }
 
 blockquote {
@@ -175,13 +174,13 @@ blockquote {
   margin: 0;
   .margin-bottom--m;
   .font-sans();
-  .font-color(@color-grey--mm);
+  .font-color(grey--mm);
   font-style: italic;
   &:hover {
     p, cite {
-      .font-color(@color-grey--dd);
+      .font-color(grey--dd);
       a {
-        .font-color(@color-grey--ddd);
+        .font-color(grey--ddd);
       }
     }
   }
@@ -191,10 +190,10 @@ blockquote {
     .font-sans;
     .font-size(s);
     .font-leading(1.3);
-    .font-color(@color-grey--mm);
+    .font-color(grey--mm);
     text-align: right;
     a {
-      .font-color(@color-grey--mmm)
+      .font-color(grey--mmm)
     }
   }
   // em
@@ -239,7 +238,7 @@ hr {
   width: 35%;
   .font-leading(1px);
   text-align: center;
-  border: 0px solid @color-white;
+  border: 0px solid @color-grey--w;
   &:before {
     display: inline-block;
     content: "* * *";
@@ -249,8 +248,8 @@ hr {
     .font-sans;
     .font-size(l);
     .font-leading(l);
-    .font-color(@color-grey--dd);
-    .background-color(@color-white);
+    .font-color(grey--dd);
+    .background-color(@color-grey--w);
     .clearfix;
   }
 }
@@ -259,12 +258,12 @@ hr {
 // SELECTION ///////////////////////////////////////////////////////
 
 ::-moz-selection {
-  .background-color(@color-blue);
+  .background-color(@color-blue--l);
   text-shadow: none;
 }
 
 ::selection {
-  .background-color(@color-blue);
+  .background-color(@color-blue--l);
   text-shadow: none;
 }
 
@@ -274,9 +273,9 @@ hr {
 section.error {
   h1 {
     .font-sans;
-    color: #FFF;
     font-size: 219.318px;
     .font-leading(132px);
+    .font-color(grey--w);
     font-weight: 700;
     font-style: italic;
     text-align: center;
@@ -286,7 +285,7 @@ section.error {
   }
 
   h2 {
-    color: #FFF;
+    .font-color(grey--w);
     text-align: center;
   }
 }
