@@ -1,10 +1,5 @@
 // @import "compass/css3"
 
-ol, ul {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   .font-family(serif);
   .font-size(s);
@@ -24,6 +19,13 @@ p {
 
 em {
   font-style: italic;
+}
+
+// LISTS ///////////////////////////////////////////////////////////////////////
+
+ol, ul {
+  margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -47,9 +49,16 @@ li {
   }
 }
 
+
+// LINKS ///////////////////////////////////////////////////////////////////////
+
 a {
   .font-color(grey--ddd);
   text-decoration: none;
+  word-break:     break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens:    auto;
+  hyphens:         auto;
   .default article &, .post article & {
     border-bottom: 1px dotted @color-grey--dd;
   }
@@ -61,8 +70,12 @@ a {
   }
 }
 
-sup, sub {
-  position: relative;
+
+// FOOTNOTES ///////////////////////////////////////////////////////////////////
+
+sup, sub,
+.default sup, .default sub,
+.post sup, .default sub {
   padding-left: 4px;
   top: -0.4em;
   .font-family(sans);
@@ -71,11 +84,17 @@ sup, sub {
   font-weight: 500;
   vertical-align: baseline;
   a {
-    .font-color(grey--ddd);
-    text-decoration: none;
+    border-bottom: 0px solid @color-grey--ddd;
+    &:hover {
+      .font-color(grey--ddd);
+      .background-color(grey--w, 0);
+      border-bottom: 1px solid @color-grey--ddd;
+    }
   }
 }
 
+
+// FIGURES /////////////////////////////////////////////////////////////////////
 
 figure {
   position: relative;
@@ -99,18 +118,13 @@ figure {
 
 figcaption {
   display: block;
+  margin-top: 7.5px;
   .font-family(sans);
-  .font-size(s);
-  .font-leading(s);
+  .font-size(ss);
+  .font-leading(sss);
   .font-color(grey--mm);
   text-align: left;
-
-  &:before, &:after {
-    display: block;
-    content: "";
-    width: 25%;
-    border-top: @border-structural;
-  }
+  text-transform: uppercase;
 
   &:before {
     margin-bottom: -1px;
@@ -121,18 +135,15 @@ figcaption {
   }
 
   &.exif, &.description {
+    margin: 0 auto;
     position: absolute;
     padding-top: 5px;
-    .font-size(ss);
     .font-leading(15px);
-    .background-color(grey--m);
   }
   &.exif {
     display: none;
     width: 400px;
-    &:before {
-      display: none;
-    }
+    text-transform: none;
     p {
       display: inline-block;
       margin-bottom: 0;
@@ -151,41 +162,41 @@ figcaption {
   }
 
   &.description {
-    margin: 0 auto;
     height: 30px;
     bottom: -30px;
     right: 30px;
-    .font-size(ss);
     text-align: right;
     font-style: italic;
-    text-transform: uppercase;
     &:before, &:after {
       display: none;
     }
   }
 }
 
-time {
-  .font-family(sans);
-  .font-color(grey--m);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+
+// QUOTES //////////////////////////////////////////////////////////////////////
 
 blockquote {
   position: relative;
-  margin: 0;
-  .margin-bottom--m();
+  margin: 0 0 30px 0;
+  padding-top: 15px;
   .font-family(sans);
   .font-color(grey--mm);
   font-style: italic;
+  quotes: "“" "”" "“" "’";
   &:hover {
     p, cite {
       .font-color(grey--dd);
-      a {
-        .font-color(grey--ddd);
-      }
     }
+  }
+
+  &:before {
+    position: absolute;
+    content: open-quote;
+    top: 5px;
+    .font-size(ll);
+    .font-leading(ssss);
+    .font-color(grey--m);
   }
 
   cite {
@@ -197,7 +208,10 @@ blockquote {
     .font-color(grey--mm);
     text-align: right;
     a {
-      .font-color(grey--mmm)
+      .font-color(grey--mmm);
+      &:hover {
+        .font-color(grey--w);
+      }
     }
   }
 
@@ -214,7 +228,8 @@ blockquote {
   }
 }
 
-// HEADINGS ////////////////////////////////////////////////////////
+
+// HEADINGS ////////////////////////////////////////////////////////////////////
 
 h1, h2, h3, h4, h5 {
   margin: 0;
@@ -259,15 +274,30 @@ hr {
 }
 
 
-// SELECTION ///////////////////////////////////////////////////////
+// MISC ////////////////////////////////////////////////////////////////////////
 
-::-moz-selection, ::selection {
+time {
+  .font-family(sans);
+  .font-color(grey--m);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+// SELECTION ///////////////////////////////////////////////////////////////////
+
+::-moz-selection {
+  .background-color(blue--l);
+  text-shadow: none;
+}
+
+::selection {
   .background-color(blue--l);
   text-shadow: none;
 }
 
 
-// 404 /////////////////////////////////////////////////////////////
+// 404 /////////////////////////////////////////////////////////////////////////
 
 section.error {
   h1 {

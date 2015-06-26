@@ -1,22 +1,18 @@
 .post {
   position: relative;
-  article {
-    a {
-      border-bottom: 1px dotted @color-grey--dd;
-    }
-    >p {
+  article section {
+    > p {
       &:last-of-type {
         margin: 0;
         padding: 0 0 30px 0;
         &:after {
-          // position: absolute
           content: "";
           display: block;
           margin: 30px auto;
           width: 10px;
           height: 10px;
           left: 50%;
-          border: 1px solid @color-red--m;
+          border: 1px solid @color-grey--ddd;
           .border-radius(40px);
         }
       }

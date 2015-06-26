@@ -93,6 +93,9 @@ article {
   }
 }
 
+
+// FOOTNOTES ///////////////////////////////////////////////////////////////////
+
 .footnotes {
   padding: 30px 0 0 0;
   border-top: @border-structural;
@@ -124,10 +127,13 @@ article {
     }
     a:last-of-type {
       padding: 0 0 0 6px;
-      .font-color(red--m);
+      .font-color(grey--dd);
       .font-size(ss);
       .font-leading(sss);
-      text-decoration: none;
+      border-bottom: 0px solid @color-grey--ddd;
+      &:hover {
+        .background-color(grey--w);
+      }
     }
   }
 }

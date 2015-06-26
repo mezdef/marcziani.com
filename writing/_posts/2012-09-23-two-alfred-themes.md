@@ -9,9 +9,11 @@ Having been an [Alfred][L1] devotee for some time now, trying to operate without
 The [Powerpack][L2] paid upgrade to Alfred (not currently available on the AppStore) is well worth it to anyone using Alfred in any meaningful capacity. Of particular interest to fellow pedants is the ability to export, import, and create themes.
 
 ![Fig 1. Alfred theme: DeusEx][I1]
+DeusEx theme
 {: .md-figure}
 
 ![Fig 2. Alfred theme: Ulysses][I2]
+Ulysses theme
 {: .md-figure}
 
 If you're interested in either of these themes, click below to download. Installation is as simple as opening the file with Alfred + Powerpack installed.
