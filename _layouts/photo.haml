@@ -17,5 +17,42 @@
               {{ page.date | date: '%Y' }}
         %section
           {{ content | stripem }}
+          {% if page.photoset %}
+          {% for photo in page.photos %}
+          {% assign photo-num = page.photos[forloop.index] %}
+          {% for story in page.stories %}
+          {% assign story-num = page.photos[forloop.index] %}
+          {% if story-num == photo-num %}
+          %p {{ story.para }}
+          {% endif %}
+          {% endfor %}
+          -# {% if forloop.index == page.story.id[forloop.index] %}
+          -# {% endif %}
+          -# %p {{ page.story.id[numm].para }}
+          %figure
+            %img{:alt => "{{ photo.description }}", :src => "{{ photo.urlFullSize }}"}/
+            %figcaption.exif
+              %p
+                %label F. Length
+                {{ photo.focalLength }}
+              %p
+                %label S. Speed
+                {{ photo.shutterSpeed }} s
+              %p
+                %label Aperture
+                ƒ/{{ photo.aperture }}
+              %p
+                %label ISO
+                {{ photo.iso }}
+              %p
+                %label Taken
+                {{ photo.creationDate | date: "%b %Y" }}
+            {% if photo.description != '' %}
+            %figcaption.description
+              {{ photo.description }}
+            {% endif %}
+          {% endfor %}
+          {% endif %}
+
 
       {% haml footer.haml %}

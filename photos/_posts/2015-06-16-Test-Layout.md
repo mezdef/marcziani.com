@@ -7,24 +7,7 @@
   tags:
   - Travel
   - Japan
+  stories:
+    - id: 1
+      para: "A person’s living situation tends to reinforce certain habits: studio apartments entail close quarters and limited storage space, houses and larger apartments encourage spreading out lest they feel empty. When it comes time for a move, the current space and the manner of its population will dictate how the process of packing is to be gone about."
 ---
-
-{% if page.photoset %}
-{% for photo in page.photos %}
-<figure>
-<img src="{{ photo.urlFullSize }}" alt="{{ photo.description }}" />
-<figcaption class="exif">
-<p><label>F. Length</label> {{ photo.focalLength }}</p>
-<p><label>S. Speed</label> {{ photo.shutterSpeed }} s</p>
-<p><label>Aperture</label> ƒ/{{ photo.aperture }}</p>
-<p><label>ISO</label> {{ photo.iso }}</p>
-<p><label>Taken</label> {{ photo.creationDate | date: "%b %Y" }}</p>
-</figcaption>
-{% if photo.description != '' %}
-<figcaption class="description">
-{{ photo.description }}
-</figcaption>
-{% endif %}
-</figure>
-{% endfor %}
-{% endif %}
