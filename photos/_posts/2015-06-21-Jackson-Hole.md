@@ -7,4 +7,7 @@
   tags:
   - Travel
   - America
+  stories:
+    - id: 1
+      para: " "
 ---

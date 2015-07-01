@@ -19,16 +19,12 @@
           {{ content | stripem }}
           {% if page.photoset %}
           {% for photo in page.photos %}
-          {% assign photo-num = page.photos[forloop.index] %}
+          {% assign photo-num = forloop.index %}
           {% for story in page.stories %}
-          {% assign story-num = page.photos[forloop.index] %}
-          {% if story-num == photo-num %}
+          {% if story.id == photo-num %}
           %p {{ story.para }}
           {% endif %}
           {% endfor %}
-          -# {% if forloop.index == page.story.id[forloop.index] %}
-          -# {% endif %}
-          -# %p {{ page.story.id[numm].para }}
           %figure
             %img{:alt => "{{ photo.description }}", :src => "{{ photo.urlFullSize }}"}/
             %figcaption.exif
