@@ -3,7 +3,7 @@
 
 // Word-spacing = Columns * Gutter
 // Padding-right = Gutters * Gutter
-// Margin-right = Gutters * Gutter
+// Margin-right = Gutters * -Gutter
 
 [class*=cols] {
   text-align: justify;
@@ -21,13 +21,13 @@
    box-sizing: border-box;
 }
 
-.cols2 { word-spacing: 20px; padding-right: 10px; }
-.cols3 { word-spacing: 15px; padding-right: 10px; }
+.cols2 { word-spacing: 5px; padding-right: 5px; }
+.cols3 { word-spacing: 10px; padding-right: 10px; }
 .cols4 { word-spacing: 40px; padding-right: 30px; }
 .cols5 { word-spacing: 50px; padding-right: 40px; }
 .cols6 { word-spacing: 60px; padding-right: 50px; }
  .cols2 >* { margin-right: 0 }
- .cols2 >* { margin-right: -10px; }
+ .cols2 >* { margin-right: -5px; }
  .cols3 >* { margin-right: -10px; }
  .cols4 >* { margin-right: -30px; }
  .cols5 >* { margin-right: -40px; }
@@ -42,7 +42,7 @@
 .one-third, .one-third >* { width: 33.00%; }
 .⅜, .⅜s >* { width: 37.50%; }
 .⅖, .⅖s >* { width: 40.00%; }
-.½, .½s >* { width: 50.00%; }
+.one-half, .one-half >* { width: 50.00%; }
 .⅗, .⅗s >* { width: 60.00%; }
 .⅝, .⅝s >* { width: 62.50%; }
 .⅔, .⅔s >* { width: 66.00%; }

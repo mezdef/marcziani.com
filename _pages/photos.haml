@@ -6,9 +6,9 @@ permalink: photos/
 
 %article.photos
   %section
-    %ul.cols3
+    %ul.cols2
       == {% for album in site.categories.photos %}
-      %li.one-third
+      %li.one-half
         %a{ href: "{{ album.url }}" }
           %img{ src: "{{ album.thumbnail }}"}
           %span {{ album.title }}
