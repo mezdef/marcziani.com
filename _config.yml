@@ -1,7 +1,7 @@
 name: "Marc Ziani de Ferranti"
 description: "Personal website and blog of Marc Ziani de Ferranti"
 
-url: "http://localhost:4000"
+url: "http://www.marcziani.com"
 
 # Outputting
 permalink: "/:categories/:title/"
