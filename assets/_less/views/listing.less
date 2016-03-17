@@ -1,83 +1,96 @@
 .listing {
-
-  article.writing {
-    .font-leading(m);
-
-    section {
-      padding-top: 30px;
-    }
-
-    li {
-      display: block;
-      margin-bottom: 30px;
-      text-align: right;
-    }
-
-    a {
-      float: left;
-      display: block;
-      max-width: 80%;
-      .truncate();
-      .font-size(s);
-      text-align: left;
-      text-decoration: none;
-    }
-
-    time {
-      .font-size(ss);
-    }
-
-  }
-
-
-// PHOTOS //////////////////////////////////////////////////////////////////////
-
-  article.photos {
-    .font-family(sans);
-    .font-size(ss);
-
-    section {
-      padding: 0 30px 60px 30px;
-    }
-
-    li {
-      text-transform: uppercase;
-      margin-bottom: 5px;
-
-      >a {
-        display: block;
-        width: 100%;
-        .font-size(ss);
-        .font-leading(16px);
-
-        &:hover {
-          .background-color(grey--w, 0);
-          span {
-            .background-color(grey--ddd);
-          }
-        }
-      }
-    }
+  article {
 
     img {
       width: 100%;
     }
 
-    nav {
-      width: 100%;
-      .font-color(grey--m);
-      .font-leading(ss);
-      .truncate();
-      border-top: @border-structural;
-      a {
-        .font-color(grey--m);
-        &:hover {
-          .font-color(grey--w);
+    &.writing, &.photos, &.projects {
+      li {
+        > a {
+          display: block;
         }
       }
     }
 
+    &.writing {
+      .font-leading(m);
+
+      section {
+        padding-top: 30px;
+      }
+
+      li {
+        display: block;
+        margin-bottom: 30px;
+        text-align: right;
+      }
+
+      a {
+        float: left;
+        max-width: 80%;
+        .truncate();
+        .font-size(s);
+        text-align: left;
+        text-decoration: none;
+      }
+
+      time {
+        .font-size(ss);
+      }
+
+    }
+
+    &.photos, &.projects {
+      .font-family(sans);
+      .font-size(ss);
+
+      section {
+        padding: 0 30px 60px 30px;
+      }
+
+      li {
+        text-transform: uppercase;
+        margin-bottom: 5px;
+
+        >a {
+          width: 100%;
+          .font-size(ss);
+          .font-leading(16px);
+
+          &:hover {
+            .background-color(grey--w, 0);
+            span {
+              .background-color(grey--ddd);
+            }
+          }
+        }
+      }
+
+      p, span {
+        margin: 0;
+      }
+
+      nav {
+        width: 100%;
+        .font-color(grey--m);
+        .font-leading(ss);
+        .truncate();
+        border-top: @border-structural;
+        a {
+          .font-color(grey--m);
+          &:hover {
+            .font-color(grey--w);
+          }
+        }
+      }
+    }
+
+    &.projects {
+      p {
+        width: 100%;
+      }
+    }
 
   }
-
 }
