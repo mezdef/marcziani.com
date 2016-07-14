@@ -16,6 +16,7 @@ gems:
 
 less:
   entrypoint: "assets/screen.less"
+  compress: true
 
 # Handling Reading
 exclude: ['rakefile.rb', 'Guardfile', 'Gemfile', 'Gemfile.lock', 's3_website.yml']
