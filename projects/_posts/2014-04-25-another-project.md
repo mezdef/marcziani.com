@@ -1,8 +1,8 @@
 ---
-title: Pipeline—
+title: Test
 subtitle: branding
 layout: project
-thumbnail: http://a.marcziani.com/projects/pipeline_logo.png
+thumbnail: 
 ---
 
 Blah Blah.

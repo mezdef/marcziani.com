@@ -6,12 +6,12 @@ permalink: projects/
 
 %article.projects
   %section
-    %ul
+    %ul.cols2
       == {% for post in site.categories.projects %}
-      %li
+      %li.one-half
         %a{ href: "{{ post.url }}" }
-          .about
-            %h1 {{ post.title }}
-            %span {{ post.subtitle }}
           %img{ src: "{{ post.thumbnail }}"}
+          %span {{ post.title }}
+        %nav.info
+          %span {{ post.subtitle }}
       == {% endfor %}
