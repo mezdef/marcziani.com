@@ -9,8 +9,53 @@
 
   %link{href: "/assets/favicon.ico?v=2", :rel => "shortcut icon"}
   %link{href: "/assets/screen.css", rel: "stylesheet"}
-  -# %link{rel: "stylesheet", href: "/assets/screen.css", media: "none", onload: "if(media!='all')media='all'"}
-  
+
+  %script{src: "/assets/javascripts/fontfaceobserver.js", type: "text/javascript"}
+  :javascript
+    function timer(time) { return new Promise(function (resolve, reject) { setTimeout(reject, time); }); }
+    var webfontLoader = function(font) { document.documentElement.classList.add('ff-' + font); };
+    var serif = new FontFaceObserver('Galaxie Copernicus');
+    var serifItalic = new FontFaceObserver('Galaxie Copernicus', { style: 'italic' });
+    var sans = new FontFaceObserver('Klavika');
+    var sansItalic = new FontFaceObserver('Klavika', { style: 'italic' });
+
+
+    if (sessionStorage.ffSerif) {
+    } else {
+      document.documentElement.classList.remove('ff-serif');
+      serif.load(null, 20000).then(function(){
+        webfontLoader('serif');
+        sessionStorage.ffSerif = true;
+      }).catch(function(e){ sessionStorage.ffSerif = false; });
+    }
+
+    if (sessionStorage.ffSerifItalic) {
+    } else {
+      document.documentElement.classList.remove('ff-serif-italic');
+      serifItalic.load(null, 20000).then(function(){
+        webfontLoader('serif-italic');
+        sessionStorage.ffSerifItalic = true;
+      }).catch(function(e){ sessionStorage.ffSerifItalic = false; });
+    }
+
+    if (sessionStorage.ffSans) {
+    } else {
+      document.documentElement.classList.remove('ff-sans');
+      sans.load(null, 20000).then(function(){
+        webfontLoader('sans');
+        sessionStorage.ffSans = true;
+      }).catch(function(e){ sessionStorage.ffSans = false; });
+    }
+
+    if (sessionStorage.ffSansItalic) {
+    } else {
+      document.documentElement.classList.remove('ff-sans-italic');
+      sansItalic.load(null, 20000).then(function(){
+        webfontLoader('sans-italic');
+        sessionStorage.ffSansItalic = true;
+      }).catch(function(e){ sessionStorage.ffSansItalic = false; });
+    }
+
   / HTML5 shim, for IE6-8 support of HTML5 elements
   /[if lt IE 9]
     %script{src: "http://html5shim.googlecode.com/svn/trunk/html5.js"}

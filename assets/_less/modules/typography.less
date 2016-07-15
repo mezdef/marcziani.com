@@ -2,7 +2,6 @@
 
 body {
   .font-family(serif);
-  .font-size(s);
   .font-leading(s);
   .font-color(grey--dd);
   -webkit-font-smoothing: antialiased;
@@ -279,6 +278,7 @@ hr {
 time {
   .font-family(sans);
   .font-color(grey--m);
+  .font-size(ss);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -316,5 +316,114 @@ section.error {
   h2 {
     .font-color(grey--w);
     text-align: center;
+  }
+}
+
+// NO FONTS ////////////////////////////////////////////////////////////////////
+
+html:not(.ff-serif) {
+  body {
+    .font-family(serif-fallback);
+    font-size: 18px;
+  }
+  article section>p:first-of-type {
+    font-size: 19px;
+  }
+  .listing article.writing a {
+    font-size: 16px;
+  }
+  @media only screen and (min-width: 630px) {
+    .post section>p:first-of-type {
+      font-size: 20px;
+      line-height: 35px;
+    }
+  }
+}
+
+html:not(.ff-serif-italic) {
+  h1, h2, h3, h4, h5 {
+    .font-family(serif-fallback);
+  }
+  h1 { font-size: 30px; }
+}
+
+
+html:not(.ff-sans) {
+  figcaption,
+  time,
+  article header p,
+  .listing article.photos,
+  .listing article.projects,
+  main > footer
+  {
+    .font-family(mono);
+    font-size: 11px;
+  }
+
+  time {
+    font-size: 11px;
+    word-spacing: -3.5px;
+  }
+
+  body {
+    > header {
+      .font-family(mono);
+      ul {
+        font-size: 11px;
+      }
+    }
+  }
+  main > footer {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    word-spacing: -4px;
+  }
+
+  .listing {
+    article {
+      &.photos, &.projects {
+        font-size: 9px;
+        li > a {
+          font-size: 11px;
+        }
+      }
+      &.writing {
+        time {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+html:not(.ff-sans-italic) {
+  body {
+    > header {
+      .font-family(mono);
+    }
+  }
+  @media only screen and (min-width: 630px) {
+    a.brand {
+      font-size: 15px;
+      line-height: 29px;
+      word-spacing: -5px;
+      letter-spacing: 0.7px;
+    }
+  }
+  blockquote {
+    .font-family(mono);
+    &:before {
+      font-size: 20px;
+      line-height: 14px;
+    }
+    p {
+      font-size: 14px;
+      word-spacing: -3px;
+      letter-spacing: 0.8px;
+    }
+  }
+  figcaption {
+    .font-family(mono);
+    font-size: 11px;
   }
 }
