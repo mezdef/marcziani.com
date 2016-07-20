@@ -39,9 +39,13 @@
   line-height: @size;
 }
 
-.font-color(@color, @alpha: 1) {
+.font-color(@color-@color, @alpha: 1) when (iskeyword(@color)) {
   @f-color: 'color-@{color}';
   color: rgba( red(@@f-color), green(@@f-color), blue(@@f-color), @alpha);
+}
+.font-color(@color-@color, @alpha: 1) when (isstring(@color)) {
+  @f-color: 'color-@{color}';
+  color: '@{@{f-color}}';
 }
 
 
@@ -76,14 +80,14 @@
 
 // BACKGROUND //////////////////////////////////////////////////////////////////
 
-.background-color(@color, @alpha: 1) when (iskeyword(@color)) {
-  @b-color: 'color-@{color}';
-  background-color: rgba( red(@@b-color), green(@@b-color), blue(@@b-color), @alpha);
-}
-
-.background-color(@color) when (isstring(@color)) {
-  background-color: @color;
-}
+// background-color: @color-@color, @alpha: 1) when (iskeyword(@color)) {
+//   @b-color: 'color-@{color}';
+//   background-color: rgba( red(@@b-color), green(@@b-color), blue(@@b-color), @alpha);
+// }
+//
+// background-color: @color-@color) when (isstring(@color)) {
+//   background-color: @color;
+// }
 
 // BORDER //////////////////////////////////////////////////////////////////////
 

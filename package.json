@@ -1,0 +1,42 @@
+{
+  "name": "marcziani.com",
+  "description": "My new Jekyll site.",
+  "version": "0.1.0",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-clean": "",
+    "grunt-contrib-cssmin": "",
+    "grunt-contrib-less": "",
+    "grunt-contrib-watch": "",
+    "grunt-jekyll": "",
+    "grunt-shell": "",
+    "load-grunt-tasks": "",
+    "time-grunt": ""
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mezdef/marcziani.com.git"
+  },
+  "author": "Marc Ziani de Ferranti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mezdef/marcziani.com/issues"
+  },
+  "homepage": "https://github.com/mezdef/marcziani.com",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-jekyll": "^0.4.4",
+    "grunt-shell": "^1.3.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-less": "^1.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "load-grunt-tasks": "^3.5.0",
+    "time-grunt": "^1.3.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0"
+  }
+}

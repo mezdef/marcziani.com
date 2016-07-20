@@ -27,7 +27,7 @@ body > header {
     }
     a {
       display: block;
-      .font-color(grey--m);
+      color: @color-grey--m;
       &:after {
         display: block;
         position: absolute;
@@ -40,8 +40,8 @@ body > header {
         .opacity(0);
       }
       &:hover {
-        .font-color(grey--dd);
-        .background-color(grey--w, 0);
+        color: @color-grey--dd;
+        background-color: @color-grey--0;
         &:after {
           width: 100%;
           margin-left: 0%;
@@ -51,7 +51,7 @@ body > header {
         }
       }
       &.active {
-        .font-color(grey--dd);
+        color: @color-grey--dd;
         &:after {
           width: 100%;
           margin-left: 0%;
@@ -77,7 +77,7 @@ a.brand {
   font-style: italic;
   &:hover {
     text-decoration: none;
-    .background-color(grey--ddd);
+    background-color: @color-grey--ddd;
     span.logo {
     }
   }

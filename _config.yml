@@ -12,11 +12,11 @@ markdown: kramdown
 # Plugins
 gems:
 - jekyll-haml
-- jekyll-less
+# - jekyll-less
 
-less:
-  entrypoint: "assets/screen.less"
-  compress: true
+# less:
+  # entrypoint: "assets/screen.less"
+  # compress: true
 
 # Handling Reading
 exclude: ['rakefile.rb', 'Guardfile', 'Gemfile', 'Gemfile.lock', 's3_website.yml']
