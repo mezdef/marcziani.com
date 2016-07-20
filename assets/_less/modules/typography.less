@@ -358,16 +358,22 @@ html:not(.ff-serif) {
     .font-family(serif-fallback);
     font-size: 18px;
   }
+  section {
+    >p {
+      letter-spacing: .24px;
+    }
+  }
   article section>p:first-of-type {
     font-size: 19px;
   }
   .listing article.writing a {
-    font-size: 16px;
+    font-size: 19px;
+    letter-spacing: .04px;
   }
   @media only screen and (min-width: 630px) {
     .post section>p:first-of-type {
-      font-size: 20px;
-      line-height: 35px;
+      font-size: 20.5px;
+      line-height: 34px;
     }
   }
 }
@@ -405,6 +411,12 @@ html:not(.ff-sans) {
       }
     }
   }
+  a.brand {
+    font-size: 15px;
+    letter-spacing: 1.2px;
+    word-spacing: -8px;
+  }
+
   main > footer {
     font-size: 10px;
     letter-spacing: 0.5px;
@@ -430,8 +442,8 @@ html:not(.ff-sans) {
 
 html:not(.ff-sans-italic) {
   body {
-    > header {
-      .font-family(mono);
+    > header, > header a:not(.brand) {
+      // .font-family(mono);
     }
   }
   @media only screen and (min-width: 630px) {
