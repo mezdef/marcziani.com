@@ -9,3 +9,5 @@ s3_website.yml
 _site
 .ruby-gemset
 _cache
+.asset-cache
+.tmp

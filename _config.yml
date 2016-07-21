@@ -12,11 +12,12 @@ markdown: kramdown
 # Plugins
 gems:
 - jekyll-haml
-# - jekyll-less
 
-# less:
-  # entrypoint: "assets/screen.less"
-  # compress: true
+# Grunt handles images and assets.
+exclude: [
+  'rakefile.rb', 'Gemfile', 'Gemfile.lock', 'package.json', 's3_website.yml',
+  'node_modules/',
+  'img', 'js',
+  '**.png', '**.jpg', '**.jpeg', '**.gif', '**webp', '**.svg', '**.ico'
+]
 
-# Handling Reading
-exclude: ['rakefile.rb', 'Guardfile', 'Gemfile', 'Gemfile.lock', 's3_website.yml']
