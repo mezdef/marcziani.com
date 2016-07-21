@@ -3,14 +3,14 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     // # Task: Clean
     clean: {
-      dev: ['_site'],
+      dev: ['_site']
     },
     // # Task: Jekyll
     jekyll: {
       // Build website from scratch
       dist: {
         options: {
-          dest: './_site',
+          dest: './_site'
         }
       },
       // Build website with only Haml and Md
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         options: {
           dest: './_site',
           exclude: ['./**', '!./**/*.haml', '!./**/*.md'],
-          quiet: true,
+          quiet: true
         }
       },
       // Start up server
@@ -59,8 +59,8 @@ module.exports = function(grunt) {
       },
       styles: {
         files: ['assets/**/*.less'],
-        tasks: ['less'],
-      },
+        tasks: ['less']
+      }
     },
     // # Task: Concurrent
     concurrent: {
