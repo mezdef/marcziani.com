@@ -17,7 +17,7 @@ gems:
 exclude: [
   'rakefile.rb', 'Gemfile', 'Gemfile.lock', 'package.json', 's3_website.yml',
   'node_modules/',
-  'img', 'js',
+  'assets/img', 'assets/js',
   '**.png', '**.jpg', '**.jpeg', '**.gif', '**webp', '**.svg', '**.ico'
 ]
 

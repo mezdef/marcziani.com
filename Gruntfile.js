@@ -3,21 +3,24 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    // # Plugin: Clean
-    clean: {
-      server: ['.tmp', '_site'],
-      dist: ['_site'],
+    // # Plugin: Shell
+    shell: {
+      clean: {
+        command: 'rm -rf .tmp .jekyll _site',
+      },
+      // sync: { command: 's3_website push', },
     },
+    clean: ['.tmp', '.jekyll', '_site'],
 
     // # Plugin: Watch
     watch: {
       less: {
         files: ['assets/**/*.less'],
-        tasks: ['less:server', 'autoprefixer'],
+        tasks: ['less:server', 'postcss:server'],
       },
       scripts: {
         files: ['assets/**/*.js'],
-        tasks: ['uglify'],
+        tasks: ['uglify:server'],
       },
       jekyll: {
         files: ['**/*.{html,haml,md,mkd,markdown,rb,svg,xml,yml}', '!_site/**/.{html,md,rb,svg,xml,yml}'],
@@ -28,13 +31,14 @@ module.exports = function(grunt) {
     // # Plugin: Jekyll
     jekyll: {
       options: {
-        config: '_config.yml,_config.build.yml',
+        // config: '_config.yml,_config.build.yml',
         src: './',
       },
       server: {
         options: {
           config: '_config.yml',
           dest: '.jekyll/',
+          // quiet: true,
           // incremental: true,
         },
       },
@@ -44,78 +48,65 @@ module.exports = function(grunt) {
           quiet: true,
         },
       },
+      layout: {
+        options: {
+          config: '_config.yml',
+          dest: '.jekyll/',
+          quiet: true,
+          // incremental: true,
+        },
+      },
     },
 
     // # Plugin: Less
     less: {
       server: {
-        compile: {
-          files: { '.tmp/assets/screen.css': 'assets/screen.less' },
+        options: {
+          paths: ['assets/'],
         },
+        files: { '.tmp/assets/screen.min.css': 'assets/_screen.less' },
       },
-      dist: {
-        compile: {
-          options: {
-            compress: true,
-            yuicompress: true,
-            optimization: 2,
-          },
-          // compilation.css  :  source.less
-          files: { '_site/assets/screen.css': 'assets/screen.less' },
-        },
-      },
-    },
-
-    // # Plugin: Uncss for unused css rules
-    // uncss: {
-    //   options: {
-    //     htmlroot: '<%= app.dist %>/<%= app.baseurl %>',
-    //     report: 'gzip'
-    //   },
-    //   dist: {
-    //     files: {
-    //       '_site/assets/screen.min.css': ['app/index.html', 'app/about.html']
-    //     }
-    //   }
-    //   dist: {
-    //     src: '_site/**/*.html',
-    //     dest: '.tmp/<%= app.baseurl %>/css/blog.css'
-    //   }
-    // },
-
-    // # Plugin: CSS Prefixing
-    autoprefixer: {
-      options: {
-        browsers: ['last 3 versions'],
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/assets/',
-          src: '**/*.css',
-          dest: '.tmp/assets/',
-        }],
-      },
-    },
-
-    // # Plugin: Minify CSS
-    cssmin: {
       dist: {
         options: {
-          keepSpecialComments: 0,
-          check: 'gzip',
+          paths: ['assets/'],
+          plugins: [
+          ],
         },
-        files: [{
-          expand: true,
-          cwd: '.tmp/assets/',
-          src: '**/*.css',
-          dest: '.tmp/assets/',
-        }],
+        // compilation.css  :  source.less
+        files: { '_site/assets/screen.min.css': 'assets/_screen.less' },
       },
     },
 
+    postcss: {
+      options: {
+        processors: [
+          require('pixrem')(), // add fallbacks for rem units
+          require('autoprefixer')({
+            browsers: [
+              '>0.1%', 'ie 8', 'chrome 6', 'firefox 20', 'safari 4', 'opera 12',
+              'android 4', 'ios_saf 4', 'op_mini all', 'samsung 4',
+            ],
+          }), // add vendor prefixes
+          // require('cssnano')() // minify the result
+        ]
+      },
+      server: {
+        src: '.tmp/assets/screen.min.css'
+      },
+      dist: {
+        src: '_site/assets/screen.min.css'
+      },
+    },
+
+    // csslint: {
+    //   src: ['.tmp/assets/screen.min.css']
+    // },
+    //
     // lesslint: {
-    //   src: ['./**/*.less']
+    //   options: {
+    //     imports: ['assets'],
+    //   },
+    //   src: ['assets/**/*.less'],
     // },
 
     // # Plugin: Minify JS
@@ -123,45 +114,48 @@ module.exports = function(grunt) {
       options: {
         preserveComments: false,
       },
+      server: {
+        files: [{
+          expand: true, // Extensions in filenames begin after the first dot
+          src: ['assets/js/*.js'], // Extensions in filenames begin after the first dot
+          dest: '.tmp/', // Extensions in filenames begin after the first dot
+          ext: '.min.js', // Extensions in filenames begin after the first dot
+          extDot: 'first', // Extensions in filenames begin after the first dot
+        }],
+      },
       dist: {
         files: [{
-          // Enable dynamic expansion.
           expand: true,
-          // Src matches are relative to this path.
           cwd: 'assets/js/',
-          // Actual pattern(s) to match.
           src: ['**/*.js'],
-          // Destination path prefix.
-          dest: '.tmp/assets/js/',
-          // Dest filepaths will have this extension.
+          dest: '_site/assets/js/',
           ext: '.min.js',
-          // Extensions in filenames begin after the first dot
           extDot: 'first',
         }],
       },
     },
 
     // # Task: Html Minification
-    htmlmin: {                                     // Task
-      dist: {                                      // Target
-        options: {                                 // Target options
-          removeComments: true,
-          collapseWhitespace: true,
-          collapseBooleanAttributes: true,
-          removeAttributeQuotes: true,
-          removeRedundantAttributes: true,
-          removeEmptyAttributes: true,
-          minifyJS: true,
-          minifyCSS: true,
-        },
-        files: [{
-          expand: true,
-          cwd: '_site',
-          src: '**/*.html',
-          dest: '_site',
-        }],
-      },
-    },
+    // htmlmin: {                                     // Task
+    //   dist: {                                      // Target
+    //     options: {                                 // Target options
+    //       removeComments: true,
+    //       collapseWhitespace: true,
+    //       collapseBooleanAttributes: true,
+    //       removeAttributeQuotes: true,
+    //       removeRedundantAttributes: true,
+    //       removeEmptyAttributes: true,
+    //       minifyJS: true,
+    //       minifyCSS: true,
+    //     },
+    //     files: [{
+    //       expand: true,
+    //       cwd: '_site',
+    //       src: '**/*.html',
+    //       dest: '_site',
+    //     }],
+    //   },
+    // },
 
     // # Plugin: Copy files
     copy: {
@@ -192,46 +186,24 @@ module.exports = function(grunt) {
 
     // # Plugin: Browser Sync
     browserSync: {
-      options: {
-        ui: {
-          port: 4000,
-        },
-        browser: "google chrome canary",
-      },
       server: {
         bsFiles: {
           src: [
             '.jekyll/**/*.html',
-            '.tmp/css/**/*.css',
-            '{.tmp,./}/js/**/*.js',
-            'assets/img/**/*.{gif,jpg,jpeg,png,svg}'
+            '.tmp/assets/*.css',
+            '.tmp/assets/js/*.min.js',
+            '.tmp/assets/**/*.{gif,jpg,jpeg,png,svg}',
           ]
         },
         options: {
-          server: {
-            baseDir: [
-              '.jekyll',
-              '.tmp',
-              './'
-            ]
-          },
-          watchTask: true
-        }
+          // baseDir: [ '.jekyll', '.tmp',],
+          browser: "google chrome canary",
+          watchTask: true,
+          server: ['.tmp', '.jekyll'],
+        },
       },
-      dist: {
-        options: {
-          server: {
-            baseDir: '_site'
-          }
-        }
-      }
     },
 
-    // shell: {
-    //   sync: {
-    //     command: 's3_website push'
-    //   }
-    // },
 
     // confirm: {
     //   sync: {
@@ -243,18 +215,16 @@ module.exports = function(grunt) {
     // }
   });
   require('load-grunt-tasks')(grunt);
-  i
 
   // Task: Serve
   grunt.registerTask('serve', function(target) {
     if (target === 'dist') { return grunt.task.run(['build', 'browserSync:dist']); }
     grunt.task.run([
-      'clean:server',
-      'concurrent:server',
+      'shell:clean',
+      'clean',
       'jekyll:server',
       'less:server',
-      'autoprefixer',
-      'uglify',
+      'uglify:server',
       'browserSync:server',
       'watch',
     ]);
@@ -262,14 +232,14 @@ module.exports = function(grunt) {
 
   // Task: Build
   grunt.registerTask('build', [
-    'clean:dist',
+    'shell:clean',
+    'clean',
     'jekyll:dist',
-    'concurrent:dist',
     'less:dist',
-    // 'uncss',
-    'autoprefixer',
-    'cssmin',
-    'uglify',
+    'postcss:dist',
+    'less:dist',
+    'copy:dist',
+    'uglify:dist',
     // 'htmlmin',
     // 'critical',
     // 'imagemin',
