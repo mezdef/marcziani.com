@@ -1,0 +1,57 @@
+
+
+.intrinsic {
+  // Make sure <picture> wrapper is set to block
+  // Max-width is governed by parentNode
+  display: block;
+
+  // Intrinsic Ratio Box
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: 100%; // Default to square
+
+  // Custom Styling
+  // background: #f0f0f0;
+
+  // Add as many ratios as you'd like...
+  &.intrinsic--square {
+    padding-top: 100%;
+  }
+
+  &.intrinsic--4x3 {
+    padding-top: 75%;
+  }
+
+  &.intrinsic--16x9 {
+    padding-top: 56.25%;
+  }
+
+  // 213/320
+  &.intrinsic--photolisting {
+    padding-top: 66.56%;
+  }
+
+  // Force the item to fill the intrinsic box
+  .intrinsic-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+picture.intrinsic {
+  background: url(/assets/img/loader.gif) center center no-repeat;
+  background-size: 34px;
+}
+
+img.b-lazy {
+  opacity: 0;
+	transition: opacity 0.3s;
+  &.b-loaded {
+  	opacity: 1;
+  }
+}
