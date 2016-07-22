@@ -15,9 +15,8 @@ gems:
 
 # Grunt handles images and assets.
 exclude: [
-  'rakefile.rb', 'Gemfile', 'Gemfile.lock', 'package.json', 's3_website.yml',
-  'node_modules/',
-  'assets/img', 'assets/js',
-  '**.png', '**.jpg', '**.jpeg', '**.gif', '**webp', '**.svg', '**.ico'
+  'rakefile.rb', 'Gemfile', 'Gemfile.lock', 'package.json', 'Gruntfile.js', 's3_website.yml', 'README.md',
+  'assets/**', 'node_modules/**', '.tmp/**', '.jekyll/'
+  # '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico'
 ]
 

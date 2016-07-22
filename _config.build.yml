@@ -1,8 +1,0 @@
-future: false
-show_drafts: false
-
-exclude: [
-  'rakefile.rb', 'Gemfile', 'Gemfile.lock', 'package.json', 's3_website.yml',
-  'node_modules/',
-  'js',
-]
