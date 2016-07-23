@@ -1,29 +1,49 @@
 'use strict';
 module.exports = function(grunt) {
-  // require('time-grunt')(grunt);
+  require('jit-grunt')(grunt);
+  require('time-grunt')(grunt);
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
     // # Plugin: Shell tasks
     shell: {
-      // sync: { command: 's3_website push', },
-      dir: { command: 'mkdir .tmp .jekyll _site', },
+      // sync: { command: 's3_website push', },,,
+      dir: { command: 'mkdir -p .tmp .jekyll', },
       clean: { command: 'rm -rf .tmp .jekyll _site', },
     },
 
-    // # Plugin: Jekyll HTML generation
+    // # Plugin: Haml generation for index files
+    haml: {
+      dist: {
+        files: {
+          'index.html': '_pages/index.haml',
+          'about.html': '_pages/about.haml',
+          'writing.html': '_pages/index.haml', // Index is mirrored
+          'photos.html': '_pages/photos.haml',
+          '404.html': '_pages/404.haml',
+        },
+      },
+    },
+
+    // # Plugin: Process that cleans up after jekyll
+    clean: {
+      dist: ['index.html', 'about.html', 'witing.html', 'photos.html', '404.html'],
+      start: ['_site/', '.jekyll/*', '.tmp/*'],
+    },
+
+    // # Plugin: Jekyll build process for html generation
     jekyll: {
       options: {
         src: './',
         config: '_config.yml',
-        // quiet: true, drafts: true, future: true,
-        // incremental: true,
+        quiet: true, drafts: true, future: true,
+        incremental: true,
       },
-      server: { options: { dest: '.jekyll/', }, },
+      server: { options: { dest: '.tmp/', }, },
       dist: { options: { dest: '_site/', }, },
     },
 
-    // # Plugin: Less processing
+    // # Plugin: Less process to generate css
     less: {
       options: {
         paths: ['assets/'],
@@ -32,7 +52,7 @@ module.exports = function(grunt) {
       dist: { files: { '_site/assets/screen.min.css': 'assets/_screen.less' }, },
     },
 
-    // # Plugin: Minify CSS
+    // # Plugin: Minify styles from less generated css
     postcss: {
       options: {
         processors: [
@@ -50,7 +70,7 @@ module.exports = function(grunt) {
       dist: { src: '_site/assets/screen.min.css' },
     },
 
-    // # Plugin: Minify JS
+    // # Plugin: Minify js process
     uglify: {
       options: { preserveComments: false, },
       server: {
@@ -69,7 +89,7 @@ module.exports = function(grunt) {
       },
     },
 
-    // # Plugin: Minify Images
+    // # Plugin: Minify process that moves images
     imagemin: {
       options: {
         optimizationLevel: 3,
@@ -85,7 +105,7 @@ module.exports = function(grunt) {
       },
     },
 
-    // # Plugin: Copy files
+    // # Plugin: Process to copy site for dev server
     copy: {
       server: {
         expand: true,
@@ -102,34 +122,14 @@ module.exports = function(grunt) {
       },
     },
 
-    // // # Plugin: Minify Html
-    // htmlmin: {                                     // Task
-    //   server: {                                      // Target
-    //     options: {                                 // Target options
-    //       removeComments: true,
-    //       collapseWhitespace: true,
-    //       collapseBooleanAttributes: true,
-    //       removeAttributeQuotes: true,
-    //       removeRedundantAttributes: true,
-    //       removeEmptyAttributes: true,
-    //       minifyJS: true,
-    //       minifyCSS: true,
-    //     },
-    //     files: [{
-    //       expand: true,
-    //       // src: '.jekyll/**/*.html',
-    //       // dest: './',
-    //       src: '.jekyll/**/*.html',
-    //       dest: './',
-    //     }],
-    //   },
-    // },
-
-    // # Plugin: Watch
+    // # Plugin: Watch process for server
     watch: {
+      options: {
+        spawn: false,
+      },
       less: {
         files: ['assets/**/*.less'],
-        tasks: ['less:server', 'postcss:server'],
+        tasks: ['bsReload:css', 'less:server', 'postcss:server'],
       },
       scripts: {
         files: ['assets/**/*.js'],
@@ -137,73 +137,35 @@ module.exports = function(grunt) {
       },
       jekyll: {
         files: [
-          '**/*.{haml,md,mkd,markdown,rb,svg,xml,yml}',
-          // '!tmp/**/*.{html,haml,md,mkd,markdown,rb,svg,xml,yml}',
-          // '!_site/**/.{html,md,rb,svg,xml,yml}',
-          // '!.tmp/**/.{html,md,rb,svg,xml,yml}',
-          '!tmp/**',
-          '!.tmp/**',
-          '!.jekyll/**',
-          '!_site/**',
-          '!node_modules/**',
-          // '!node_modules/**/.{html,md,rb,svg,xml,yml}',
+          '_includes/**/*.{haml,md,mkd,markdown,rb,svg,xml,yml}',
+          '_layouts/**/*.{haml,md,mkd,markdown,rb,svg,xml,yml}',
+          '_pages/**/*.{haml,md,mkd,markdown,rb,svg,xml,yml}',
+          '_plugins/*.{haml,md,mkd,markdown,rb,svg,xml,yml}',
+          'photos/**/*.{haml,md,mkd,markdown,rb,svg,xml,yml}',
+          'projects/**/*.{haml,md,mkd,markdown,rb,svg,xml,yml}',
+          'writing/**/*.{haml,md,mkd,markdown,rb,svg,xml,yml}',
         ],
-        tasks: ['jekyll:server'],
+        tasks: ['haml:dist', 'jekyll:dist', 'copy:server', 'clean:dist'],
       },
     },
 
     // # Plugin: Browser Sync
     browserSync: {
-      options: {
-        watchTask: true,
-        browser: "google chrome canary",
-      },
       server: {
-        bsFiles: {
-          src: [
-            '.jekyll/**/*.html', '!.jekyll/tmp/**/*.html',
-            '.tmp/assets/*.css', '.tmp/assets/js/*.min.js',
-            '.tmp/assets/**/*.{gif,jpg,jpeg,png,svg}',
-          ],
-        },
         options: {
-          server: ['.tmp/', '.jekyll/'],
-          // injectChanges: true,
+          watchTask: true,
+          server: '.tmp/',
+          browser: "google chrome canary",
+          plugins: [{
+            module: "bs-html-injector",
+            options: { files: [ '.tmp/**/*.html', ], },
+          }],
         },
       },
-      // dist: {
-      //   bsFiles: {
-      //     src: [
-      //       '_site/**/*.html', '!_site/tmp/**/*.html',
-      //       '_site/assets/*.css', '_site/assets/js/*.min.js',
-      //       '_site/assets/**/*.{gif,jpg,jpeg,png,svg}',
-      //     ],
-      //   },
-      //   options: {
-      //     server: '_site/',
-      //   },
-      // },
     },
-
-    // confirm: {
-    //   sync: {
-    //     options: {
-    //       question: 'Syncing website to S3. Continue?',
-    //       input: '_key:y'
-    //     }
-    //   }
-    // }
-
-    // csslint: {
-    //   src: ['.tmp/assets/screen.min.css']
-    // },
-    //
-    // lesslint: {
-    //   options: {
-    //     imports: ['assets'],
-    //   },
-    //   src: ['assets/**/*.less'],
-    // },
+    bsReload: {
+      css: ".tmp/**/*.css",
+    },
 
     // # Plugin: Concurrent Tasks
     concurrent: {
@@ -211,14 +173,15 @@ module.exports = function(grunt) {
     },
 
   });
-  require('load-grunt-tasks')(grunt);
 
   // Task: Build
   grunt.registerTask('build', [
-    'shell:clean', 'shell:dir',
+    'clean:start', 'shell:dir',
+    'haml:dist',
     'jekyll:dist',
     'concurrent:dist',
     'postcss:dist',
+    'clean:dist',
   ]);
 
   // Task: Development
@@ -226,3 +189,46 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['build', 'browserSync:dist', 'watch']);
   // grunt.registerTask('sync', ['build', 'shell:sync']);
 };
+
+// confirm: {
+//   sync: {
+//     options: {
+//       question: 'Syncing website to S3. Continue?',
+//       input: '_key:y'
+//     }
+//   }
+// }
+
+// csslint: {
+//   src: ['.tmp/assets/screen.min.css']
+// },
+//
+// lesslint: {
+//   options: {
+//     imports: ['assets'],
+//   },
+//   src: ['assets/**/*.less'],
+// },
+
+// // # Plugin: Minify Html
+// htmlmin: {                                     // Task
+//   server: {                                      // Target
+//     options: {                                 // Target options
+//       removeComments: true,
+//       collapseWhitespace: true,
+//       collapseBooleanAttributes: true,
+//       removeAttributeQuotes: true,
+//       removeRedundantAttributes: true,
+//       removeEmptyAttributes: true,
+//       minifyJS: true,
+//       minifyCSS: true,
+//     },
+//     files: [{
+//       expand: true,
+//       // src: '.jekyll/**/*.html',
+//       // dest: './',
+//       src: '.jekyll/**/*.html',
+//       dest: './',
+//     }],
+//   },
+// },

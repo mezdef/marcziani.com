@@ -8,12 +8,6 @@
   %link{:href => "{{ site.url }}/feed.xml", :rel => "alternate", :title => "{{ site.name }}", :type => "application/rss+xml"}/
   %link{href: "/assets/favicon.ico?v=2", :rel => "shortcut icon"}
 
-  %script{src: "/assets/js/blazy.min.js", type: "text/javascript"}
-  :javascript
-    var bLazy = new Blazy({
-    // Options
-    });
-
   %link{rel:"preload", href:"http://a.marcziani.com/fonts/Copernicus-Book.woff"}
   %link{rel:"preload", href:"http://a.marcziani.com/fonts/KlavikaWebBasicRegular.woff"}
 
@@ -21,6 +15,13 @@
 
   -# %script{src: "/assets/javascripts/fontfaceobserver.js", type: "text/javascript"}
   %script{src: "/assets/js/fontloader.min.js", type: "text/javascript"}
+  
+  %script{src: "/assets/js/blazy.min.js", type: "text/javascript"}
+  :javascript
+    var bLazy = new Blazy({
+    // Options
+    });
+
 
   -# :javascript
     /* include loadJS library */
