@@ -10,7 +10,6 @@ permalink: photos/
       == {% for album in site.categories.photos %}
       %li.one-half
         %a{ href: "{{ album.url }}" }
-          -# %img{ src: "{{ album.thumbnail }}"}
           %picture.intrinsic.intrinsic--photolisting
             %source{ media: "(min-width: 500px)", srcset: "large.jpg" }
             %img{ class: "b-lazy intrinsic-item",  src: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", "data-src": "{{ album.thumbnail }}", alt: ""}
@@ -22,3 +21,5 @@ permalink: photos/
           %span {{ tag }}
           == {% endfor %}
       == {% endfor %}
+
+  %script{src: "/assets/js/imageloader.min.js", type: "text/javascript"}

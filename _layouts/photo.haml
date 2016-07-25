@@ -31,7 +31,7 @@
             -# %img{:alt => "{{ photo.description }}", :src => "{{ photo.urlFullSize }}"}/
             %picture.intrinsic.intrinsic--photolisting
               %source{ media: "(min-width: 500px)", srcset: "large.jpg" }
-              -# %img{ class: "b-lazy intrinsic-item",  src: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", "data-src": "{{ photo.urlFullSize }}", alt: "{{ photo.description }}"}
+              %img{ class: "b-lazy intrinsic-item", "data-src": "{{ photo.urlFullSize }}", alt: "{{ photo.description }}"}
             %figcaption.exif
               %p
                 %label F. Length
@@ -57,3 +57,5 @@
 
 
       {% haml footer.haml %}
+
+    %script{src: "/assets/js/imageloader.min.js", type: "text/javascript"}
