@@ -6,13 +6,12 @@ permalink: photos/
 
 %article.photos
   %section
-    %ul.cols2
+    %ul.grid
       == {% for album in site.categories.photos %}
-      %li.one-half
+      %li
         %a{ href: "{{ album.url }}" }
-          %picture.intrinsic.intrinsic--photolisting
-            %source{ media: "(min-width: 500px)", srcset: "large.jpg" }
-            %img{ class: "b-lazy intrinsic-item",  src: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", "data-src": "{{ album.thumbnail }}", alt: ""}
+          %picture
+            %img.b-lazy{src:"", "data-src":"{{ album.thumbnail }}", alt:""}
           %span {{ album.title }}
         %nav
           %time {{ album.date | date: "%Y" }}

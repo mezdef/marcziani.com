@@ -1,53 +1,17 @@
-/* The Omega Maneuver */
-// http://stackoverflow.com/questions/7190768/css-fluid-columns-fixed-margins-the-holy-grail-of-holy-grails
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: -10px 0 0 -10px;
 
-// Word-spacing = Columns * Gutter
-// Padding-right = Gutters * Gutter
-// Margin-right = Gutters * -Gutter
+  li {
+    // flex: 1;
+    padding: 10px 0 0 10px;
+    @media screen and (min-width: 420px) { width: 50%; }
+    @media screen and (min-width: 630px) { width: calc(100% / 3); }
 
-[class*=cols] {
-  text-align: justify;
-  // padding-left: 10px;
-  -ms-text-justify: distribute-all-lines;
+    img {
+      display: block;
+    }
+  }
 }
-
- [class*=cols]>* {
-   display: inline-block;
-   text-align: left;
-   word-spacing: normal;
-   vertical-align: top;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-}
-
-.cols2 { word-spacing: 5px; padding-right: 5px; }
-.cols3 { word-spacing: 10px; padding-right: 10px; }
-.cols4 { word-spacing: 40px; padding-right: 30px; }
-.cols5 { word-spacing: 50px; padding-right: 40px; }
-.cols6 { word-spacing: 60px; padding-right: 50px; }
- .cols2 >* { margin-right: 0 }
- .cols2 >* { margin-right: -5px; }
- .cols3 >* { margin-right: -10px; }
- .cols4 >* { margin-right: -30px; }
- .cols5 >* { margin-right: -40px; }
- .cols6 >* { margin-right: -50px; }
-
-// # HELPERS
-
-.⅛, .⅛s >* { width: 12.50%; }
-.⅙, .⅙s >* { width: 16.66%; }
-.⅕, .⅕s >* { width: 20.00%; }
-.¼, .¼s >* { width: 25.00%; }
-.one-third, .one-third >* { width: 33.00%; }
-.⅜, .⅜s >* { width: 37.50%; }
-.⅖, .⅖s >* { width: 40.00%; }
-.one-half, .one-half >* { width: 50.00%; }
-.⅗, .⅗s >* { width: 60.00%; }
-.⅝, .⅝s >* { width: 62.50%; }
-.⅔, .⅔s >* { width: 66.00%; }
-.¾, .¾s >* { width: 75.00%; }
-.⅘, .⅘s >* { width: 80.00%; }
-.⅚, .⅚s >* { width: 83.33%; }
-.⅞, .⅞s >* { width: 87.50%; }
-.blarg-five-twelfs { width: 41.66%; }
