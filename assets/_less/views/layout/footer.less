@@ -1,58 +1,31 @@
 main > footer {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  padding: 30px 0 60px 0;
+  padding: 15px 0 30px 0;
   margin: 0 30px;
   .font.sans();
   .font-size(ss);
-  .font-leading(s);
-  color: @color-grey--d;
+  .font-leading(20px);
+  color: @color-grey--mmm;
   border-top: @border-structural;
   @media screen and (min-width: 630px) {
     margin: 0 auto;
     width: 560px;
-    background-color: @color-grey--w;
   }
 
-  a {
-    color: @color-grey--dd;
-  }
-
+  p { margin: 0; }
   nav {
-    margin: 33px 0 0 0;
     a {
-      display: block;
-      margin: 0 0 0 33px;
-      width: 30px;
-      height: 30px;
-      .font-size(m);
-      color: @color-grey--m;
-      &:hover {
-        background-color: @color-grey--0;
-        color: @color-grey--ddd;
-      }
-
-      i {
-        &.fa-github, &.fa-twitter {
-          .font-size(l);
-        }
-      }
+      color: @color-grey--mm;
     }
   }
 
-  ul {
-    overflow: visible;
-    text-align: center;
-  }
 
   li {
     display: inline-block;
-    &:first-of-type {
-      a {
-        margin: 0;
+    &:not(:first-of-type) {
+      &:before {
+        content: " · ";
+        padding: 0 5px;
       }
     }
   }
-
 }
