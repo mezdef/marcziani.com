@@ -129,15 +129,10 @@ sup, sub,
 
 figure {
   position: relative;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
+  .font.sans();
+  .font-size(ss);
   .font-leading(0);
-
-  &:hover {
-    figcaption {
-      color: @color-grey--d;
-      .transition(color 0.1s linear);
-    }
-  }
 
   img {
     height: auto;
@@ -148,57 +143,61 @@ figure {
 }
 
 figcaption {
-  display: block;
   margin-top: 7.5px;
-  .font.sans();
-  .font-size(ss);
   .font-leading(sss);
   color: @color-grey--mm;
   text-align: left;
 
-  &:before {
-    margin-bottom: -1px;
-  }
-  &:after {
-    display: none;
-    margin-top: 8.25px;
-  }
+  figure:hover & { color: @color-grey--d; }
 
-  &.exif, &.description {
-    margin: 0 auto;
-    position: absolute;
-    padding-top: 5px;
-    .font-leading(15px);
-  }
+  &.exif, &.description { position: absolute; }
   &.exif {
     display: none;
     width: 400px;
     text-transform: none;
+
+    @media only screen and (min-width: 630px) { display: block; }
+    @media only screen and (min-width: 1200px) {
+      padding-top: 0;
+      width: 180px;
+      top: 0;
+      right: 45px;
+    }
+
     p {
       display: inline-block;
       margin-bottom: 0;
       margin-right: 30px;
-      width: 150px;
-      &:last-of-type {
-        display: none;
-        width: 300px;
-      }
+      width: 155px;
+      &:last-of-type { display: none; }
     }
     label {
       display: inline-block;
       width: 75px;
       text-transform: uppercase;
+      @media only screen and (min-width: 1200px) { width: 110px; }
     }
   }
 
   &.description {
     height: 30px;
-    bottom: -30px;
+    bottom: -37.5px;
+    left: 30px;
     right: 30px;
+    .truncate();
     text-align: right;
-    font-style: italic;
-    &:before, &:after {
-      display: none;
+
+    &:before, &:after { display: none; }
+
+    @media only screen and (min-width: 630px) {
+      left: auto;
+      right: 60px;
+      width: 45%;
+    }
+    @media only screen and (min-width: 1200px) {
+      padding: 0 240px;
+      width: 100%;
+      left: 0;
     }
   }
 }
