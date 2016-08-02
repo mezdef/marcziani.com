@@ -57,8 +57,20 @@
         }
       }
 
+      picture, nav {
+        @media screen and (max-width: 419px) { width: 50%; }
+      }
+
       picture {
         @media screen and (min-width: 420px) { margin-bottom: 5px; }
+      }
+
+      nav {
+        color: @color-grey--m;
+        .truncate();
+        vertical-align: top;
+
+        @media screen and (max-width: 419px) { padding-left: 10px; }
       }
 
       p, span {
@@ -73,19 +85,6 @@
           .a();
           display: inline;
         }
-      }
-
-      picture, nav {
-        @media screen and (max-width: 419px) {
-          padding-left: 10px;
-          width: 50%;
-        }
-      }
-
-      nav {
-        color: @color-grey--m;
-        .truncate();
-        vertical-align: top;
       }
     }
 
