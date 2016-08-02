@@ -28,7 +28,6 @@
           {% endif %}
           {% endfor %}
           %figure
-            -# %img{:alt => "{{ photo.description }}", :src => "{{ photo.urlFullSize }}"}/
             %picture.pre
               %img.lzy{src:"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", "data-src": "{{ photo.urlFullSize }}", alt: "{{ photo.description }}" }
             %figcaption.exif

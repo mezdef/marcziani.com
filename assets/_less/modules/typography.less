@@ -51,22 +51,27 @@ li {
 
 // LINKS ///////////////////////////////////////////////////////////////////////
 
-a {
+.a {
   color: @color-grey--ddd;
   text-decoration: none;
-  word-break:     break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens:    auto;
-  hyphens:         auto;
-  .default article &, .post article & {
-    border-bottom: 1px dotted @color-grey--dd;
-  }
-  &:hover {
+  word-break: break-word;
+  hyphens: auto;
+  border-bottom: 1px dotted @color-grey--m;
+
+  .hover {
     color: @color-grey--w;
     text-decoration: none;
-    background-color: @color-grey--ddd;
-    border-bottom: 0px dotted @color-grey--dd;
+    background-color: #0242FF;
+    border-bottom: 1px dotted @color-grey--0;
+    .default article &, .post article & {
+      border-bottom: 1px dotted @color-blue--d;
+    }
   }
+}
+
+a {
+  .a();
+  &:hover { .a>.hover(); }
 }
 
 
