@@ -29,9 +29,8 @@
           {% endfor %}
           %figure
             -# %img{:alt => "{{ photo.description }}", :src => "{{ photo.urlFullSize }}"}/
-            %picture.intrinsic.intrinsic--photolisting
-              %source{ media: "(min-width: 500px)", srcset: "large.jpg" }
-              %img{ class: "b-lazy intrinsic-item", "data-src": "{{ photo.urlFullSize }}", alt: "{{ photo.description }}"}
+            %picture.pre
+              %img.lzy{src:"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", "data-src": "{{ photo.urlFullSize }}", alt: "{{ photo.description }}" }
             %figcaption.exif
               %p
                 %label F. Length

@@ -43,15 +43,20 @@
 }
 
 
-picture.intrinsic {
-  background: url(/assets/img/loader.gif) center center no-repeat;
+picture.pre {
+  .photos & { min-height: 51vw; }
+  display: block;
+  background-image: url(/assets/img/loader.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #F6F6F6;
   background-size: 34px;
 }
 
-img.b-lazy {
+img.lzy {
   opacity: 0;
 	transition: opacity 0.3s;
-  &.b-loaded {
+  &.lded {
   	opacity: 1;
   }
 }

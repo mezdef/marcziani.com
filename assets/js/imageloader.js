@@ -316,14 +316,16 @@
   }
 });
 
-
-
-
+// Call image lazy loader
 var bLazy = new Blazy({
-  offset: 200,
+  offset: 1000,
+  selector: '.lzy',
+  successClass: 'lded',
   success: function(ele){
+    setTimeout(function(){
+      ele.parentNode.classList.remove('pre')
+    }, 1000);
   }, error: function(ele, msg){
-    console.log('nope');
     if (msg === 'missing') {
     } else if (msg === 'invalid') {
     }
