@@ -1,15 +1,9 @@
 .listing {
   article {
 
-    img {
-      width: 100%;
-    }
-
-    &.writing, &.photos, &.projects {
+    &.writing, &.albums, &.projects {
       li {
-        > a {
-          display: block;
-        }
+        > a { display: block; }
       }
     }
 
@@ -24,11 +18,9 @@
       li {
         display: block;
         margin-bottom: 30px;
-        text-align: right;
       }
 
       a {
-        float: left;
         max-width: 80%;
         .truncate();
         .font-size(s);
@@ -41,47 +33,59 @@
 
     }
 
-    &.photos, &.projects {
+    &.albums, &.projects {
       .font.sans();
-      .font-size(ss);
 
-      section {
-        padding: 0 30px 60px 30px;
-      }
+      section { padding: 0 30px 60px 30px; }
+      img { max-width: 100%; }
 
       li {
         margin-bottom: 5px;
 
         >a {
-          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
           .font-size(ss);
-          .font-leading(16px);
+          .font-leading(sss);
+          border-width: 0;
 
           &:hover {
             background-color: @color-grey--0;
-            span {
-              background-color: @color-grey--ddd;
-            }
+            p:first-of-type { .a > .hover(); }
           }
         }
+      }
+
+      picture {
+        @media screen and (min-width: 420px) { margin-bottom: 5px; }
       }
 
       p, span {
         margin: 0;
       }
 
-      nav {
-        width: 100%;
-        color: @color-grey--m;
-        .font-leading(ss);
+      p {
+        max-width: 100%;
         .truncate();
-        border-top: @border-structural;
-        a {
-          color: @color-grey--m;
-          &:hover {
-            color: @color-grey--w;
-          }
+
+        &:first-of-type {
+          .a();
+          display: inline;
         }
+      }
+
+      picture, nav {
+        @media screen and (max-width: 419px) {
+          padding-left: 10px;
+          width: 50%;
+        }
+      }
+
+      nav {
+        color: @color-grey--m;
+        .truncate();
+        vertical-align: top;
       }
     }
 

@@ -4,21 +4,22 @@ layout: listing
 permalink: photos/
 == ---
 
-%article.photos
+%article.albums
   %section
     %ul.grid
       == {% for album in site.categories.photos %}
       %li
         %a{ href: "{{ album.url }}" }
-          %picture
-            %img.b-lazy{src:"", "data-src":"{{ album.thumbnail }}", alt:""}
-          %span {{ album.title }}
-        %nav
-          %time {{ album.date | date: "%Y" }}
-          == {% for tag in album.tags %}
-          %span,
-          %span {{ tag }}
-          == {% endfor %}
+          %picture.pre
+            %img.lzy{src:"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", "data-src": "{{ album.thumbnail }}"}
+          %nav
+            %p {{ album.title }}
+            %p
+              %time {{ album.date | date: "%Y" }}
+              == {% for tag in album.tags %}
+              %span,
+              %span {{ tag }}
+              == {% endfor %}
       == {% endfor %}
 
   %script{src: "/assets/js/imageloader.min.js", type: "text/javascript"}
