@@ -7,10 +7,23 @@
   li {
     padding: 10px 0 0 10px;
     width: 100%;
-
-    @media screen and (min-width: 420px) { width: 50%; }
-    @media screen and (min-width: 630px) { width: calc(100% / 3); }
-
     img { display: block; }
+  }
+
+  .listing & {
+    li {
+      @media screen and (min-width: 420px) { width: 50%; }
+      @media screen and (min-width: 630px) { width: calc(100% / 3); }
+    }
+  }
+  .post & {
+    align-items: center;
+    justify-content: center;
+
+    picture {
+        width: 50%;
+        &:first-of-type { img { float: right; } }
+    }
+    figcaption { padding-left: 10px; }
   }
 }
