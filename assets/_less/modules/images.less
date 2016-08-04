@@ -29,7 +29,10 @@ picture {
       // max-width: 1444px;
       // @media screen and (min-width: 1200px) { min-height: 643px; }
     }
-    .listing & { min-height: 28vw; }
+    .listing & {
+      min-height: 28vw;
+      @media only screen and (min-width: 630px) { min-height: 120px; }
+    }
   }
 }
 
