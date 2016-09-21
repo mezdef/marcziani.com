@@ -32,6 +32,7 @@
     "cssnano": "^3.7.3",
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.4",
+    "grunt-aws": "^0.6.2",
     "grunt-browser-sync": "^2.2.0",
     "grunt-concurrent": "^2.3.0",
     "grunt-confirm": "^1.0.5",

@@ -1,6 +1,7 @@
 'use strict';
 module.exports = function(grunt) {
-  require('jit-grunt')(grunt);
+  // require('jit-grunt')(grunt);
+  require('jit-grunt')(grunt, { s3: 'grunt-aws', });
   require('time-grunt')(grunt);
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -162,6 +163,17 @@ module.exports = function(grunt) {
           }],
         },
       },
+      dist: {
+        options: {
+          watchTask: true,
+          server: '_site/',
+          browser: "google chrome canary",
+          plugins: [{
+            module: "bs-html-injector",
+            options: { files: [ '_site/**/*.html', ], },
+          }],
+        },
+      },
     },
     bsReload: {
       css: ".tmp/**/*.css",
@@ -172,6 +184,22 @@ module.exports = function(grunt) {
       dist: ['less:dist', 'uglify:dist', 'imagemin:dist', 'copy:dist'],
     },
 
+    // # Plugin: Upload to S3
+    aws: grunt.file.readJSON("credentials.json"),
+    s3: {
+      options: {
+        accessKeyId: "<%= aws.accessKeyId %>",
+        secretAccessKey: "<%= aws.secretAccessKey %>",
+        bucket: "<%= aws.bucket %>",
+        region: "<%= aws.region %>"
+      },
+
+      //upload all files within build/ to root
+      deploy: {
+        cwd: "_site/",
+        src: "**"
+      },
+    },
   });
 
   // Task: Build
@@ -184,20 +212,10 @@ module.exports = function(grunt) {
     'clean:dist',
   ]);
 
-  // Task: Development
   grunt.registerTask('dev', ['build', 'copy:server', 'browserSync:server', 'watch']);
-  grunt.registerTask('test', ['build', 'browserSync:dist', 'watch']);
-  // grunt.registerTask('sync', ['build', 'shell:sync']);
+  grunt.registerTask('test', ['build', 'copy:dist', 'browserSync:dist', 'watch']);
+  grunt.registerTask('deploy', ['build', 'copy:dist', 's3:deploy']);
 };
-
-// confirm: {
-//   sync: {
-//     options: {
-//       question: 'Syncing website to S3. Continue?',
-//       input: '_key:y'
-//     }
-//   }
-// }
 
 // csslint: {
 //   src: ['.tmp/assets/screen.min.css']
