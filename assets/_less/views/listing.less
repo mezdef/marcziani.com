@@ -1,14 +1,13 @@
 .listing {
   article {
 
-    &.writing, &.albums, &.projects {
+    &.albums, &.projects {
       li {
         > a { display: block; }
       }
     }
 
     &.writing {
-      .font-leading(m);
       @media screen and (min-width: 630px) { .font-size(m); }
 
       section {
@@ -17,20 +16,22 @@
 
       li {
         display: block;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
       }
 
       a {
-        max-width: 80%;
-        .truncate();
+        display: inline-block;
         .font-size(s);
-        text-align: left;
-        text-decoration: none;
+        hyphens: none;
+        max-width: 100%;
+        .truncate();
+        @media screen and (min-width: 630px) { max-width: 460px; }
       }
 
       time {
+        display: block;
+        @media screen and (min-width: 630px) { float: right; }
       }
-
     }
 
     &.albums, &.projects {
