@@ -1,7 +1,8 @@
 body > header {
   margin: 0 auto;
-  .font-size(s);
   .font.sans();
+  .font-size(ss);
+  letter-spacing: 1px;
 
   nav {
     margin: 0 auto;
@@ -9,13 +10,47 @@ body > header {
     width: 100%;
     text-align: center;
     .clearfix;
+    @media screen and (min-width: 630px) {
+      padding: 30px 30px 60px 30px;
+      width: 620px;
+    }
   }
 
+
+// LOGO ////////////////////////////////////////////////////////////////////////
+
+  a.brand {
+    display: inline-block;
+    margin: 0 0 22px 0;
+    height: 30px;
+    .font-size(m);
+    border-bottom: none;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-image: url('/assets/img/icon_mezdef.png');
+      background-size: 100%;
+    }
+
+    span {
+      display: none;
+      vertical-align: top;
+      @media screen and (min-width: 630px) { display: inline-block; }
+    }
+
+    &:hover {
+      background-color: @color-blue--d;
+    }
+  }
+
+
+// NAVIGATION //////////////////////////////////////////////////////////////////
+
   ul {
-    position: relative;
-    .font-size(ss);
-    vertical-align: top;
-    border-bottom: @border-structural;
+    // border-bottom: @border-structural;
     li {
       display: inline-block;
       margin-right: 30px;
@@ -24,22 +59,11 @@ body > header {
       }
     }
     a {
-      display: block;
+      padding: 0 4px;
       color: @color-grey--m;
-      &:after {
-        display: block;
-        position: absolute;
-        content: "";
-        margin-left: 40%;
-        margin-right: 40%;
-        width: 20%;
-        bottom: -1px;
-        border-top: 1px solid @color-grey--dd;
-        .opacity(0);
-      }
+      border-bottom: 1px dotted @color-grey--m;
+
       &:hover {
-        color: @color-grey--dd;
-        background-color: @color-grey--0;
         &:after {
           width: 100%;
           margin-left: 0%;
@@ -48,8 +72,11 @@ body > header {
           .transition(all 0.15s linear);
         }
       }
+
       &.active {
-        color: @color-grey--dd;
+        color: @color-grey--w;
+        background-color: @color-grey--ddd;
+        border-bottom: 1px dotted @color-grey--ddd;
         &:after {
           width: 100%;
           margin-left: 0%;
@@ -59,34 +86,5 @@ body > header {
         }
       }
     }
-  }
-
-  a {
-    .font-leading(m);
-    vertical-align: top;
-  }
-}
-
-a.brand {
-  position: relative;
-  display: inline-block;
-  margin: 0 0 22px 0;
-  .font-size(0);
-  font-style: italic;
-  &:hover {
-    text-decoration: none;
-    background-color: @color-grey--ddd;
-    span.logo {
-    }
-  }
-
-  .logo {
-    display: inline-block;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    left: -20px;
-    background-image: url('/assets/img/icon_mezdef.png');
-    background-size: 100%;
   }
 }

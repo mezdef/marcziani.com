@@ -25,59 +25,6 @@
   }
 
 
-// LAYOUT - HEADER /////////////////////////////////////////////////////////////
-
-  body > header {
-    nav {
-      padding: 30px 30px 60px 30px;
-      width: 620px;
-    }
-
-    ul {
-      li {
-        display: inline-block;
-        margin-right: 30px;
-        &:last-of-type {
-          margin-right: 0;
-        }
-      }
-
-      a {
-        &:hover {
-          text-decoration: none;
-          color: @color-grey--dd;
-          &:after {
-            display: block;
-            position: absolute;
-            content: "";
-            width: 100%;
-            bottom: -1px;
-            border-top: 1px solid @color-grey--dd;
-          }
-        }
-        &.active {
-          color: @color-grey--dd;
-          &:after {
-            display: block;
-            position: absolute;
-            content: "";
-            width: 100%;
-            bottom: -1px;
-            border-top: 1px solid @color-grey--dd;
-          }
-        }
-      }
-    }
-  }
-
-  a.brand {
-    .font-size(m);
-    .logo {
-      left: -44px;
-    }
-  }
-
-
 // VIEWS - POST ////////////////////////////////////////////////////////////////
 
   .post {

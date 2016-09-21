@@ -3,8 +3,7 @@
 %header.banner
   %nav
     %a.brand{href: "/"}
-      %span.logo
-      Marc Ziani de Ferranti
+      %span Marc Ziani de Ferranti
 
     {% assign current = page.url | downcase | split: '/' %}
     %ul.nav
@@ -17,7 +16,7 @@
       %li
         {% if current[1] == "writing" %}
         %a.active{href: "/"}> Writing
-        {% elsif current.[1] == "index.html" %}
+        {% elsif current[1] == null %}
         %a.active{href: "/"}> Writing
         {% else %}
         %a{href: "/"}> Writing
