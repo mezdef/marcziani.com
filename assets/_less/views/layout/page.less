@@ -74,6 +74,10 @@ article {
 
   section {
     padding: 0 30px 60px 30px;
+    > p {
+      font-size: 15px;
+      @media only screen and (min-width: 630px) { font-size: inherit; }
+    }
   }
 
   section > p:first-of-type {
