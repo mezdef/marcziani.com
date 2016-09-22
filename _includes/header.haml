@@ -27,10 +27,9 @@
         {% else %}
         %a{href: "/photos"}> Photos
         {% endif %}
-      -# %li —
-      -# %li
-        -# {% if current[1] == "projects" %}
-        -# %a.active{href: "/projects"}> Projects
-        -# {% else %}
-        -# %a{href: "/projects"}> Projects
-        -# {% endif %}
+      %li
+        {% if current[1] == "projects" %}
+        %a.active{href: "/projects"}> Projects
+        {% else %}
+        %a{href: "/projects"}> Projects
+        {% endif %}

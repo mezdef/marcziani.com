@@ -7,6 +7,9 @@
       }
     }
 
+
+// WRITING /////////////////////////////////////////////////////////////////////
+
     &.writing {
       @media screen and (min-width: 630px) { .font-size(m); }
 
@@ -36,8 +39,15 @@
 
     &.albums, &.projects {
       .font.sans();
+    }
 
-      section { padding: 0 30px 60px 30px; }
+    &.albums {
+      .font.sans();
+
+      section {
+        padding: 0 30px 60px 30px;
+        @media screen and (max-width: 360px) { padding: 0 15px 60px 15px; }
+      }
       img { max-width: 100%; }
 
       li {
@@ -89,9 +99,55 @@
       }
     }
 
+
+// PROJECTS ////////////////////////////////////////////////////////////////////
+
     &.projects {
+      section {
+        padding: 0 30px 60px 30px;
+        @media screen and (max-width: 360px) { padding: 0 15px 60px 15px; }
+      }
+      li {
+        margin-bottom: 5px;
+
+        >a {
+          position: relative;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          .font-size(ss);
+          .font-leading(sss);
+          border-width: 0;
+
+          &:hover {
+            background-color: @color-grey--0;
+            p:first-of-type { .a > .hover(); }
+          }
+        }
+      }
+      nav {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        color: @color-grey--m;
+        .truncate();
+        vertical-align: top;
+        background-color: @color-grey--w;
+
+        @media screen and (max-width: 419px) { padding-left: 10px; }
+      }
+      p, span {
+        margin: 0;
+      }
+
       p {
-        width: 100%;
+        max-width: 100%;
+        .truncate();
+
+        &:first-of-type {
+          .a();
+          display: inline;
+        }
       }
     }
 

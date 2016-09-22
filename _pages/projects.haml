@@ -6,12 +6,14 @@ permalink: projects/
 
 %article.projects
   %section
-    %ul.cols2
-      == {% for post in site.categories.projects %}
-      %li.one-half
-        %a{ href: "{{ post.url }}" }
-          %img{ src: "{{ post.thumbnail }}"}
-          %span {{ post.title }}
-        %nav.info
-          %span {{ post.subtitle }}
+    %ul.grid
+      == {% for project in site.categories.projects %}
+      %li
+        %a{href:"{{ project.url }}"}
+          %picture.pre
+            %img{src:"{{ project.thumbnail }}"}
+          %nav
+            %p {{ project.title }}
+        %p
+          %time {{ project.date | date: "%Y" }}
       == {% endfor %}
