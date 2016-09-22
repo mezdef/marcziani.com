@@ -21,6 +21,7 @@ module.exports = function(grunt) {
           'about.html': '_pages/about.haml',
           'writing.html': '_pages/index.haml', // Index is mirrored
           'photos.html': '_pages/photos.haml',
+          'projects.html': '_pages/projects.haml',
           '404.html': '_pages/404.haml',
         },
       },
@@ -28,7 +29,7 @@ module.exports = function(grunt) {
 
     // # Plugin: Process that cleans up after jekyll
     clean: {
-      dist: ['index.html', 'about.html', 'witing.html', 'photos.html', '404.html'],
+      dist: ['index.html', 'about.html', 'witing.html', 'photos.html',  'projects.html', '404.html'],
       start: ['_site/', '.jekyll/*', '.tmp/*'],
     },
 
