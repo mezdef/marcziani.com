@@ -31,7 +31,7 @@ body > header {
       display: inline-block;
       width: 30px;
       height: 30px;
-      background-image: url('/assets/img/icon_mezdef.png');
+      background-image: url('/assets/img/marcziani-icon-grey.png');
       background-size: 100%;
     }
 
@@ -42,7 +42,14 @@ body > header {
     }
 
     &:hover {
-      background-color: @color-blue--d;
+      background-color: transparent;
+      @media screen and (min-width: 630px) { background-color: @color-blue--d; }
+      &:before {
+        background-image: url('/assets/img/marcziani-icon-blue.png');
+        @media screen and (min-width: 630px) {
+          background-image: url('/assets/img/marcziani-icon-white.png');
+        }
+      }
     }
   }
 
