@@ -42,11 +42,16 @@
 
     &.albums, &.projects {
       .font.sans();
+    }
+
+    &.albums {
+      .font.sans();
 
       section {
         padding: 0 30px 60px 30px;
         @media screen and (max-width: 360px) { padding: 0 15px 60px 15px; }
       }
+      img { max-width: 100%; }
 
       li {
         margin-bottom: 5px;
@@ -144,7 +149,25 @@
       p {
         background-color: @color-grey--w;
         &:first-of-type {
+          color: @color-grey--m;
+          .truncate();
+          vertical-align: top;
+          background-color: @color-grey--w;
+        }
+
+        @media screen and (max-width: 419px) { padding-left: 10px; }
+      }
+      p, span {
+        margin: 0;
+      }
+
+      p {
+        max-width: 100%;
+        .truncate();
+
+        &:first-of-type {
           display: inline;
+          .a();
         }
       }
     }
