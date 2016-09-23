@@ -37,18 +37,16 @@
       }
     }
 
-    &.albums, &.projects {
-      .font.sans();
-    }
 
-    &.albums {
+// ALBUMS + PROJECTS ///////////////////////////////////////////////////////////
+
+    &.albums, &.projects {
       .font.sans();
 
       section {
         padding: 0 30px 60px 30px;
         @media screen and (max-width: 360px) { padding: 0 15px 60px 15px; }
       }
-      img { max-width: 100%; }
 
       li {
         margin-bottom: 5px;
@@ -60,7 +58,29 @@
           .font-size(ss);
           .font-leading(sss);
           border-width: 0;
+        }
+      }
 
+      nav {
+        .truncate();
+        vertical-align: top;
+      }
+
+      p, span { margin: 0; }
+      p {
+        max-width: 100%;
+        .truncate();
+      }
+    }
+
+    &.albums {
+      .font.sans();
+
+      img { max-width: 100%; }
+      li {
+        margin-bottom: 5px;
+
+        >a {
           &:hover {
             background-color: @color-grey--0;
             p:first-of-type { .a > .hover(); }
@@ -78,20 +98,11 @@
 
       nav {
         color: @color-grey--m;
-        .truncate();
-        vertical-align: top;
 
         @media screen and (max-width: 419px) { padding-left: 10px; }
       }
 
-      p, span {
-        margin: 0;
-      }
-
       p {
-        max-width: 100%;
-        .truncate();
-
         &:first-of-type {
           .a();
           display: inline;
@@ -103,49 +114,36 @@
 // PROJECTS ////////////////////////////////////////////////////////////////////
 
     &.projects {
-      section {
-        padding: 0 30px 60px 30px;
-        @media screen and (max-width: 360px) { padding: 0 15px 60px 15px; }
-      }
       li {
         margin-bottom: 5px;
 
         >a {
           position: relative;
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: row;
-          .font-size(ss);
-          .font-leading(sss);
-          border-width: 0;
 
           &:hover {
-            background-color: @color-grey--0;
-            p:first-of-type { .a > .hover(); }
+            nav {
+              p {
+                .a > .hover();
+                color: @color-grey--w;
+              }
+            }
+          }
+          p {
+            padding: 2px 6px;
           }
         }
       }
+
       nav {
         position: absolute;
         bottom: 15px;
         left: 15px;
-        color: @color-grey--m;
-        .truncate();
-        vertical-align: top;
-        background-color: @color-grey--w;
-
-        @media screen and (max-width: 419px) { padding-left: 10px; }
-      }
-      p, span {
-        margin: 0;
+        right: 15px;
       }
 
       p {
-        max-width: 100%;
-        .truncate();
-
+        background-color: @color-grey--w;
         &:first-of-type {
-          .a();
           display: inline;
         }
       }
