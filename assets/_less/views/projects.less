@@ -1,65 +1,76 @@
-.listing.projects {
+.projects {
 
-  ul {
-    .clearfix;
+  article& {
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 
-  li {
-    float: left;
-    display: block;
-    padding: 0 30px 0 0;
-    width: 50%;
-    &:nth-child(even) {
-      padding: 0;
-    }
-  }
-
-  a {
-    position: relative;
-    display: block;
-    .font-leading(0);
-    text-align: center;
-    background-color: @color-grey--l;
-
-    &:hover {
-      text-decoration: none;
-
-      .about {
-        display: block;
+  section {
+    padding: 0;
+    >p {
+      padding: 0 30px;
+      @media only screen and (min-width: 630px) {
+        margin: 0 auto 30px auto;
+        width: 620px;
       }
     }
   }
 
-  .about {
-    display: none;
-    position: absolute;
-    padding: 20px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: left;
+  figure {
+    margin-bottom: 60px;
+    padding: 0 30px;
 
-    h1 {
-      display: inline-block;
-      padding: 0 10px;
-      .font-leading(l);
-      color: @color-grey--w;
-      font-weight: bold;
-      background-color: @color-red--m;
+    @media only screen and (min-width: 630px) {
+      margin: 0 auto 120px auto;
+      padding: 0 60px;
+      max-width: 904px;
     }
-
-    span {
-      display: inline-block;
-      .font.sans();
-      .font-size(ss);
-      .font-leading(s);
-      color: @color-grey--mm;
-      letter-spacing: 1px;
+    @media only screen and (min-width: 1200px) {
+      padding: 0 240px;
+      max-width: 1444px;
     }
   }
 
-  img {
-    width: 100%;
+
+  .gallery {
+    picture {
+      margin-bottom: 15px;
+    }
+
+    ul li {
+      position: relative;
+      width: 25%;
+      @media only screen and (min-width: 630px) { width: 12.5%; }
+      cursor: pointer;
+
+      &.active {
+        &:before {
+          opacity: 1;
+          width: 15px;
+          height: 15px;
+          .border-radius(50%);
+        }
+      }
+
+      &:before {
+        opacity: 0;
+        display: block;
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 6px;
+        top: 6px;
+        background-color: @color-blue--d;
+      }
+
+      &:hover {
+        &:before {
+          opacity: 0.8;
+        }
+      }
+    }
+
   }
 }

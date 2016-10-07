@@ -12,3 +12,4 @@ _cache/
 .tmp/
 .jekyll/
 _site/
+credentials.json
