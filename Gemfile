@@ -17,5 +17,6 @@ gem 'guard-shell'
 gem 'kramdown'
 
 gem 'flickraw'
+gem 'nokogiri'
 
 gem 's3_website'
