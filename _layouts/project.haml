@@ -18,7 +18,7 @@
             %span
               {{ page.date | date: '%Y' }}
         %section
-          {{ content | stripem | gallery }}
+          {{ content | stripem | gallery | credits }}
 
       {% haml footer.haml %}
 
