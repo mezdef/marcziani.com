@@ -79,61 +79,6 @@ a {
 }
 
 
-// FOOTNOTES ///////////////////////////////////////////////////////////////////
-
-sup, sub,
-.default sup, .default sub,
-.post sup, .default sub {
-  top: -0.4em;
-  .font.sans();
-  .font-size(s);
-  .font-leading(sss);
-  font-weight: 500;
-  vertical-align: baseline;
-  a {
-    padding: 1px 2px;
-    border-bottom: 0px solid @color-grey--ddd;
-    &:hover {
-      color: @color-grey--w;
-      background-color: @color-grey--ddd;
-      border-bottom: 0px solid @color-grey--0;
-    }
-  }
-}
-
-.fn-container {
-  position: absolute;
-  top: 30px;
-  left: -45px;
-  width: 320px;
-  padding: 15px;
-  color: @color-grey--w;
-  font-size: 15px;
-  .font-leading(ss);
-  background: @color-grey--ddd;
-  cursor: text;
-  a {
-    color: @color-grey--w;
-    &:hover {
-
-    }
-    &.reversefootnote {
-      display: none;
-    }
-  }
-  &:before {
-    content: " ";
-    position: absolute;
-    top: -15px;
-    left: 15px;
-    border-width: 8px;
-    border-color: transparent;
-    border-style: solid solid outset;
-    border-bottom-color: @color-grey--ddd;
-  }
-}
-
-
 // FIGURES /////////////////////////////////////////////////////////////////////
 
 figure {
