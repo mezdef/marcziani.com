@@ -21,9 +21,7 @@ article {
   @media only screen and (min-width: 630px) { width: 620px; }
 
   header {
-    position: relative;
-    margin: 0 30px 30px 30px;
-    padding-top: 60px;
+    padding: 0 30px 30px 30px;
 
     p, h2 {
       margin: 0;
@@ -40,34 +38,17 @@ article {
     }
 
     time {
-      position: absolute;
       display: block;
+      padding-bottom: 60px;
       width: 100%;
-      top: 0;
-      .font-size(ss);
-      .font-leading(m);
       text-align: center;
       span {
-        z-index: 1;
-        background-color: @color-grey--w;
         &:nth-of-type(1) {
           padding-left: 10px;
         }
         &:nth-of-type(3) {
           padding-right: 10px;
         }
-      }
-      &:before, &:after {
-        content: "";
-        display: block;
-      }
-      &:before {
-        z-index: -1;
-        margin: 0 0 -15px 0;
-        width: 100%;
-      }
-      &:after {
-        display: none;
       }
     }
   }
