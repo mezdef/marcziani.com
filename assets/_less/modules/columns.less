@@ -9,29 +9,4 @@
     width: 100%;
     img { display: block; }
   }
-
-  .albums & {
-    li {
-      @media screen and (min-width: 420px) { width: 50%; }
-      @media screen and (min-width: 630px) { width: calc(100% / 3); }
-    }
-  }
-
-  .projects & {
-    li {
-      @media screen and (min-width: 420px) { width: 100%; }
-      @media screen and (min-width: 630px) { width: calc(100% / 2); }
-    }
-  }
-
-  .post & {
-    align-items: center;
-    justify-content: center;
-
-    picture {
-        width: 50%;
-        &:first-of-type { img { float: right; } }
-    }
-    figcaption { padding-left: 10px; }
-  }
 }
