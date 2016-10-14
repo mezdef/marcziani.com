@@ -1,86 +1,86 @@
-.projects {
-
-  article& {
+.post {
+  .projects {
     margin: 0;
     padding: 0;
     width: 100%;
-  }
 
-  header {
-    padding: 0 30px;
-    @media only screen and (min-width: 630px) {
-      margin: 0 auto 30px auto;
-      width: 620px;
-    }
-  }
-
-  section {
-    padding-left: 0;
-    padding-right: 0;
-    >p, header, .credits {
+    header {
       padding: 0 30px;
       @media only screen and (min-width: 630px) {
         margin: 0 auto 30px auto;
         width: 620px;
       }
     }
-  }
 
-  figure {
-    margin-bottom: 30px;
-    padding: 0 30px;
-
-    @media only screen and (min-width: 630px) {
-      margin: 0 auto 60px auto;
-      padding: 0 60px;
-      max-width: 904px;
-    }
-    @media only screen and (min-width: 1200px) {
-      padding: 0 240px;
-      max-width: 1444px;
-    }
-  }
-
-
-  .gallery {
-    picture {
-      margin-bottom: 15px;
-      text-align: center;
-    }
-
-    ul li {
-      position: relative;
-      width: 25%;
-      @media only screen and (min-width: 630px) { width: 12.5%; }
-      cursor: pointer;
-
-      &.active {
-        &:before {
-          opacity: 1;
-          width: 15px;
-          height: 15px;
-          .border-radius(50%);
-        }
-      }
-
-      &:before {
-        opacity: 0;
-        display: block;
-        content: "";
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        left: 6px;
-        top: 6px;
-        background-color: @color-blue--d;
-      }
-
-      &:hover {
-        &:before {
-          opacity: 0.8;
+    section {
+      padding-left: 0;
+      padding-right: 0;
+      >p, header, .credits {
+        padding: 0 30px;
+        @media only screen and (min-width: 630px) {
+          margin: 0 auto 30px auto;
+          width: 620px;
         }
       }
     }
 
+    figure {
+      margin-bottom: 30px;
+      padding: 0 30px;
+
+      @media only screen and (min-width: 630px) {
+        margin: 0 auto 60px auto;
+        padding: 0 60px;
+        max-width: 904px;
+      }
+      @media only screen and (min-width: 1200px) {
+        padding: 0 240px;
+        max-width: 1444px;
+      }
+    }
+
+
+    .gallery {
+      picture {
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      ul li {
+        position: relative;
+        width: 25%;
+        @media only screen and (min-width: 630px) { width: 12.5%; }
+        cursor: pointer;
+
+        &.active {
+          &:before {
+            opacity: 1;
+            width: 15px;
+            height: 15px;
+            .border-radius(50%);
+          }
+        }
+
+        &:before {
+          opacity: 0;
+          display: block;
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          left: 6px;
+          top: 6px;
+          background-color: @color-blue--d;
+        }
+
+        &:hover {
+          &:before {
+            opacity: 0.8;
+          }
+        }
+      }
+
+    }
   }
+
 }
