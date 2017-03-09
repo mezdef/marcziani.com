@@ -1,5 +1,5 @@
-'use strict';
 module.exports = function(grunt) {
+  'use strict';
   // require('jit-grunt')(grunt);
   require('jit-grunt')(grunt, { s3: 'grunt-aws', });
   require('time-grunt')(grunt);
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          src: ['assets/img/*.{png,jpg,gif}'],
+          src: ['assets/img/*.{png,jpg,gif,svg}'],
           dest: '_site/'
         }],
       },
