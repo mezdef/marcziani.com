@@ -20,37 +20,41 @@ body > header {
 
 // LOGO ////////////////////////////////////////////////////////////////////////
 
-  a.brand {
+  a.logo {
+    border: none;
     display: inline-block;
-    margin: 0 0 22px 0;
-    height: 30px;
-    .font-size(m);
-    border-bottom: none;
-
-    &:before {
-      content: "";
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      background-image: url('/assets/img/marcziani-icon-grey.png');
-      background-size: 100%;
+    svg {
+      path {
+        stroke: @color-grey--dd;
+        stroke-dasharray: 200;
+        stroke-dashoffset: 200;
+        &:nth-of-type(1) {
+          transform: rotate(-342deg);
+          transform-origin: 10% 36%;
+          stroke-dashoffset: -80;
+          animation: dash 0.5s 0.95s linear forwards;
+        }
+        &:nth-of-type(2) {
+          animation: dash 0.75s 0.5s linear forwards;
+        }
+        &:nth-of-type(3) {
+          animation: dash 1.5s 0.85s linear forwards;
+        }
+        &:nth-of-type(4) {
+          animation: dash 1.25s 1.25s linear forwards;
+        }
+      }
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
     }
-
-    span {
-      display: none;
-      vertical-align: top;
-      white-space: nowrap;
-      overflow: hidden;
-      @media screen and (min-width: 630px) { display: inline-block; }
-    }
-
     &:hover {
       background-color: transparent;
-      @media screen and (min-width: 630px) { background-color: @color-blue--d; }
-      &:before {
-        background-image: url('/assets/img/marcziani-icon-blue.png');
-        @media screen and (min-width: 630px) {
-          background-image: url('/assets/img/marcziani-icon-white.png');
+      svg {
+        path {
+          stroke: @color-blue--d;
         }
       }
     }
@@ -70,7 +74,6 @@ body > header {
       @media screen and (max-width: 420px) { margin-right: 15px; }
     }
     a {
-      padding: 0 4px;
       color: @color-grey--m;
       border-bottom: 1px dotted @color-grey--m;
 
@@ -85,9 +88,12 @@ body > header {
       }
 
       &.active {
-        color: @color-grey--w;
-        background-color: @color-grey--ddd;
+        color: @color-grey--ddd;
         border-bottom: 1px dotted @color-grey--ddd;
+        &:hover {
+          color: @color-grey--w;
+          border-bottom: 1px dotted @color-blue--d;
+        }
         &:after {
           width: 100%;
           margin-left: 0%;

@@ -2,17 +2,11 @@
 ---
 %header.banner
   %nav
-    %a.brand{href: "/"}
-      %span Marc Ziani de Ferranti
+    %a.monogram{href:"/"}
+      {% haml monogram.haml %}
 
     {% assign current = page.url | downcase | split: '/' %}
     %ul.nav
-      %li
-        {% if current[1] == "about" %}
-        %a.active{href: "/about"}> About
-        {% else %}
-        %a{href: "/about"}> About
-        {% endif %}
       %li
         {% if current[1] == "writing" %}
         %a.active{href: "/"}> Writing

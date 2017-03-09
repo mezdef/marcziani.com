@@ -1,0 +1,43 @@
+---
+---
+-$iSquares = 24
+-$iScale = 100 / $iSquares
+-$iSize = 40
+-$iThickness = $iSize / 5.7
+
+-$aLineEye = [ [21,21], [-16,0], [4,4,0,1,0,20,0], [4,4,0,1,0,-20,0] ]
+-$sLineGem = [1,1, 12,12, 19,5, 15,1, 7,1]
+-$sLineChain = [3,10, 3,18, 5,20]
+-$aLineWink = [15,15, 17,17, 23,11, 23,17]
+-$aLines = $aLineEye, $sLineGem, $sLineChain, $aLineWink
+-$oCordinates = []
+
+- $aLines.each_with_index do |n, i|
+  -$aLine = ""
+  -if i == 0
+    - n.each_with_index do |nn, ii|
+      -if ii == 0
+        -$aLine += ("M" + (nn[0]*$iScale).to_s + "," + (nn[1]*$iScale).to_s)
+      -elsif ii == 1
+        -$aLine += (" m" + (nn[0]*$iScale).to_s + "," + (nn[1]*$iScale).to_s)
+      -else
+        - nn.each_with_index do |nnn, iii|
+          -if iii == 0
+            -$aLine += (" a" + (nnn).to_s + ",")
+          -elsif iii == 4 || iii == 6
+            -$aLine += ("" + (nnn).to_s + ",")
+          -else
+            -$aLine += ((nnn).to_s + ",")
+  -else
+    - n.each_with_index do |nn, ii|
+      -if ii == 0
+        -$aLine += ("M" + (nn*$iScale).to_s + " ")
+      -elsif ii == 1 || !ii.even?
+        -$aLine += (" " + (nn*$iScale).to_s)
+      -elsif ii.even?
+        -$aLine += (" L" + (nn*$iScale).to_s)
+  -$oCordinates.push($aLine)
+
+%svg{:width => $iSize.to_s + "px", :height => $iSize.to_s + "px", :viewBox=> "0 0 100 100", :xmlns=> "http://www.w3.org/2000/svg", :version=> "1.1"}
+  - $oCordinates.each_with_index do |n, i|
+    %path{:class=> (i+1).to_s, :d=> n, :fill=>"none", :'stroke-width'=> $iThickness, :'stroke-linejoin'=>"bevel"}
