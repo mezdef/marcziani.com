@@ -27,3 +27,9 @@
         {% else %}
         %a{href: "/projects"}> Projects
         {% endif %}
+      %li
+        {% if current[1] == "about" %}
+        %a.active{href: "/about"}> About
+        {% else %}
+        %a{href: "/about"}> About
+        {% endif %}
