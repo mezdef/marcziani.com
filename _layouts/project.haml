@@ -10,13 +10,19 @@
         %header
           %time
             %span
-              {{ page.date | date: '%d' }}
-            %span
               {{ page.date | date: '%B' }}
             %span
               {{ page.date | date: '%Y' }}
-          %h1 {{ page.title }}
-          %h2 {{ page.subtitle }}
+          %h1
+            %span {{ page.title }}
+            == {% if page.projecturl != null %}
+            %a{href:"{{ page.projecturl }}"}
+              %span
+            == {% endif %}
+          %p
+            == {% for tag in page.tags %}
+            %span {{ tag }} &#x2F;
+            == {% endfor %}
         %section
           {{ content | headline | figure | gallery | details }}
 
