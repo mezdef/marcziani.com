@@ -18,7 +18,7 @@
           %h1 {{ page.title }}
           %h2 {{ page.subtitle }}
         %section
-          {{ content | stripem | gallery | credits }}
+          {{ content | headline | figure | gallery | details }}
 
       {% haml footer.haml %}
 

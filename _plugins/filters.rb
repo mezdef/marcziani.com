@@ -1,22 +1,65 @@
 require 'nokogiri'
 module Jekyll
 
-  module MarkdownFixes
-    def stripem(input)
-      m = input.gsub(/<p class="md-figure"><img src="(.*?)"(.*?)\/>\s(.*?)<\/p>/, "<figure><img class='lzy' data-src='\\1' \\2/><figcaption>\\3</figcaption></figure>")
-      n = m.gsub(/<p class="md-figure"><img src="(.*?)"(.*?)\/>\s<img src="(.*?)"(.*?)\/>\s(.*?)<\/p>/, "<figure class='grid'><picture><img class='lzy' data-src='\\1' \\2></picture><picture><img class='lzy' data-src='\\3' \\4></picture><figcaption>\\5</figcaption></figure>")
-      return n
-    end
-  end
+  module MarkdownConstruction
 
-  module GalleryConstruction
+    def headline(input)
+      doc = Nokogiri::HTML.fragment(input)
+      doc.css("h2").each_with_index do |headline, index|
+        headline.replace(Nokogiri.make("<h2><span>#{headline.inner_text}</span></h2>"))
+      end
+      doc.to_html
+    end
+
+    def figure(input)
+      lzyUri = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      picture = "<picture class='pre'><img class='lzy' src='' data-src='' /></picture>"
+      doc = Nokogiri::HTML.fragment(input)
+      doc.css(".md-figure").each_with_index do |figure, index|
+        if figure.inner_text.length > 0
+          sText = figure.inner_text
+          oImgs = figure.css('img')
+          figure.content = ""
+          figure.add_child(oImgs)
+          figure.add_child('<figcaption>' + sText + '</figcaption>')
+        end
+        figure.name = "figure"
+        sClasses = figure["class"]
+        figure["class"] = ""
+        if sClasses.include? "wide"
+          figure["class"] += " wide"
+        end
+        if sClasses.include? "screenshot"
+          figure["class"] += " screenshot"
+        end
+        firstUrl = "default"
+        figure.css("img").each_with_index do |img, index|
+          if index == 0
+            firstUrl = img["src"]
+          end
+          img["data-src"] = img["src"]
+          img["src"] = lzyUri
+          img["class"] = "lzy"
+          img.replace(Nokogiri.make("<picture>#{img.to_html}</picture>"))
+        end
+      end
+      doc.to_html
+    end
+
     def gallery(input)
       lzyUri = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
       picture = "<picture class='pre'><img class='lzy' src='' data-src='' /></picture>"
       doc = Nokogiri::HTML.fragment(input)
       doc.css(".md-gallery").each_with_index do |gallery, index|
         gallery.name = "figure"
+        sClasses = gallery["class"]
         gallery["class"] = "gallery"
+        if sClasses.include? "wide"
+          gallery["class"] += " wide"
+        end
+        if sClasses.include? "screenshot"
+          gallery["class"] += " screenshot"
+        end
         gallery.children.first.add_previous_sibling("<ul class='grid'></ul>")
         gallery.children.first.add_child(gallery.css('img'))
         gallery.children.first.add_previous_sibling(picture)
@@ -24,8 +67,10 @@ module Jekyll
         gallery.css("ul img").each_with_index do |img, index|
           if index == 0
             firstUrl = img["src"]
+            img.before("<li class='active'>")
+          else
+            img.before("<li>")
           end
-          img.before("<li>")
           img.after("</li>")
           img["data-src"] = img["src"]
           img["src"] = lzyUri
@@ -36,24 +81,28 @@ module Jekyll
       end
       doc.to_html
     end
-  end
 
-  module CreditsConstruction
-    def credits(input)
+    def details(input)
       doc = Nokogiri::HTML.fragment(input)
-      doc.css(".md-credits").each_with_index do |credit, index|
-        credit["class"] = "credits"
+      doc.css(".md-details").each_with_index do |rHtml, index|
+        rHtml["class"] = "details"
         # heading = credits.previous_element
         # credits.children.first.add_previous_sibling(heading)
-        credit.css("li strong").each_with_index do |strong, index|
+        rHtml.css("li strong").each_with_index do |strong, index|
           strong.name = "label"
         end
+      end
+      doc.css(".details").wrap("<details>")
+      doc.css("details").each_with_index do |rHtml, index|
+        rHtml.children.first.add_previous_sibling("<summary>details yo</summary>")
+        # rHtml.add_previous_sibling ""
+        rHtml["open"] = ""
+
       end
       doc.to_html
     end
   end
 
 end
-Liquid::Template.register_filter(Jekyll::MarkdownFixes)
-Liquid::Template.register_filter(Jekyll::GalleryConstruction)
-Liquid::Template.register_filter(Jekyll::CreditsConstruction)
+
+Liquid::Template.register_filter(Jekyll::MarkdownConstruction)
