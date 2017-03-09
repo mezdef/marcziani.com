@@ -2,6 +2,10 @@
 title: Visions of Future Past
 subtitle: "Prometheus, and the future of 1979"
 layout: post
+tags:
+- Pop Culture
+- Movies
+- Thought Experiment
 ---
 
 Science fiction (SF) and the universes it lays claim to are of the most arresting material modern media has to offer, but it's creation and subsequent exploration bears equal consideration.

@@ -2,6 +2,11 @@
 title: Space Debris in Gravity and Planetes
 subtitle: In space, your unresolved baggage is literally coming around to kill you.
 layout: post
+tags:
+- Pop Culture
+- Thought Experiment
+- Movies
+- Anime
 ---
 
 In the vacuum of space—absent of quotidian human experience—space debris (the product of countless launches and collisions) is the protagonist's internal existence made manifest.

@@ -2,6 +2,8 @@
 title: No Country for Old Things
 subtitle: "On possessions and identity"
 layout: post
+tags:
+- Thought Experiment
 ---
 
 What do the number and nature of your possessions signify, and do you think about them?

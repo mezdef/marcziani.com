@@ -2,6 +2,9 @@
   title: A study in clarity
   subtitle: "The interfaces of Sherlock"
   layout: post
+  tags:
+  - Pop Culture
+  - User Interface
 ---
 
 Television and movies have a somewhat baffling disregard for their technology and their viewers knowledge of it. Phones, computers, and all manner of devices appear to run on [media-OS][L1], an operating system that is definitively no recognisable system, but is similar to all. Media-OS is often characterised by over-sized typography, giant buttons and custom web-browsers. Most bear little-to-no resemblance to every day device usage. [Accessmaincomputerfile][L2] contains a wealth of examples, many of them fascinating.

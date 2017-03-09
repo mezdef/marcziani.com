@@ -2,6 +2,9 @@
 title: The Unbearable Lightness of Listening
 subtitle: "A few good podcasts"
 layout: post
+tags:
+- Podcasts
+- Recommendations
 ---
 
 Podcasts occupy an interesting audio niche, offering critical and thoughtful material to consume and digest. Finding good programs that are well produced and/or contain relevant material is an ongoing challenge, and the endless 'top 10' lists that pervade any search related to podcasts often lack any form of curation or personal touch. As such, what follows is a list of podcasts that contain intriguing material or people, organised by category. Being of personal interest, these picks may not translate as well for others. In the interests of providing a little more than a top 10 list, each will be followed with a few thoughts in regard to content and form.

@@ -2,6 +2,8 @@
 title: Two Alfred Themes
 snip: "Two themes for the powerpack user"
 layout: post
+tags:
+- Themes
 ---
 
 Having been an [Alfred][L1] devotee for some time now, trying to operate without an application launcher of some description is an exercise is frustration. Spotlight seems positively sluggish in comparison, not to mention ungainly for a keyboard based experience.

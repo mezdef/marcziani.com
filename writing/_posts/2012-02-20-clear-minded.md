@@ -2,6 +2,9 @@
 title: Clear Minded
 subtitle: "Thoughts on the iOS app Clear"
 layout: post
+tags:
+- Review
+- GTD
 ---
 
 GTD (Getting things Done) applications serve a particular niche, and have found a thriving home on mobile devices. A cursory glance at the 'Productivity' section of the iOS, Android, or Windows Phone 7 marketplaces is likely to unearth a plethora of applications, ranging from simple to-do lists to full-blown project management tools.
