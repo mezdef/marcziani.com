@@ -16,12 +16,15 @@ module Jekyll
       picture = "<picture class='pre'><img class='lzy' src='' data-src='' /></picture>"
       doc = Nokogiri::HTML.fragment(input)
       doc.css(".md-figure").each_with_index do |figure, index|
+        oImgs = figure.css('img')
         if figure.inner_text.length > 0
           sText = figure.inner_text
-          oImgs = figure.css('img')
           figure.content = ""
-          figure.add_child(oImgs)
+          figure.add_child('<picture>' + oImgs.to_html + '</picture>')
           figure.add_child('<figcaption>' + sText + '</figcaption>')
+        else
+          figure.content = ""
+          figure.add_child('<picture>' + oImgs.to_html + '</picture>')
         end
         figure.name = "figure"
         sClasses = figure["class"]
@@ -40,7 +43,6 @@ module Jekyll
           img["data-src"] = img["src"]
           img["src"] = lzyUri
           img["class"] = "lzy"
-          img.replace(Nokogiri.make("<picture>#{img.to_html}</picture>"))
         end
       end
       doc.to_html
