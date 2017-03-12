@@ -4,19 +4,12 @@ main > footer {
   .font-size(ss);
   .font-leading(20px);
   color: @color-grey--mmm;
-  border-top: @border-structural;
-  @media screen and (min-width: 630px) {
-    margin: 0 auto;
-    width: 560px;
-  }
 
-  p { margin: 0; }
-  nav {
-    a {
-      color: @color-grey--mm;
-    }
+  p {
+    margin: 0;
+    padding-top: (@size-base/2);
+    border-top: @border-structural;
   }
-
 
   li {
     display: inline-block;
@@ -26,5 +19,9 @@ main > footer {
         padding: 0 5px;
       }
     }
+  }
+
+  a {
+    color: @color-grey--mm;
   }
 }
