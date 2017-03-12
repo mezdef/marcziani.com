@@ -13,7 +13,8 @@ body {
 }
 
 p {
-  margin: 0 0 30px 0;
+  margin-top: 0;
+  margin-bottom: @size-base;
 }
 
 // b
@@ -162,11 +163,12 @@ figcaption {
 
 blockquote {
   position: relative;
-  margin: 0 0 30px 0;
-  padding-top: 15px;
   .font.sans();
   color: @color-grey--mm;
   font-style: italic;
+  margin: 0 0 @size-base 0;
+  padding-top: (@size-base/2);
+  padding-bottom: (@size-base/2);
   quotes: "“" "”" "“" "’";
   &:hover {
     p, cite {
@@ -264,10 +266,10 @@ hr {
   &:before {
     display: inline-block;
     content: "* * *";
-    padding: 0 10px;
     height: 16px;
     width: auto;
     .font.sans();
+    padding: @size-base 0;
     .font-size(l);
     .font-leading(l);
     color: @color-grey--dd;
