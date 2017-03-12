@@ -75,47 +75,7 @@ article {
   }
 }
 
-
-// FOOTNOTES ///////////////////////////////////////////////////////////////////
-
-.footnotes {
-  padding: 30px 0 0 0;
-  border-top: @border-structural;
-
-  ol {
-    list-style-type: none;
   }
 
-  li[id*='fn:'] {
-    position: relative;
-    padding: 0 0 0 20px;
-    .font-size(ss);
-    .font-leading(ss);
-    counter-increment: step-counter;
-    &:before {
-      position: absolute;
-      left: 0;
-      content: counter(step-counter);
-      margin-right: 5px;
-      .font.sans();
-      .font-size(s);
-      .font-leading(ssss);
-      font-weight: 500;
-    }
-    &:last-of-type {
-      p {
-        margin-bottom: 0;
-      }
-    }
-    a:last-of-type {
-      padding: 0 0 0 6px;
-      color: @color-grey--dd;
-      .font-size(ss);
-      .font-leading(sss);
-      border-bottom: 0px solid @color-grey--ddd;
-      &:hover {
-        background-color: @color-grey--w;
-      }
-    }
   }
 }
