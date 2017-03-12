@@ -38,6 +38,15 @@
         -$aLine += (" L" + (nn*$iScale).to_s)
   -$oCordinates.push($aLine)
 
-%svg{:width => $iSize.to_s + "px", :height => $iSize.to_s + "px", :viewBox=> "0 0 100 100", :xmlns=> "http://www.w3.org/2000/svg", :version=> "1.1"}
+%svg.icon{ :width => $iSize.to_s + "px", :height => $iSize.to_s + "px", :viewBox=> "0 0 100 100", :xmlns=> "http://www.w3.org/2000/svg", :version=> "1.1"}
   - $oCordinates.each_with_index do |n, i|
     %path{:class=> (i+1).to_s, :d=> n, :fill=>"none", :'stroke-width'=> $iThickness, :'stroke-linejoin'=>"bevel"}
+
+:javascript
+  function fSvgClass() {
+    var aClasses = ["one", "one", "two", "three"];
+    var sClass = aClasses[Math.floor(Math.random() * aClasses.length)];
+    var nTarget = document.querySelectorAll(".icon");
+    nTarget[0].classList.add(sClass)
+  }
+  fSvgClass();

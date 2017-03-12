@@ -11,10 +11,6 @@ body > header {
     padding-bottom: 60px;
     .clearfix;
     @media screen and (max-width: 360px) { padding: 30px 15px; }
-    @media screen and (min-width: 630px) {
-      padding: 30px 30px 60px 30px;
-      width: 620px;
-    }
   }
 
 
@@ -23,29 +19,92 @@ body > header {
   a.monogram {
     border: none;
     display: inline-block;
+    width: 40px;
+    height: 40px;
     svg {
       path {
         stroke: @color-grey--dd;
         stroke-dasharray: 200;
         stroke-dashoffset: 200;
+      }
+      &.one path {
         &:nth-of-type(1) {
           transform: rotate(-342deg);
           transform-origin: 10% 36%;
           stroke-dashoffset: -80;
-          animation: dash 0.5s 0.95s linear forwards;
+          animation: draw 0.5s 0.35s linear forwards;
         }
         &:nth-of-type(2) {
-          animation: dash 0.75s 0.5s linear forwards;
+          animation: draw 0.75s 0.2s linear forwards;
         }
         &:nth-of-type(3) {
-          animation: dash 1.5s 0.85s linear forwards;
+          animation: draw 1.5s 0.55s linear forwards;
         }
         &:nth-of-type(4) {
-          animation: dash 1.25s 1.25s linear forwards;
+          animation: draw 1.55s 0.45s linear forwards;
         }
       }
-      @keyframes dash {
-        to {
+      &.two path {
+        &:nth-of-type(1) {
+          transform: rotate(-342deg);
+          transform-origin: 10% 36%;
+          stroke-dashoffset: -80;
+          animation: stutter 0.5s 0.35s linear forwards;
+          animation-timing-function: steps(6, end);
+        }
+        &:nth-of-type(4) {
+          animation: stutter 0.75s 0.2s linear forwards;
+          animation-timing-function: steps(3, end);
+        }
+        &:nth-of-type(2) {
+          animation: stutter 0.5s 0.55s linear forwards;
+          animation-timing-function: steps(6, end);
+        }
+        &:nth-of-type(3) {
+          animation: stutter 1.55s 0.45s linear forwards;
+          animation-timing-function: steps(3, end);
+        }
+      }
+      &.three path {
+        &:nth-of-type(1) {
+          transform: rotate(-342deg);
+          transform-origin: 10% 36%;
+          stroke-dashoffset: -80;
+          animation: flicker 0.5s 0.35s linear forwards;
+        }
+        &:nth-of-type(4) {
+          animation: flicker 0.75s 0.2s linear forwards;
+        }
+        &:nth-of-type(2) {
+          animation: flicker 1s 0.25s linear forwards;
+        }
+        &:nth-of-type(3) {
+          animation: flicker 1.05s 0.45s ease-in forwards;
+        }
+      }
+
+      @keyframes draw {
+        0% { stroke-opacity:0; }
+        10% { stroke-opacity:1; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes stutter {
+        0%,18.999%,31.999% { stroke-dashoffset: 190; }
+        44.999%,49.999% { stroke-dashoffset: 90; }
+        58.999%,68.999% { stroke-dashoffset: 140; }
+        85.999%,100% { stroke-dashoffset: 0; }
+        19%,22.99% { stroke-dashoffset: 60; }
+        36.999%, 45.999% { stroke-dashoffset: 140; }
+        50.99%, 60.999% { stroke-dashoffset: 100; }
+        70.999%,95.999% { stroke-dashoffset: 30; }
+      }
+      @keyframes flicker {
+        0%,18.999%,31.999%,44.999%,49.999%,58.999%,68.999%,85.999%,100% {
+          opacity:0.99;
+          stroke-dashoffset: 0;
+        }
+        19%,22.99%,36.999%,45.999%,50.99%,60.999%,70.999%,95.999% {
+          opacity:0.4;
           stroke-dashoffset: 0;
         }
       }
