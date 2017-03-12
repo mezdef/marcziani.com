@@ -1,0 +1,26 @@
+.a {
+  color: @color-grey--ddd;
+  text-decoration: none;
+  word-break: break-word;
+  hyphens: auto;
+  border-bottom: 1px dotted @color-grey--mm;
+
+  .hover {
+    color: @color-grey--w;
+    text-decoration: none;
+    background-color: @color-blue--d;
+    border-bottom: 1px dotted @color-grey--0;
+    .default article &, .writing article & {
+      border-bottom: 1px dotted @color-blue--d;
+    }
+  }
+}
+
+a {
+  .a();
+  &:hover { .a>.hover(); }
+}
+
+.active {
+  color: @color-blue--d;
+}

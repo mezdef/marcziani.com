@@ -1,0 +1,85 @@
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  // text-align: center;
+  font-weight: normal;
+  font-style: italic;
+  span {
+    color: @color-grey--w;
+    background: @color-grey--ddd;
+  }
+}
+
+h1 {
+  // display: inline-block;
+  .font-size(l);
+  .font-leading(l);
+  @media only screen and (min-width: 630px) {
+    .font-size(ll);
+    .font-leading(ll);
+  }
+  a {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+    border-width: 0px;
+    vertical-align: bottom;
+
+    &::before, &::after, span {
+      content: "";
+      position: absolute;
+      .border-radius(3px);
+      transform: rotate(-45deg);
+    }
+    &::before, &::after {
+      width: 12px;
+      height: 8px;
+      border: 2px solid @color-grey--ddd;
+    }
+    &::before {
+      top: 9px;
+    }
+    &::after {
+      left: 9px;
+    }
+
+    span {
+      left: 4.5px;
+      top: 6.5px;
+
+      width: 12px;
+      height: 4px;
+      border: 1px solid @color-grey--w;
+      background: @color-grey--ddd;
+      z-index: 3;
+    }
+
+    &:hover {
+      background-color: transparent;
+      &::before, &::after {
+        border: 2px solid @color-blue--d;
+      }
+      span {
+        background: @color-blue--d;
+      }
+
+    }
+  }
+}
+
+h2 {
+  .layout;
+  margin-bottom: (@size-base/2);
+  padding-top: @size-base;
+  .font-size(mm);
+  .font-leading(mm);
+  @media only screen and (min-width: 630px) {
+    .font-size(l);
+    .font-leading(l);
+  }
+}
+
+h4 {
+  .font-family(sans);
+}

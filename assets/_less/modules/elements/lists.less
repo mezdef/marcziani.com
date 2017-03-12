@@ -1,0 +1,30 @@
+ol, ul, hr {
+  margin: 0;
+  padding: 0;
+
+  section > & {
+    .layout;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+ol {
+  list-style: decimal;
+  margin-bottom: @size-base;
+}
+
+li {
+  position: relative;
+  code {
+    display: inline-block;
+    margin: 0 0 5px 0;
+    padding: 3px 6px;
+    color: @color-grey--dd;
+    background-color: @color-grey--l;
+    border: 1px solid #CCC;
+    .border-radius(2px);
+  }
+}
