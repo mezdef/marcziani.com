@@ -10,6 +10,7 @@ footnote.classList.add("fn-container");
 document.addEventListener('click', function(event) {
   if (fnContainer.length > 0) {
     if (event.target.className !== fnClass && event.target.className !== 'footnote') {
+      fnContainer[0].parentNode.classList.remove('active')
       fnContainer[0].parentNode.removeChild(fnContainer[0]);
       document.documentElement.classList.remove('fn-open');
     }
@@ -28,6 +29,7 @@ for (i = 0; i < fnTargets.length; i++) {
 function fnCreate(target) {
   var targetId = target.srcElement.text;
   footnote.innerHTML = document.getElementById('fn:' + targetId).children[0].innerHTML;
+  target.srcElement.parentNode.classList.add('active');
   target.srcElement.parentNode.appendChild(footnote);
   document.documentElement.classList.add('fn-open');
 }
