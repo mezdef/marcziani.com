@@ -9,157 +9,153 @@ body > header {
     margin-bottom: 0;
     padding-top: @size-base;
     padding-bottom: 60px;
-    .clearfix;
     @media screen and (max-width: 360px) { padding: 30px 15px; }
-  }
-
-
-// LOGO ////////////////////////////////////////////////////////////////////////
-
-  a.monogram {
-    border: none;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    svg {
-      path {
-        stroke: @color-grey--dd;
-        stroke-dasharray: 200;
-        stroke-dashoffset: 200;
-      }
-      &.one path {
-        &:nth-of-type(1) {
-          transform: rotate(-342deg);
-          transform-origin: 10% 36%;
-          stroke-dashoffset: -80;
-          animation: draw 0.5s 0.35s linear forwards;
-        }
-        &:nth-of-type(2) {
-          animation: draw 0.75s 0.2s linear forwards;
-        }
-        &:nth-of-type(3) {
-          animation: draw 1.5s 0.55s linear forwards;
-        }
-        &:nth-of-type(4) {
-          animation: draw 1.55s 0.45s linear forwards;
-        }
-      }
-      &.two path {
-        &:nth-of-type(1) {
-          transform: rotate(-342deg);
-          transform-origin: 10% 36%;
-          stroke-dashoffset: -80;
-          animation: stutter 0.5s 0.35s linear forwards;
-          animation-timing-function: steps(6, end);
-        }
-        &:nth-of-type(4) {
-          animation: stutter 0.75s 0.2s linear forwards;
-          animation-timing-function: steps(3, end);
-        }
-        &:nth-of-type(2) {
-          animation: stutter 0.5s 0.55s linear forwards;
-          animation-timing-function: steps(6, end);
-        }
-        &:nth-of-type(3) {
-          animation: stutter 1.55s 0.45s linear forwards;
-          animation-timing-function: steps(3, end);
-        }
-      }
-      &.three path {
-        &:nth-of-type(1) {
-          transform: rotate(-342deg);
-          transform-origin: 10% 36%;
-          stroke-dashoffset: -80;
-          animation: flicker 0.5s 0.35s linear forwards;
-        }
-        &:nth-of-type(4) {
-          animation: flicker 0.75s 0.2s linear forwards;
-        }
-        &:nth-of-type(2) {
-          animation: flicker 1s 0.25s linear forwards;
-        }
-        &:nth-of-type(3) {
-          animation: flicker 1.05s 0.45s ease-in forwards;
-        }
-      }
-
-      @keyframes draw {
-        0% { stroke-opacity:0; }
-        10% { stroke-opacity:1; }
-        100% { stroke-dashoffset: 0; }
-      }
-      @keyframes stutter {
-        0%,18.999%,31.999% { stroke-dashoffset: 190; }
-        44.999%,49.999% { stroke-dashoffset: 90; }
-        58.999%,68.999% { stroke-dashoffset: 140; }
-        85.999%,100% { stroke-dashoffset: 0; }
-        19%,22.99% { stroke-dashoffset: 60; }
-        36.999%, 45.999% { stroke-dashoffset: 140; }
-        50.99%, 60.999% { stroke-dashoffset: 100; }
-        70.999%,95.999% { stroke-dashoffset: 30; }
-      }
-      @keyframes flicker {
-        0%,18.999%,31.999%,44.999%,49.999%,58.999%,68.999%,85.999%,100% {
-          opacity:0.99;
-          stroke-dashoffset: 0;
-        }
-        19%,22.99%,36.999%,45.999%,50.99%,60.999%,70.999%,95.999% {
-          opacity:0.4;
-          stroke-dashoffset: 0;
-        }
-      }
-    }
-    &:hover {
-      background-color: transparent;
-      svg {
-        path {
-          stroke: @color-blue--d;
-        }
-      }
-    }
   }
 
 
 // NAVIGATION //////////////////////////////////////////////////////////////////
 
-  ul {
-    // border-bottom: @border-structural;
-    li {
-      display: inline-block;
-      margin-right: @size-base;
-      &:last-of-type {
-        margin-right: 0;
-      }
-      @media screen and (max-width: 420px) { margin-right: 15px; }
+  li {
+    display: inline-block;
+    margin-right: @size-base;
+    &:last-of-type {
+      margin-right: 0;
     }
-    a {
-      color: @color-grey--m;
-      border-bottom: 1px dotted @color-grey--m;
+    @media screen and (max-width: 420px) { margin-right: 15px; }
+  }
+  a {
+    color: @color-grey--mmm;
+    border-bottom: 1px dotted @color-grey--mm;
 
-      &:hover {
-        &:after {
-          width: 100%;
-          margin-left: 0%;
-          margin-right: 0%;
-          .opacity(1);
-          .transition(all 0.15s linear);
-        }
+    &:hover {
+      &:after {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        .opacity(1);
+        .transition(all 0.15s linear);
       }
+    }
 
-      &.active {
-        color: @color-grey--ddd;
-        border-bottom: 1px dotted @color-grey--ddd;
-        &:hover {
-          color: @color-grey--w;
-          border-bottom: 1px dotted @color-blue--d;
-        }
-        &:after {
-          width: 100%;
-          margin-left: 0%;
-          margin-right: 0%;
-          border-top: 1px solid @color-grey--dd;
-          .opacity(1);
-        }
+    &.active {
+      color: @color-grey--ddd;
+      border-bottom: 1px dotted @color-grey--ddd;
+      &:hover {
+        color: @color-grey--w;
+        border-bottom: 1px dotted @color-blue--d;
+      }
+      &:after {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        border-top: 1px solid @color-grey--dd;
+        .opacity(1);
+      }
+    }
+  }
+}
+
+
+// LOGO ////////////////////////////////////////////////////////////////////////
+
+a.monogram {
+  border: none;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  svg {
+    path {
+      stroke: @color-grey--dd;
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+    }
+    &.one path {
+      &:nth-of-type(1) {
+        transform: rotate(-342deg);
+        transform-origin: 10% 36%;
+        stroke-dashoffset: -80;
+        animation: draw 0.5s 0.35s linear forwards;
+      }
+      &:nth-of-type(2) {
+        animation: draw 0.75s 0.2s linear forwards;
+      }
+      &:nth-of-type(3) {
+        animation: draw 1.5s 0.55s linear forwards;
+      }
+      &:nth-of-type(4) {
+        animation: draw 1.55s 0.45s linear forwards;
+      }
+    }
+    &.two path {
+      &:nth-of-type(1) {
+        transform: rotate(-342deg);
+        transform-origin: 10% 36%;
+        stroke-dashoffset: -80;
+        animation: stutter 0.5s 0.35s linear forwards;
+        animation-timing-function: steps(6, end);
+      }
+      &:nth-of-type(4) {
+        animation: stutter 0.75s 0.2s linear forwards;
+        animation-timing-function: steps(3, end);
+      }
+      &:nth-of-type(2) {
+        animation: stutter 0.5s 0.55s linear forwards;
+        animation-timing-function: steps(6, end);
+      }
+      &:nth-of-type(3) {
+        animation: stutter 1.55s 0.45s linear forwards;
+        animation-timing-function: steps(3, end);
+      }
+    }
+    &.three path {
+      &:nth-of-type(1) {
+        transform: rotate(-342deg);
+        transform-origin: 10% 36%;
+        stroke-dashoffset: -80;
+        animation: flicker 0.5s 0.35s linear forwards;
+      }
+      &:nth-of-type(4) {
+        animation: flicker 0.75s 0.2s linear forwards;
+      }
+      &:nth-of-type(2) {
+        animation: flicker 1s 0.25s linear forwards;
+      }
+      &:nth-of-type(3) {
+        animation: flicker 1.05s 0.45s ease-in forwards;
+      }
+    }
+
+    @keyframes draw {
+      0% { stroke-opacity:0; }
+      10% { stroke-opacity:1; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes stutter {
+      0%,18.999%,31.999% { stroke-dashoffset: 190; }
+      44.999%,49.999% { stroke-dashoffset: 90; }
+      58.999%,68.999% { stroke-dashoffset: 140; }
+      85.999%,100% { stroke-dashoffset: 0; }
+      19%,22.99% { stroke-dashoffset: 60; }
+      36.999%, 45.999% { stroke-dashoffset: 140; }
+      50.99%, 60.999% { stroke-dashoffset: 100; }
+      70.999%,95.999% { stroke-dashoffset: 30; }
+    }
+    @keyframes flicker {
+      0%,18.999%,31.999%,44.999%,49.999%,58.999%,68.999%,85.999%,100% {
+        opacity:0.99;
+        stroke-dashoffset: 0;
+      }
+      19%,22.99%,36.999%,45.999%,50.99%,60.999%,70.999%,95.999% {
+        opacity:0.4;
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+  &:hover {
+    background-color: transparent;
+    svg {
+      path {
+        stroke: @color-blue--d;
       }
     }
   }
