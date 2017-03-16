@@ -8,7 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   @media only screen and (min-width: 630px) {
     .font-size(m);
-    .font-leading(m);
+    .font-leading(mm);
   }
 }
 
@@ -29,6 +29,7 @@ em {
 // MISC ////////////////////////////////////////////////////////////////////////
 
 time {
+  display: inline-block;
   .font.sans();
   color: @color-grey--m;
   .font-size(ss);
@@ -37,27 +38,18 @@ time {
 }
 
 hr {
-  margin: 0 auto 15px auto;
-  padding-bottom: 30px;
-  height: 16px;
-  width: 35%;
-  .font-leading(1px);
   text-align: center;
   border: 0px solid @color-grey--w;
   &:before {
-    display: inline-block;
+    display: block;
     content: "* * *";
-    height: 16px;
-    width: auto;
-    .font.sans();
     padding: @size-base 0;
+    height: (@size-base*3);
+    .font-family(sans);
     .font-size(l);
     .font-leading(l);
-    color: @color-grey--dd;
-    background-color: @color-grey--w;
-    .clearfix();
   }
-  @media only screen and (min-width: 630px) { padding: 30px 0 60px 0; }
+  // @media only screen and (min-width: 630px) { padding: 30px 0 60px 0; }
 }
 
 

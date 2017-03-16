@@ -3,12 +3,56 @@ title: Hello, World!
 layout: listing
 == ---
 
-%article.writing
-  %section
+%article
+  %section.writing
     %ul
       == {% for post in site.categories.writing %}
       %li
         %a{ href: "{{ post.url }}" }
-          == {{ post.title }}
-        %time {{ post.date | date: "%b %Y" }}
+          %span {{ post.title }}
+          %nav
+            %p
+              %time {{ post.date | date: "%Y" }} &#x2F;
+              == {% for tag in post.tags %}
+              %span {{ tag }} &#x2F;
+              == {% endfor %}
       == {% endfor %}
+
+  %section.photos
+    %h2
+      %span Photos /&nbsp;
+    %ul
+      == {% for album in site.categories.photos %}
+      %li
+        %a{ href: "{{ album.url }}" }
+          %span {{ album.title }}
+          %nav
+            %p
+              %time {{ album.date | date: "%Y" }} &#x2F;
+              == {% for tag in album.tags %}
+              %span {{ tag }} &#x2F;
+              == {% endfor %}
+          %picture.pre
+            %img.lzy{src:"data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", "data-src": "{{ album.thumbnail }}"}
+      == {% endfor %}
+
+  %section.projects
+    %h2
+      %span Projects /&nbsp;
+    %ul
+      == {% for project in site.categories.projects %}
+      %li
+        %a{href:"{{ project.url }}"}
+          %span {{ project.title }}
+          %nav
+            %p
+              %time {{ project.date | date: "%Y" }}
+              == {% for tag in project.tags %}
+              %span {{ tag }} &#x2F;
+              == {% endfor %}
+          %picture.pre
+            %img{src:"{{ project.thumbnail }}"}
+      == {% endfor %}
+
+
+%script{src: "/assets/js/imageloader.min.js", type: "text/javascript"}
