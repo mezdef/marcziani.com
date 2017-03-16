@@ -1,32 +1,13 @@
 .post {
   .photos {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-
-    section {
-      padding: 0;
-      >p {
-        padding: 0 30px;
-        @media only screen and (min-width: 630px) {
-          margin: 0 auto 30px auto;
-          width: 620px;
-        }
-      }
-    }
 
     figure {
-      margin-bottom: 60px;
-      padding: 0 30px;
-
-      @media only screen and (min-width: 630px) {
-        margin: 0 auto 120px auto;
-        padding: 0 60px;
-        max-width: 1024px;
+      width: 100%;
+      picture {
+        text-align: left;
       }
-      @media only screen and (min-width: 1200px) {
-        padding: 0 240px;
-        max-width: 1444px;
+      @media only screen and (min-width: 630px) {
+        margin-bottom: (@size-base*4);
       }
     }
   }
