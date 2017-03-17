@@ -29,6 +29,8 @@ for (i = 0; i < fnTargets.length; i++) {
 function fnCreate(target) {
   var targetId = target.srcElement.text;
   footnote.innerHTML = document.getElementById('fn:' + targetId).children[0].innerHTML;
+  footnote.classList.remove('left', 'right');
+  target.x < (window.innerWidth/2) ? footnote.classList.add('left') : footnote.classList.add('right');
   target.srcElement.parentNode.classList.add('active');
   target.srcElement.parentNode.appendChild(footnote);
   document.documentElement.classList.add('fn-open');

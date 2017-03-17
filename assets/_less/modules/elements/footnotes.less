@@ -1,11 +1,12 @@
 sup, sub {
+  position: relative;
   top: -(@size-base/3);
   .font-family(sans);
   .font-size(s);
   .font-leading(sss);
+  vertical-align: baseline;
   > a {
     padding: 1px 2px;
-    // color: @color-blue--d;
     border-bottom: 0px solid @color-grey--ddd;
     &:hover {
       color: @color-grey--w;
@@ -15,21 +16,43 @@ sup, sub {
   }
   &.active > a {
     color: @color-blue--d;
+    &:before {
+      content: " ";
+      position: absolute;
+      top: (@size-base/2);
+      left: -2px;
+      border-width: 8px;
+      border-color: transparent;
+      border-style: solid solid outset;
+      border-bottom-color: @color-grey--ddd;
+    }
   }
 }
 
 .fn-container {
   position: absolute;
   top: @size-base;
-  left: -45px;
-  width: (@size-base*11);
   padding: (@size-base/2);
+  width: ((@size-base*12)-(@size-base/2));
+  @media only screen and (min-width: 420px) { width: (@size-base*8); }
+  @media only screen and (min-width: 630px) { width: (@size-base*11); }
   color: @color-grey--w;
   font-size: 15px;
   .font-leading(ss);
   background: @color-grey--ddd;
   cursor: text;
   z-index: 1;
+
+
+  &.left {
+    margin-left: -(@size-base/2);
+    @media only screen and (min-width: 420px) { left: -(@size-base/2); }
+  }
+  &.right {
+    margin-right: -(@size-base/2);
+    @media only screen and (min-width: 420px) { right: -(@size-base/2); }
+  }
+
   a {
     color: @color-grey--w;
     border-color: @color-grey--d;
@@ -39,16 +62,6 @@ sup, sub {
     &.reversefootnote {
       display: none;
     }
-  }
-  &:before {
-    content: " ";
-    position: absolute;
-    top: -15px;
-    left: 42px;
-    border-width: 8px;
-    border-color: transparent;
-    border-style: solid solid outset;
-    border-bottom-color: @color-grey--ddd;
   }
 }
 
