@@ -4,17 +4,39 @@ layout: default
 permalink: about/
 == ---
 
-%article
-  -# %header
-    -# %h1 About the author
-    -# %h2 or somthing to that effect
+%article.about
   %section
+    %p.smiley
+      Hi, I'm Marc, an Australian developer and designer based in New York City—I like to design and build things on the web, and occasionally do some branding, create sensible user experiences, and think about living with technology.
+      %span
+        (◔‿
+        %svg{ :width => "20px", :height => "20px", :viewBox=> "0 0 50 50", :xmlns=> "http://www.w3.org/2000/svg", :version=> "1.1" }
+          -# %path{ :d=> "M60  60 L68 68 L92 44 L92 68", :fill=> "none", :'stroke-linejoin'=> "bevel", :'stroke-width'=> "7" }
+          %path{ :d=> "M10  20 L18 28 L42 04 L42 28", :fill=> "none", :'stroke-linejoin'=> "bevel", :'stroke-width'=> "7" }
+        )ﾉ゛
     %p
-      :markdown
-        An Australian expatriate living and working in New York as a Web Developer for [Samsung](http://www.samsung.com/us/) by day, and a freelance designer by night.
+      Currently working for
+      %a{src:'http://www.samsung.com/us/'} Samsung
+      building prototypes and futzing with code. I've previously spent time working in advertising, not-for-profits, universities, and startups.
     %p
-      :markdown
-        Marc has a BCd (Bachelor of Communication Design), a MSE (Masters of Software Engineering), and more than 6 years experience in design and development.
-    %p
-      :markdown
-        If you'd like to get in contact quickly, he can be [emailed]( mailto:mezdef@gmail.com) or found as   [@mezdef](http://twitter.com/#!/mezdef) on Twitter. Public work can be sleuthed on [Github](https://github.com/mezdef), and [Flickr](http://www.flickr.com/photos/mezdef/); Personal cinematic and literary interests can be found on [Letterboxd](http://letterboxd.com/mezdef/) and [Goodreads](https://www.goodreads.com/mezdef) respectively.
+      I occasionally
+      %a{src:'http://www.marcziani.com/photos'} take photos
+      while I'm out and about or do some
+      %a{src:'http://www.marcziani.com/writing'} writing
+      when I have an idea.
+      If you'd like to get in contact or request something, you can
+      %a{src:'mailto:mezdef@gmail.com'} email
+      or find me as
+      %a{src:'http://twitter.com/#!/mezdef'} @mezdef
+      on Twitter where I retweet other people's jokes. Some of my work can be found on
+      %a{src:'https://github.com/mezdef'} Github
+      or by looking at my
+      %a{src:'http://www.marcziani.com/projects'} projects
+      section, or if you're into lists I use
+      %a{src:'https://www.goodreads.com/mezdef'} Goodreads
+      and
+      %a{src:'http://letterboxd.com/mezdef/'} Letterboxd.
+
+    %figure.profile
+      %picture
+        %img{src:"http://a.marcziani.com/marcziani-profile.jpg"}

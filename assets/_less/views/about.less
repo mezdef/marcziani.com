@@ -1,0 +1,36 @@
+.about {
+  p {
+    &:first-of-type, &.smiley {
+      .font-family(sans);
+      .font-size(l);
+      .font-leading(mm);
+    }
+  }
+  .profile {
+    padding-top: (@size-base*2);
+    img {
+      width: (@size-base*5);
+      height: (@size-base*5);
+      border-radius: 50%;
+      filter: grayscale(100%);
+    }
+  }
+  .smiley {
+    span {
+      color: @color-blue--d;
+    }
+    svg {
+      margin: 0 -4px -4px -8px;
+      path {
+        stroke: @color-blue--d;
+      }
+    }
+    &:hover {
+      background-color: transparent;
+      svg {
+        path {
+        }
+      }
+    }
+  }
+}
