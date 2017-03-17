@@ -2,6 +2,11 @@
   .writing {
     section {
       > p {
+        &:first-of-type {
+          .font-family(sans);
+            .font-size(mm);
+            .font-leading(mm);
+        }
         &:last-of-type {
           &:after {
             content: "";
@@ -16,7 +21,7 @@
         }
         @media only screen and (min-width: 630px) {
           &:first-of-type {
-            .font-size(mm);
+            .font-size(l);
             .font-leading(mm);
           }
           &:last-of-type {
