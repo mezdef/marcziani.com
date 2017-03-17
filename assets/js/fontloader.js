@@ -10,8 +10,6 @@ sessionStorage.getItem('ffSansItalic')) {
   webfontLoader('serif');
   webfontLoader('serif-italic');
   webfontLoader('sans');
-  webfontLoader('sans-italic');
-  webfontLoader('icon');
   console.log('cookied');
 } else {
   console.log('slow loading');
@@ -26,9 +24,7 @@ sessionStorage.getItem('ffSansItalic')) {
 
   var serif = new FontFaceObserver('Galaxie Copernicus');
   var serifItalic = new FontFaceObserver('Galaxie Copernicus', { style: 'italic' });
-  var sans = new FontFaceObserver('Klavika');
-  var sansItalic = new FontFaceObserver('Klavika', { style: 'italic' });
-  var icon = new FontFaceObserver('FontAwesome');
+  var sans = new FontFaceObserver('Maison Neue');
 
   serif.load(null, 20000).then(function(){
     webfontLoader('serif');
@@ -44,15 +40,5 @@ sessionStorage.getItem('ffSansItalic')) {
     webfontLoader('sans');
     sessionStorage.setItem('ffSans', true);
   }).catch(function(e){ sessionStorage.ffSans = false; });
-
-  sansItalic.load(null, 20000).then(function(){
-    webfontLoader('sans-italic');
-    sessionStorage.setItem('ffSansItalic', true);
-  }).catch(function(e){ sessionStorage.ffSansItalic = false; });
-
-  sansItalic.load(null, 20000).then(function(){
-    webfontLoader('icon');
-    sessionStorage.setItem('ffIcon', true);
-  }).catch(function(e){ sessionStorage.ffIcon = false; });
 
 }
