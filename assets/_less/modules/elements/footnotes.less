@@ -58,19 +58,13 @@ sup, sub {
 
   ol {
     padding-top: @size-base;
-    list-style-type: none;
   }
 
   li[id*='fn:'] {
-    position: relative;
     .font-family(sans);
     .font-size(s);
     .font-leading(ss);
-    counter-increment: step-counter;
     &:before {
-      position: absolute;
-      left: -15px;
-      content: counter(step-counter);
       .font-leading(ssss);
     }
     &:last-of-type {

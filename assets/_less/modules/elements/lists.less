@@ -12,8 +12,19 @@ ul {
 }
 
 ol {
-  list-style: decimal;
   margin-bottom: @size-base;
+  list-style-type: none;
+  li {
+    counter-increment: step-counter;
+    margin-bottom: (@size-base/3);
+    &:before {
+      position: absolute;
+      left: -(@size-base/2);
+      .font-family(sans);
+      .font-size(s);
+      content: counter(step-counter);
+    }
+  }
 }
 
 li {
