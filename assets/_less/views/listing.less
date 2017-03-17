@@ -30,7 +30,6 @@
 
   // .photos, .projects {
     section {
-      @media screen and (max-width: 360px) { padding: 0 15px 60px 15px; }
     }
 
     ul {
@@ -52,6 +51,7 @@
           .font-size(l);
           color: @color-grey--ddd;
           background: @color-grey--w;
+          border-bottom: 1px dotted @color-grey--mm;
           z-index: 1;
         }
         &:hover {
@@ -76,7 +76,6 @@
     nav {
       position: relative;
       width: 100%;
-      @media screen and (max-width: 419px) { padding-left: 10px; }
       color: @color-grey--mm;
       .truncate();
       z-index: 1;
@@ -95,7 +94,6 @@
       }
     }
 
-    picture, nav { @media screen and (max-width: 419px) { width: 50%; } }
     picture { z-index: 0; }
 
 
@@ -113,7 +111,6 @@
 
   .photos, .projects {
     section {
-      @media screen and (max-width: 360px) { padding: 0 15px 60px 15px; }
     }
     ul {
       padding-top: (@size-base*2);
@@ -149,6 +146,7 @@
     a { padding-bottom: (@size-base*2); }
     picture {
       margin: -90px 0 30px 30px;
+      padding-right: @size-base;
       height: 180px;
       background: @color-grey--w;
       img {

@@ -12,10 +12,34 @@ img {
   &.intrinsic--photolisting { padding-top: 66.56%; }
 }
 
+.wide {
+  padding-left: 15px;
+  padding-right: 15px;
+  @media only screen and (min-width: 630px) {
+    margin-bottom: (@size-base*2);
+    padding: 0 (@size-base*2);
+    max-width: @size-base*36;
+  }
+  @media only screen and (min-width: 1200px) {
+  }
+  @media only screen and (min-width: 1440px) {
+    max-width: (@size-base*48);
+    padding: 0 (@size-base*8);
+  }
+}
+
 figure {
   position: relative;
-  margin-bottom: @size-base;
-  .layout;
+  margin: 0 auto @size-base auto;
+  .layout();
+  padding-left: 30px;
+  padding-right: 30px;
+  @media only screen and (min-width: 630px) {
+    padding-left: @size-base; padding-right: @size-base;
+
+    min-width: @size-base*18;
+  }
+
   margin-top: 0;
   .font.sans();
   .font-size(ss);
@@ -23,18 +47,6 @@ figure {
 
   picture {
     text-align: center;
-  }
-
-  &.wide {
-    @media only screen and (min-width: 630px) {
-      margin-bottom: (@size-base*2);
-      padding: 0 (@size-base*2);
-      width: @size-base*30
-    }
-    @media only screen and (min-width: 1200px) {
-      padding: 0 (@size-base*8);
-      width: (@size-base*48);
-    }
   }
 
   &.gallery {
