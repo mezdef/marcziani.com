@@ -6,15 +6,16 @@ thumbnail: http://a.marcziani.com/projects/microcyclic-photo-1.jpg
 tags:
 - Design
 - Graphic
+- Print
 - Medical
 ---
 
 A brochure for the pharmaceutical company Pfizer to provide information related to a drug offering.
 
 ![Brochure][I2]
-![Homepage][I3]
-![Homepage][I4]
-![Homepage][I5]
+![Layout][I3]
+![Detail][I4]
+![Graph][I5]
 {: .md-gallery.wide }
 
 * __Title__: Microcyclic Lactones
