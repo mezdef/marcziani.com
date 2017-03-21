@@ -6,14 +6,15 @@ permalink: about/
 
 %article.about
   %section
-    %p.smiley
+    %p
       Hi, I'm Marc, an Australian developer and designer based in New York City—I like to design and build things on the web, and occasionally do some branding, create sensible user experiences, and think about living with technology.
-      %span
-        (◔‿
+      %span.smiley
+        %span (◔‿
         %svg{ :width => "20px", :height => "20px", :viewBox=> "0 0 50 50", :xmlns=> "http://www.w3.org/2000/svg", :version=> "1.1" }
           -# %path{ :d=> "M60  60 L68 68 L92 44 L92 68", :fill=> "none", :'stroke-linejoin'=> "bevel", :'stroke-width'=> "7" }
           %path{ :d=> "M10  20 L18 28 L42 04 L42 28", :fill=> "none", :'stroke-linejoin'=> "bevel", :'stroke-width'=> "7" }
-        )ﾉ゛
+        %span> )
+        %span.arm> ﾉ゛
     %p
       Currently working for
       %a{src:'http://www.samsung.com/us/'} Samsung

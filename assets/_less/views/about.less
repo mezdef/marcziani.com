@@ -20,7 +20,8 @@
       color: @color-blue--d;
     }
     svg {
-      margin: 0 -4px -4px -8px;
+      margin: 0 0 -4px -8px;
+      animation: blink 12s infinite;
       path {
         stroke: @color-blue--d;
       }
@@ -32,5 +33,18 @@
         }
       }
     }
+  }
+}
+
+@keyframes blink {
+  98% {
+    transform: none;
+    animation-timing-function: ease-in;
+  }
+  99% {
+    transform: translateY(10px) scaleY(0);
+  }
+  100% {
+    animation-timing-function: ease-out;
   }
 }
