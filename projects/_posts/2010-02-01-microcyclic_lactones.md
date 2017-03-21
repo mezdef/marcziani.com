@@ -2,7 +2,7 @@
 title: Microcyclic Lactones
 subtitle: Glycomics database
 layout: project
-thumbnail: http://a.marcziani.com/projects/microcyclic-photo-1.jpg
+thumbnail: http://a.marcziani.com/projects/microcyclic-thumbnail.jpg
 tags:
 - Design
 - Graphic

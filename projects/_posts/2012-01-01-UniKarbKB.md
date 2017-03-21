@@ -2,7 +2,7 @@
 title: UniKarb KB
 subtitle: Glycomics database
 layout: project
-thumbnail: http://a.marcziani.com/projects/Unikarbkb-screenshot-1.png
+thumbnail: http://a.marcziani.com/projects/unikarbkb-thumbnail.jpg
 tags:
 - Programming
 - Utility
