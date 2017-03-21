@@ -5,7 +5,7 @@ body > header {
   letter-spacing: 1px;
 
   nav {
-    .layout;
+    .layout();
     margin-bottom: 0;
     padding-top: @size-base;
     padding-bottom: 60px;
@@ -23,41 +23,12 @@ body > header {
     }
     @media screen and (max-width: 420px) { margin-right: 15px; }
   }
-  a {
-    color: @color-grey--mmm;
-
-    &:hover {
-      &:after {
-        width: 100%;
-        margin-left: 0%;
-        margin-right: 0%;
-        .opacity(1);
-        .transition(all 0.15s linear);
-      }
-    }
-
-    &.active {
-      color: @color-grey--ddd;
-      border-bottom: 1px dotted @color-grey--ddd;
-      &:hover {
-        color: @color-grey--w;
-        border-bottom: 1px dotted @color-blue--d;
-      }
-      &:after {
-        width: 100%;
-        margin-left: 0%;
-        margin-right: 0%;
-        border-top: 1px solid @color-grey--dd;
-        .opacity(1);
-      }
-    }
-  }
 }
 
 
 // LOGO ////////////////////////////////////////////////////////////////////////
 
-a.monogram {
+.monogram {
   border: none;
   display: inline-block;
   width: 40px;
