@@ -1,4 +1,19 @@
 .post {
   .projects {
+    section {
+      > p {
+        &:first-of-type {
+          .font-family(sans);
+            .font-size(mm);
+            .font-leading(mm);
+        }
+        @media only screen and (min-width: 630px) {
+          &:first-of-type {
+            .font-size(l);
+            .font-leading(mm);
+          }
+        }
+      }
+    }
   }
 }
