@@ -6,5 +6,6 @@
   photoset: 72157655205367600
   tags:
   - Travel
+  - Asia
   - India
 ---

@@ -6,7 +6,6 @@
   photoset: 72157674196362061
   tags:
   - Sailing
-  - United States
-  - New York
-  - Long Island
+  - North America
+  - USA
 ---

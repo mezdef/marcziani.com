@@ -6,6 +6,7 @@
   photoset: 72157625878851476
   tags:
   - Travel
-  - Japan
+  - Asia
   - Singapore
+  - Japan
 ---

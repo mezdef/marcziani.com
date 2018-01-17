@@ -6,7 +6,8 @@
   photoset: 72157654474728070
   tags:
   - Travel
-  - America
+  - North America
+  - USA
   stories:
     - id: 1
       para: " "

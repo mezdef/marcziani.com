@@ -7,4 +7,5 @@
   tags:
   - Travel
   - North America
+  - USA
 ---

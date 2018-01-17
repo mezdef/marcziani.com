@@ -6,5 +6,6 @@
   photoset: 72157657855224708
   tags:
   - Travel
-  - America
+  - North America
+  - USA
 ---

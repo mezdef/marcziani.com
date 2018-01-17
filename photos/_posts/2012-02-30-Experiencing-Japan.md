@@ -6,5 +6,6 @@
   photoset: 72157629263560201
   tags:
   - Travel
+  - Asia
   - Japan
 ---
