@@ -118,7 +118,7 @@ figcaption {
         display: none;
       }
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: 1440px) {
       padding-top: 0;
       width: 180px;
       top: 0;
@@ -159,6 +159,15 @@ figcaption {
       padding: 0 240px;
       width: 100%;
       left: 0;
+    }
+    .wide & {
+      @media only screen and (min-width: 1200px) {
+        padding: 0 60px;
+      }
+      @media only screen and (min-width: 1440px) {
+        max-width: 1440px;
+        padding: 0 240px;
+      }
     }
   }
 }

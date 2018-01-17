@@ -121,6 +121,20 @@
 // PHOTOS //////////////////////////////////////////////////////////////////////
 
   .photos {
+    li {
+      .reverse-zindex(20);
+      .reverse-zindex(@n, @i: 1) when (@i =< @n) {
+        &:nth-child(@{i}) picture {
+          z-index: (@n - @i);
+        }
+        .reverse-zindex(@n, (@i + 1));
+      }
+      &:hover {
+        picture {
+          z-index: 100;
+        }
+      }
+    }
     picture {
       position: absolute;
       top: -26px;
@@ -130,10 +144,10 @@
       overflow: hidden;
       background: @color-grey--w;
       border-radius: 50%;
-      // z-index: 0;
       img {
         height: 100%;
         opacity: 0.75;
+        transition: none;
       }
     }
 
