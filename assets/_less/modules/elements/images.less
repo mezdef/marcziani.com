@@ -15,14 +15,14 @@ img {
 .wide {
   padding-left: 15px;
   padding-right: 15px;
-  @media only screen and (min-width: 630px) {
+  @media only screen and (min-width: @media--tablet) {
     margin-bottom: (@size-base*2);
     padding: 0 (@size-base*2);
     max-width: @size-base*36;
   }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: @media--laptop) {
   }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: @media--monitor) {
     max-width: (@size-base*48);
     padding: 0 (@size-base*8);
   }
@@ -34,7 +34,7 @@ figure {
   .layout();
   padding-left: 30px;
   padding-right: 30px;
-  @media only screen and (min-width: 630px) {
+  @media only screen and (min-width: @media--tablet) {
     padding-left: @size-base; padding-right: @size-base;
 
     min-width: @size-base*18;
@@ -60,7 +60,7 @@ figure {
     ul li {
       position: relative;
       width: 25%;
-      @media only screen and (min-width: 630px) { width: 12.5%; }
+      @media only screen and (min-width: @media--tablet) { width: 12.5%; }
       cursor: pointer;
 
       &.active {
@@ -109,7 +109,7 @@ figcaption {
     width: 400px;
     text-transform: none;
 
-    @media only screen and (min-width: 630px) { display: block; }
+    @media only screen and (min-width: @media--tablet) { display: block; }
     @media only screen and (min-width: 1000px) {
       &:before {
         margin-bottom: -1px;
@@ -118,7 +118,7 @@ figcaption {
         display: none;
       }
     }
-    @media only screen and (min-width: 1440px) {
+    @media only screen and (min-width: @media--monitor) {
       padding-top: 0;
       width: 180px;
       top: 0;
@@ -136,7 +136,7 @@ figcaption {
       display: inline-block;
       width: 75px;
       text-transform: uppercase;
-      @media only screen and (min-width: 1200px) { width: 100px; }
+      @media only screen and (min-width: @media--laptop) { width: 100px; }
     }
   }
 
@@ -150,21 +150,21 @@ figcaption {
 
     &:before, &:after { display: none; }
 
-    @media only screen and (min-width: 630px) {
+    @media only screen and (min-width: @media--tablet) {
       left: auto;
       right: 60px;
       width: 45%;
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: @media--laptop) {
       padding: 0 240px;
       width: 100%;
       left: 0;
     }
     .wide & {
-      @media only screen and (min-width: 1200px) {
+      @media only screen and (min-width: @media--laptop) {
         padding: 0 60px;
       }
-      @media only screen and (min-width: 1440px) {
+      @media only screen and (min-width: @media--monitor) {
         max-width: 1440px;
         padding: 0 240px;
       }
@@ -195,7 +195,7 @@ picture {
     }
     .listing & {
       min-height: 28vw;
-      @media only screen and (min-width: 630px) { min-height: 120px; }
+      @media only screen and (min-width: @media--tablet) { min-height: 120px; }
     }
   }
 }

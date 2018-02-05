@@ -13,8 +13,8 @@ h1 {
   // display: inline-block;
   .font-size(l);
   .font-leading(l);
-  @media only screen and (min-width: 630px) {
     .font-size(ll);
+  @media only screen and (min-width: @media--tablet) {
     .font-leading(ll);
   }
   a {
@@ -74,8 +74,8 @@ h2 {
   padding-top: @size-base;
   .font-size(mm);
   .font-leading(mm);
-  @media only screen and (min-width: 630px) {
     .font-size(l);
+  @media only screen and (min-width: @media--tablet) {
     .font-leading(l);
   }
 }
