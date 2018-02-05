@@ -35,8 +35,8 @@ sup, sub {
   top: @size-base;
   padding: (@size-base/2);
   width: ((@size-base*12)-(@size-base/2));
-  @media only screen and (min-width: @media--phone) { width: (@size-base*8); }
-  @media only screen and (min-width: @media--tablet) { width: (@size-base*11); }
+  @media @phone { width: (@size-base*8); }
+  @media @tablet { width: (@size-base*11); }
   color: fade(@color-white, 100%);
   font-size: 15px;
   .font-leading(ss);
@@ -47,11 +47,11 @@ sup, sub {
 
   &.left {
     margin-left: -(@size-base/2);
-    @media only screen and (min-width: @media--phone) { left: -(@size-base/2); }
+    @media @phone { left: -(@size-base/2); }
   }
   &.right {
     margin-right: -(@size-base/2);
-    @media only screen and (min-width: @media--phone) { right: -(@size-base/2); }
+    @media @phone { right: -(@size-base/2); }
   }
 
   a {
