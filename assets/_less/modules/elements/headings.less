@@ -4,8 +4,8 @@ h1, h2, h3, h4, h5 {
   font-weight: normal;
   font-style: italic;
   span {
-    color: @color-grey--w;
-    background: @color-grey--ddd;
+    color: fade(@color-white, 100%);
+    background: fade(@color-obsidian, 100%);
   }
 }
 
@@ -35,7 +35,7 @@ h1 {
     &::before, &::after {
       width: 12px;
       height: 8px;
-      border: 2px solid @color-grey--ddd;
+      border: 2px solid fade(@color-obsidian, 100%);
     }
     &::before {
       top: 9px;
@@ -50,18 +50,18 @@ h1 {
 
       width: 12px;
       height: 4px;
-      border: 1px solid @color-grey--w;
-      background: @color-grey--ddd;
+      border: 1px solid fade(@color-white, 100%);
+      background: fade(@color-obsidian, 100%);
       z-index: 3;
     }
 
     &:hover {
       background-color: transparent;
       &::before, &::after {
-        border: 2px solid @color-blue--d;
+        border: 2px solid fade(@color-blue, 100%);
       }
       span {
-        background: @color-blue--d;
+        background: fade(@color-blue, 100%);
       }
 
     }

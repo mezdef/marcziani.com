@@ -1,18 +1,18 @@
 .a {
-  color: @color-grey--ddd;
+  color: fade(@color-obsidian, 100%);
   text-decoration: none;
   word-break: break-word;
   hyphens: auto;
-  border-bottom: 1px dotted @color-blue--d;
+  border-bottom: 1px dotted fade(@color-blue, 100%);
   cursor: pointer;
 
   .hover {
-    color: @color-grey--w;
+    color: fade(@color-white, 100%);
     text-decoration: none;
-    background-color: @color-blue--d;
-    border-bottom: 1px dotted @color-grey--0;
+    background-color: fade(@color-blue, 100%);
+    border-bottom: 1px dotted fade(@color-white, 0%);
     .default article &, .writing article & {
-      border-bottom: 1px dotted @color-blue--d;
+      border-bottom: 1px dotted fade(@color-blue, 100%);
     }
   }
 }
@@ -23,5 +23,5 @@ a {
 }
 
 .active {
-  color: @color-blue--d;
+  color: fade(@color-blue, 100%);
 }

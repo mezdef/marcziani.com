@@ -8,15 +8,15 @@ sup, sub {
   vertical-align: baseline;
   > a {
     padding: 1px 2px;
-    border-bottom: 0px solid @color-grey--ddd;
+    border-bottom: 0px solid fade(@color-obsidian, 100%);
     &:hover {
-      color: @color-grey--w;
-      background-color: @color-grey--ddd;
-      border-bottom: 0px solid @color-grey--0;
+      color: fade(@color-white, 100%);
+      background-color: fade(@color-obsidian, 100%);
+      border-bottom: 0px solid fade(@color-white, 0%);
     }
   }
   &.active > a {
-    color: @color-blue--d;
+    color: fade(@color-blue, 100%);
     &:before {
       content: " ";
       position: absolute;
@@ -25,7 +25,7 @@ sup, sub {
       border-width: 8px;
       border-color: transparent;
       border-style: solid solid outset;
-      border-bottom-color: @color-grey--ddd;
+      border-bottom-color: fade(@color-obsidian, 100%);
     }
   }
 }
@@ -37,10 +37,10 @@ sup, sub {
   width: ((@size-base*12)-(@size-base/2));
   @media only screen and (min-width: 420px) { width: (@size-base*8); }
   @media only screen and (min-width: 630px) { width: (@size-base*11); }
-  color: @color-grey--w;
+  color: fade(@color-white, 100%);
   font-size: 15px;
   .font-leading(ss);
-  background: @color-grey--ddd;
+  background: fade(@color-obsidian, 100%);
   cursor: text;
   z-index: 1;
 
@@ -55,10 +55,10 @@ sup, sub {
   }
 
   a {
-    color: @color-grey--w;
-    border-color: @color-grey--d;
+    color: fade(@color-white, 100%);
+    border-color: fade(@color-slate, 100%);
     &:hover {
-      border-color: @color-blue--d;
+      border-color: fade(@color-blue, 100%);
     }
     &.reversefootnote {
       display: none;
@@ -88,12 +88,12 @@ sup, sub {
     }
     a:last-of-type {
       padding: 0 0 0 6px;
-      color: @color-blue--d;
+      color: fade(@color-blue, 100%);
       .font-size(ss);
       .font-leading(sss);
-      border-bottom: 0px solid @color-grey--ddd;
+      border-bottom: 0px solid fade(@color-obsidian, 100%);
       &:hover {
-        background-color: @color-grey--w;
+        background-color: fade(@color-white, 100%);
       }
     }
   }

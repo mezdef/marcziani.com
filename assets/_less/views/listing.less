@@ -49,13 +49,13 @@
           position: relative;
           .a();
           .font-size(l);
-          color: @color-grey--ddd;
-          background: @color-grey--w;
-          border-bottom: 1px dotted @color-grey--mm;
+          color: fade(@color-obsidian, 100%);
+          background: fade(@color-white, 100%);
+          border-bottom: 1px dotted fade(@color-silver, 100%);
           z-index: 1;
         }
         &:hover {
-          background-color: @color-grey--0;
+          background-color: fade(@color-white, 0%);
           > span {
             .a > .hover();
           }
@@ -66,7 +66,7 @@
           }
           nav {
             * {
-              color: @color-grey--ddd;
+              color: fade(@color-obsidian, 100%);
             }
           }
         }
@@ -76,7 +76,7 @@
     nav {
       position: relative;
       width: 100%;
-      color: @color-grey--mm;
+      color: fade(@color-silver, 100%);
       .truncate();
       z-index: 1;
     }
@@ -90,7 +90,7 @@
       .truncate();
       * {
         margin-right: 5px;
-        background: @color-grey--w;
+        background: fade(@color-white, 100%);
       }
     }
 
@@ -142,7 +142,7 @@
       width: (@size-base*4);
       height: (@size-base*4);
       overflow: hidden;
-      background: @color-grey--w;
+      background: fade(@color-white, 100%);
       border-radius: 50%;
       img {
         height: 100%;
@@ -162,7 +162,7 @@
       margin: -90px 0 30px 30px;
       padding-right: @size-base;
       height: 180px;
-      background: @color-grey--w;
+      background: fade(@color-white, 100%);
       img {
         max-height: 100%;
         opacity: 0.5;

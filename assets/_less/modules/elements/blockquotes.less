@@ -8,7 +8,7 @@ blockquote {
   quotes: "“" "”" "“" "’";
   &:hover {
     p, cite {
-      color: @color-grey--dd;
+      color: fade(@color-charcoal, 100%);
     }
   }
 
@@ -16,10 +16,10 @@ blockquote {
     display: block;
     content: open-quote;
     height: @size-base;
-    color: @color-blue--d;
+    color: fade(@color-blue, 100%);
     .font-size(40px);
     .font-leading(ssss);
-    color: @color-blue--d;
+    color: fade(@color-blue, 100%);
   }
 
   p {
@@ -40,12 +40,12 @@ blockquote {
     .font.sans();
     .font-size(s);
     .font-leading(1.3);
-    color: @color-grey--mm;
+    color: fade(@color-silver, 100%);
     text-align: right;
     a {
-      color: @color-grey--mmm;
+      color: fade(@color-silver, 100%);
       &:hover {
-        color: @color-grey--w;
+        color: fade(@color-white, 100%);
       }
     }
   }

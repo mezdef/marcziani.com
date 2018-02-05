@@ -17,13 +17,13 @@
   }
   .smiley {
     span {
-      color: @color-blue--d;
+      color: fade(@color-blue, 100%);
     }
     svg {
       margin: 0 0 -4px -8px;
       animation: blink 12s infinite;
       path {
-        stroke: @color-blue--d;
+        stroke: fade(@color-blue, 100%);
       }
     }
     &:hover {

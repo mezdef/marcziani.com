@@ -1,22 +1,15 @@
 // COLOURS /////////////////////////////////////////////////////////////////////
 
-@color-grey--0: rgba(255, 255, 255, 0);
-@color-grey--w: #FFFFFF;
+@color-obsidian: #111111;
+@color-charcoal: lighten(@color-obsidian, 8.2353%); // #262626;
+@color-slate: lighten(@color-obsidian, 41.9608%); // #7C7C7C;
+@color-silver: lighten(@color-obsidian, 74.1176%); // #CECECE;
+@color-feather: lighten(@color-obsidian, 85.4902%); // #EBEBEB;
+@color-white: lighten(@color-obsidian, 100%); // #FFFFFF
 
-@color-grey--l: #EBEBEB;
-
-@color-grey--m: #CECECE;
-@color-grey--mm: #999999;
-@color-grey--mmm: #666666;
-
-@color-grey--d: #7C7C7C;
-@color-grey--dd: #262626;
-@color-grey--ddd: #111111;
-
-@color-red--m: #FC5A5A;
-
-@color-blue--l: #99ffff;
-@color-blue--d: #0242FF;
+@color-red: #FC5A5A;
+@color-green: #00FF00;
+@color-blue: #0242FF;
 
 
 // TYPOGRAPHY //////////////////////////////////////////////////////////////////
@@ -50,8 +43,8 @@
 @font-leading--l: 37.5px;
 @font-leading--ll: 44px;
 
-@border-structural: 1px solid @color-grey--l;
-@border-arrested: 1px solid @color-grey--d;
+@border-structural: 1px solid fade(@color-feather, 100%);
+@border-arrested: 1px solid fade(@color-slate, 100%);
 
 
 // SIZE ////////////////////////////////////////////////////////////////////////
