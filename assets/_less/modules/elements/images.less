@@ -13,8 +13,8 @@ img {
 }
 
 .wide {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: @size-base/2;
+  padding-right: @size-base/2;
   @media @tablet {
     margin-bottom: (@size-base*2);
     padding: 0 (@size-base*2);
@@ -32,8 +32,8 @@ figure {
   position: relative;
   margin: 0 auto @size-base auto;
   .layout();
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: @size-base;
+  padding-right: @size-base;
   @media @tablet {
     padding-left: @size-base; padding-right: @size-base;
 
@@ -42,7 +42,7 @@ figure {
 
   margin-top: 0;
   .font.sans();
-  .font-size(ss);
+  .font-size(tiny);
   .font-leading(0);
 
   picture {
@@ -128,7 +128,7 @@ figcaption {
     p {
       display: inline-block;
       margin-bottom: 0;
-      margin-right: 30px;
+      margin-right: @size-base;
       width: 155px;
       &:last-of-type { display: none; }
     }
@@ -141,10 +141,10 @@ figcaption {
   }
 
   &.description {
-    height: 30px;
+    height: @size-base;
     bottom: -37.5px;
-    left: 30px;
-    right: 30px;
+    left: @size-base;
+    right: @size-base;
     .truncate();
     text-align: right;
 
@@ -152,7 +152,7 @@ figcaption {
 
     @media @tablet {
       left: auto;
-      right: 60px;
+      right: @size-base * 2;
       width: 45%;
     }
     @media @laptop {
@@ -162,11 +162,11 @@ figcaption {
     }
     .wide & {
       @media @laptop {
-        padding: 0 60px;
+        padding: 0 (@size-base * 2);
       }
       @media @monitor {
         max-width: 1440px;
-        padding: 0 240px;
+        padding: 0 (@size-base * 8);
       }
     }
   }
@@ -195,7 +195,7 @@ picture {
     }
     .listing & {
       min-height: 28vw;
-      @media @tablet { min-height: 120px; }
+      @media @tablet { min-height: @size-base * 4; }
     }
   }
 }

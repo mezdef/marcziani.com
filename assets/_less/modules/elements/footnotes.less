@@ -3,7 +3,7 @@ sup, sub {
   top: -((@size-base/3)+2);
   left: -2px;
   .font-family(sans);
-  .font-size(s);
+  .font-size(small);
   .font-leading(sss);
   vertical-align: baseline;
   > a {
@@ -39,7 +39,7 @@ sup, sub {
   @media @tablet { width: (@size-base*11); }
   color: fade(@color-white, 100%);
   font-size: 15px;
-  .font-leading(ss);
+  .font-leading(tiny);
   background: fade(@color-obsidian, 100%);
   cursor: text;
   z-index: 1;
@@ -76,8 +76,8 @@ sup, sub {
 
   li[id*='fn:'] {
     .font-family(sans);
-    .font-size(s);
-    .font-leading(ss);
+    .font-size(small);
+    .font-leading(tiny);
     &:before {
       .font-leading(ssss);
     }
@@ -89,7 +89,7 @@ sup, sub {
     a:last-of-type {
       padding: 0 0 0 6px;
       color: fade(@color-blue, 100%);
-      .font-size(ss);
+      .font-size(tiny);
       .font-leading(sss);
       border-bottom: 0px solid fade(@color-obsidian, 100%);
       &:hover {

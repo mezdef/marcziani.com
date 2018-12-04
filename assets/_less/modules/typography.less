@@ -2,13 +2,14 @@
 
 body {
   .font-family(serif);
-  .font-leading(s);
+  .font-size(small);
+  .font-leading(small);
   color: fade(@color-charcoal, 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    .font-size(m);
-    .font-leading(mm);
   @media @tablet {
+    .font-size(base);
+    .font-leading(base);
   }
 }
 
@@ -32,7 +33,7 @@ time {
   display: inline-block;
   .font.sans();
   color: fade(@color-silver, 100%);
-  .font-size(ss);
+  .font-size(tiny);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -46,8 +47,8 @@ hr {
     padding: @size-base 0;
     height: (@size-base*3);
     .font-family(sans);
-    .font-size(l);
-    .font-leading(l);
+    .font-size(large);
+    .font-leading(large);
     color: fade(@color-silver, 100%);
   }
 }
@@ -73,11 +74,13 @@ hr {
 section.error {
   h1 {
     .font.sans();
-    .font-size(219.318px);
-    .font-leading(132px);
+    position: relative;
+    margin: 0 auto;
+    width: @size-width--l;
+    .font-size(@size-base*6);
+    .font-leading(@size-base*7);
     font-weight: 700;
     font-style: italic;
-    text-align: center;
     span {
       text-decoration: underline;
     }

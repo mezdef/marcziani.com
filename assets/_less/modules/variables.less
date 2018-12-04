@@ -24,24 +24,23 @@
 // Modular Scale 22px @ 1:1.333
 // http://modularscale.com/scale/?px1=22&px2=&ra1=1.333&ra2=0
 
-@font-size--sss: 10px;
-@font-size--ss: 12px;
-@font-size--s: 14px;
-@font-size--m: 16px;
-@font-size--mm: 18px;
-@font-size--l: 21px;
-@font-size--ll: 28px;
-@font-size--lll: 38px;
+@font-base: 16;
 
-@font-leading--0: 0;
+@font-size--tiny: unit(@font-base * 0.75, px);
+@font-size--small: unit(@font-base * 0.9, px);
+@font-size--base: unit(@font-base * 1.0, px);
+@font-size--moderate: unit(@font-base * 1.15, px);
+@font-size--large: unit(@font-base * 1.3, px);
+@font-size--giant: unit(@font-base * 1.75, px);
+
 @font-leading--ssss: 14px;
 @font-leading--sss: 18px;
-@font-leading--ss: 22px;
-@font-leading--s: 26px;
-@font-leading--m: 30px;
-@font-leading--mm: 32px;
-@font-leading--l: 37.5px;
-@font-leading--ll: 44px;
+
+@font-leading--tiny: unit(@font-size--small * 1.6, px); // 22.4
+@font-leading--small: unit(@font-size--small * 1.85, px); // 26.4
+@font-leading--base: unit(@font-size--base * 2, px);
+@font-leading--large: unit(@font-size--large * 1.8, px); // 36.8
+@font-leading--giant: unit(@font-size--giant * 1.7, px); // 47.2
 
 @border-structural: 1px solid fade(@color-feather, 100%);
 @border-arrested: 1px solid fade(@color-slate, 100%);
@@ -49,7 +48,9 @@
 
 // SIZE ////////////////////////////////////////////////////////////////////////
 
+// @base: ~'30';
 @size-base: 30px;
+
 @size-width--l: @size-base * 21;
 @size-width--ll: @size-base * 40;
 

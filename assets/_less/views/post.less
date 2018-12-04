@@ -4,8 +4,8 @@
       > p {
         &:first-of-type {
           .font-family(sans);
-            .font-size(mm);
-            .font-leading(mm);
+            .font-size(moderate);
+            .font-leading(base);
         }
         &:last-of-type {
           &:after {
@@ -19,10 +19,10 @@
             .border-radius(40px);
           }
         }
-        @media only screen and (min-width: @media--tablet) {
+        @media @tablet {
           &:first-of-type {
-            .font-size(l);
-            .font-leading(mm);
+            .font-size(large);
+            .font-leading(base);
           }
           &:last-of-type {
             &:after {
