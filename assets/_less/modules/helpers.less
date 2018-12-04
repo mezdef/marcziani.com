@@ -59,17 +59,6 @@
 }
 
 
-// BACKGROUND //////////////////////////////////////////////////////////////////
-
-// background-color: @color-@color, @alpha: 1) when (iskeyword(@color)) {
-//   @b-color: 'color-@{color}';
-//   background-color: rgba( red(@@b-color), green(@@b-color), blue(@@b-color), @alpha);
-// }
-//
-// background-color: @color-@color) when (isstring(@color)) {
-//   background-color: @color;
-// }
-
 // BORDER //////////////////////////////////////////////////////////////////////
 
 .border-radius(@radius) {
@@ -95,30 +84,170 @@
 }
 
 
-// OPACITY /////////////////////////////////////////////////////////////////////
-
-.opacity(@opacity) {
-	-webkit-opacity: 	@opacity;
-	-moz-opacity: 		@opacity;
-	opacity: 		      @opacity;
-}
-
-
-// TRANSITIONS /////////////////////////////////////////////////////////////////
-
-.transition(@transform) {
-  -webkit-transition: @transform;
-  -moz-transition: @transform;
-  -ms-transition: @transform;
-  -o-transition: @transform;
-  transition: @transform;
-}
-
-
 // ANIMATIONS //////////////////////////////////////////////////////////////////
 
-.animation(@name, @duration: 300ms, @delay: 0, @ease: ease) {
-  -webkit-animation: @name @duration @delay @ease;
-  -moz-animation: @name @duration @delay @ease;
-  -ms-animation: @name @duration @delay @ease;
+.animation(@name, @element, @loop-duration, @loop-delay, @initial-delay, @intensity, @fillColor, @background, @fillHighlight1, @fillHighlight2, @width, @height, @top, @left) {
+
+  .glitch();
+  .glitch() when (@name = 'glitch') {
+    .animationname(@alternates, @current: 1) when (@current <= @alternates) {
+      @keyframes ~'anim-@{name}-@{element}-@{current}' {
+        @steps-duration: @intensity;
+        @steps-delay: (@steps-duration / @loop-duration) * @loop-delay;
+        @steps-total: @steps-duration + @steps-delay;
+        .delay(@steps-delay-position) when (@steps-delay-position <= @steps-delay) {
+          clip: rect(0, 0, 0, 0);
+        }
+        .duration(@steps-duration-position, @height-top, @height-bottom) when (@steps-duration-position > @steps-delay) {
+          @rLeft: `Math.floor(Math.random() * 4)`;
+          clip: rect(unit(ceil(@randNum), px), ~'@{width}px', unit(ceil(@randNum1), px), 0);
+          left: unit(ceil(@rLeft), px);
+        }
+
+        .keyframes(@n, @i: 0) when (@i <= @n) {
+          @keyframeSel: percentage(@i/(@n));
+          @{keyframeSel} {
+            .fRandom(0, @height);
+            @randNum1: (@randNum + (@width / 10));
+
+            .delay(@i);
+            .duration(@i, @randNum, @randNum1);
+          }
+          .keyframes(@n, (@i + 1));
+        }
+        .keyframes(@steps-total);
+      }
+      .animationname(@alternates, (@current + 1));
+    }
+    .animationname(3);
+
+    .svg();
+    .svg() when (@element = 'svg') {
+      svg.glitch {
+        position: absolute;
+        top: ~'@{top}px';
+        left: ~'@{left}px';
+        width: ~'@{width}px';
+        height: ~'@{height}px';
+        clip: rect(0, 0, 0, 0);
+        path { stroke: @fillHighlight1; }
+
+        .elements(3);
+        .elements(@nn, @ii: 1) when (@ii <= @nn) {
+          &[anim-frame="@{ii}"] {
+            @animation-duration: @loop-duration + @loop-delay;
+            animation: ~'anim-@{name}-@{element}-@{ii}' ~'@{animation-duration}s' @initial-delay infinite linear alternate-reverse;
+          }
+          .elements(@nn, (@ii + 1));
+        }
+      }
+    }
+
+    .text();
+    .text() when (@element = 'text') {
+      position: relative;
+
+      &:before, &:after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+      }
+      &:before {
+        @animation-duration: @loop-duration + @loop-delay;
+        animation: ~'anim-@{name}-@{element}-1' ~'@{animation-duration}s' @initial-delay infinite linear alternate-reverse;
+      }
+      &:after {
+        @animation-duration: @loop-duration + @loop-delay;
+        animation: ~'anim-@{name}-@{element}-2' ~'@{animation-duration}s' @initial-delay infinite linear alternate-reverse;
+      }
+    }
+  }
+
+  .desync();
+  .desync() when (@name = 'desync') {
+    .svg();
+    .svg() when (@element = 'svg') {
+      svg.desync {
+        position: absolute;
+        top: ~'@{top}px';
+        left: ~'@{left}px';
+        width: ~'@{width}px';
+        height: ~'@{height}px';
+        clip: rect(0, 0, 0, 0);
+
+        &[anim-frame="red"] {
+          animation: anim-desync-red unit(@loop-duration, s) @initial-delay infinite normal;
+          path { stroke: fade(@color-red, 85%); }
+        }
+        &[anim-frame="green"] {
+          animation:anim-desync-green unit(@loop-duration, s) @initial-delay  infinite normal;
+          path { stroke: fade(@color-green, 85%); }
+        }
+        &[anim-frame="blue"] {
+          animation:anim-desync-blue unit(@loop-duration, s) @initial-delay infinite normal;
+          path { stroke: fade(@color-blue, 85%); }
+        }
+      }
+    }
+  }
+
+
+  @keyframes anim-desync-red {
+    0%{
+      clip: rect(0, unit(@width, px), unit(@height, px), 0);
+      top: unit((@height/4), px); left: unit((@width/8), px);
+    }
+    1.5%{ top: unit((@height/40), px); left: unit((@width/40), px); }
+    2.5%{ top: unit((-@height/20), px); left: unit((@width/5), px); }
+    3%{ }
+    14.5%{ }
+    14.75%{ top: unit((-@height/5), px); left: unit((-@width/8), px); }
+    15.5%{ top: unit((-@height/20), px); left: unit((@width/5), px); }
+    16%{ clip: rect(0, unit(@width, px), unit(@height, px), 0); }
+    16.75%{ clip: rect(0, 0, 0, 0); top: 0px; left: 0px; }
+    100%{ top: 0px; left: 0px; }
+  }
+  @keyframes anim-desync-green {
+    0%{
+      clip: rect(0, unit(@width, px), unit(@height, px), 0);
+      top: unit((@height/4), px); left: unit((@width/8), px);
+    }
+    1.5%{ top: unit((-@height/20), px); left: unit((-@width/8), px); }
+    2.5%{ top: unit((-@height/20), px); left: unit((-@width/8), px); }
+    3%{ }
+    14.5%{ }
+    14.75%{ top: unit((-@height/5), px); left: unit((-@width/8), px); }
+    15.5%{ top: unit((-@height/20), px); left: unit((-@width/8), px); }
+    16%{ clip: rect(0, unit(@width, px), unit(@height, px), 0); }
+    16.75%{ clip: rect(0, 0, 0, 0); top: 0px; left: 0px; }
+    100%{ top: 0px; left: 0px; }
+  }
+  @keyframes anim-desync-blue {
+    0%{
+      clip: rect(0, unit(@width, px), unit(@height, px), 0);
+      top: unit((@height/4), px); left: unit((@width/8), px);
+    }
+    1.5%{ top: unit((@height/10), px); left: unit((-@width/20), px); }
+    2.5%{ top: unit((-@height/20), px); left: unit((@width/20), px); }
+    3%{ top: unit((-@height/20), px); left: unit((@width/20), px); }
+    14.5%{ }
+    14.75%{ top: unit((-@height/5), px); left: unit((-@width/8), px); }
+    15.5%{ top: unit((-@height/20), px); left: unit((-@width/20), px); }
+    16%{ clip: rect(0, unit(@width, px), unit(@height, px), 0); }
+    16.75%{ clip: rect(0, 0, 0, 0); top: 0px; left: 0px; }
+    100%{ top: 0px; left: 0px; }
+  }
+}
+
+
+// FUNCTIONS ///////////////////////////////////////////////////////////////////
+
+.fRandom(@min: 0, @max: @min+1, @int: 0) {
+  .checkInt() {
+    @getNum: `Math.random() * (@{max} - @{min} + @{int})`;
+    @base: unit(`@{int} == 1 ? Math.floor(@{getNum}) : @{getNum}`);
+  }
+  .checkInt();
+  @randNum: @base + @min;
 }

@@ -17,17 +17,17 @@
   -if i == 0
     - n.each_with_index do |nn, ii|
       -if ii == 0
-        -$aLine += ("M" + (nn[0]*$iScale).to_s + "," + (nn[1]*$iScale).to_s)
+        -$aLine += ("M " + (nn[0]*$iScale).to_s + "," + (nn[1]*$iScale).to_s + " ")
       -elsif ii == 1
-        -$aLine += (" m" + (nn[0]*$iScale).to_s + "," + (nn[1]*$iScale).to_s)
+        -$aLine += ("m " + (nn[0]*$iScale).to_s + "," + (nn[1]*$iScale).to_s + " ")
       -else
         - nn.each_with_index do |nnn, iii|
           -if iii == 0
-            -$aLine += (" a" + (nnn).to_s + ",")
-          -elsif iii == 4 || iii == 6
+            -$aLine += ("a " + (nnn).to_s + ",")
+          -elsif iii == 3 || iii == 5
             -$aLine += ("" + (nnn).to_s + ",")
           -else
-            -$aLine += ((nnn).to_s + ",")
+            -$aLine += ("" + (nnn).to_s + " ")
   -else
     - n.each_with_index do |nn, ii|
       -if ii == 0
@@ -38,6 +38,17 @@
         -$aLine += (" L" + (nn*$iScale).to_s)
   -$oCordinates.push($aLine)
 
+-$aDesync = [ "red", "green", "blue" ]
+- $aDesync.each_with_index do |n, i|
+  %svg.desync{ :'anim-frame' => n, :width => $iSize.to_s + "px", :height => $iSize.to_s + "px", :viewBox=> "0 0 100 100", :xmlns=> "http://www.w3.org/2000/svg", :version=> "1.1"}
+    - $oCordinates.each_with_index do |nn, ii|
+      %path{:class=> (ii+1).to_s, :d=> nn, :fill=>"none", :'stroke-width'=> $iThickness, :'stroke-linejoin'=>"bevel"}
+
+- [1, 2, 3].each_with_index do |n, i|
+  %svg.glitch{ :'anim-frame'=> n, :width => $iSize.to_s + "px", :height => $iSize.to_s + "px", :viewBox=> "0 0 100 100", :xmlns=> "http://www.w3.org/2000/svg", :version=> "1.1"}
+    - $oCordinates.each_with_index do |nn, ii|
+      %path{ :class=> (ii+1).to_s, :d=> nn, :fill=>"none", :'stroke-width'=> $iThickness, :'stroke-linejoin'=>"bevel"}
+
 %svg.icon{ :width => $iSize.to_s + "px", :height => $iSize.to_s + "px", :viewBox=> "0 0 100 100", :xmlns=> "http://www.w3.org/2000/svg", :version=> "1.1"}
   - $oCordinates.each_with_index do |n, i|
     %path{:class=> (i+1).to_s, :d=> n, :fill=>"none", :'stroke-width'=> $iThickness, :'stroke-linejoin'=>"bevel"}
@@ -47,6 +58,6 @@
     var aClasses = ["one", "one", "two", "three"];
     var sClass = aClasses[Math.floor(Math.random() * aClasses.length)];
     var nTarget = document.querySelectorAll(".icon");
-    nTarget[0].classList.add(sClass)
+    nTarget[nTarget.length - 1].classList.add(sClass);
   }
   fSvgClass();

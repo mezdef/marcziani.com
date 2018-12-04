@@ -29,18 +29,23 @@ body > header {
 // LOGO ////////////////////////////////////////////////////////////////////////
 
 .monogram {
-  border: none;
+  position: relative;
   display: inline-block;
   width: 40px;
   height: 40px;
+  border: none;
+  .animation("glitch", 'svg', 1, 10, 5s, 15, fade(@color-obsidian, 100%), fade(@color-white, 100%), fade(@color-obsidian, 100%), fade(@color-white, 100%), 40, 40, 0, 0);
+  .animation("desync", 'svg', 14, 0, 16s, 0, fade(@color-obsidian, 100%), fade(@color-white, 100%), fade(@color-obsidian, 100%), fade(@color-white, 100%), 40, 40, 0, 0);
+
   svg {
+    &:before { content: ""; display: block; }
     path { stroke: fade(@color-charcoal, 100%); }
+    &.one path, &.two path, &.three path {
       stroke-dasharray: 200;
       stroke-dashoffset: 200;
     }
     &.one path {
       &:nth-of-type(1) {
-        transform: rotate(-342deg);
         transform-origin: 10% 36%;
         stroke-dashoffset: -80;
         animation: draw 0.5s 0.35s linear forwards;
@@ -57,7 +62,6 @@ body > header {
     }
     &.two path {
       &:nth-of-type(1) {
-        transform: rotate(-342deg);
         transform-origin: 10% 36%;
         stroke-dashoffset: -80;
         animation: stutter 0.5s 0.35s linear forwards;
@@ -78,19 +82,18 @@ body > header {
     }
     &.three path {
       &:nth-of-type(1) {
-        transform: rotate(-342deg);
         transform-origin: 10% 36%;
         stroke-dashoffset: -80;
         animation: flicker 0.5s 0.35s linear forwards;
-      }
-      &:nth-of-type(4) {
-        animation: flicker 0.75s 0.2s linear forwards;
       }
       &:nth-of-type(2) {
         animation: flicker 1s 0.25s linear forwards;
       }
       &:nth-of-type(3) {
         animation: flicker 1.05s 0.45s ease-in forwards;
+      }
+      &:nth-of-type(4) {
+        animation: flicker 0.75s 0.2s linear forwards;
       }
     }
 
